@@ -24,11 +24,11 @@
         ]
       },
       {
-        "id": "0d9744ae664899c9",
+        "id": "0021d8a1f24b9eae",
         "type": "tabs",
         "children": [
           {
-            "id": "e4c57b9e03f32650",
+            "id": "9f83144fe9925491",
             "type": "leaf",
             "state": {
               "type": "reveal-preview-view",
@@ -188,7 +188,12 @@
   },
   "active": "bf867c954c8c52c8",
   "lastOpenFiles": [
+    "Jeronimo.md",
+    "Assets/Grasshoppertree.png",
     "README.md",
+    "Assets/Grasshopperaudio.png",
+    "Assets",
+    "Nueva carpeta",
     "PRESENTACION LUNES 2.md",
     "Untitled.base",
     "PRESENTACION.md",
@@ -227,12 +232,7 @@
     "proyectos/happiness.png",
     "proyectos/cine.png",
     "proyectos/proyecto.md",
-    "colaboracion_en_repo.md",
-    "proyectos/proyecto _final-guia",
-    "proyectos/concepto de proyecto",
     "referencias/teoria_tecnica/processing/concepts/assets/helloworld.jpg",
-    "referencias/teoria_tecnica/processing/assets/matt_pearson.jpg",
-    "referencias/teoria_tecnica/processing/assets/creative-coding.jpg",
-    "proyectos/Barcelona-Clean-Location/sketches/opendata_barcelona03/data/otra.jpg"
+    "referencias/teoria_tecnica/processing/assets/matt_pearson.jpg"
   ]
 }
