@@ -1,0 +1,26 @@
+{
+  "format": {
+    "timeFormat": "HH:mm",
+    "dataViewSyntax": false
+  },
+  "calendars": {
+    "DATA": {
+      "icsName": "DATA",
+      "icsUrl": "calendar",
+      "ownerEmail": "alba@albagcorral.com",
+      "format": {
+        "checkbox": true,
+        "includeEventEndTime": true,
+        "icsName": true,
+        "summary": true,
+        "location": true,
+        "description": false,
+        "calendarType": "remote",
+        "showAttendees": false,
+        "showOngoing": false,
+        "showTransparentEvents": false
+      },
+      "calendarType": "vdir"
+    }
+  }
+}
