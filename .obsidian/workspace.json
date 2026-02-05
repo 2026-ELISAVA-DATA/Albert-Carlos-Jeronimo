@@ -24,11 +24,11 @@
         ]
       },
       {
-        "id": "8571fb03112cee68",
+        "id": "e08b8a3e3ded7d5f",
         "type": "tabs",
         "children": [
           {
-            "id": "4c585b53613c2985",
+            "id": "e3bc70e09d211f47",
             "type": "leaf",
             "state": {
               "type": "reveal-preview-view",
@@ -188,6 +188,8 @@
   },
   "active": "bf867c954c8c52c8",
   "lastOpenFiles": [
+    "DATASETSCARLOS/Shoe prices.csv",
+    "DATASETSCARLOS",
     "Jeronimo.md",
     "README.md",
     "Lospibe",
@@ -228,7 +230,6 @@
     "sesiones/20260205_sesion_4/README.md",
     "sesiones/20260201_sesion_3/README.md",
     "proyectos/de la observacion al dato",
-    "proyectos/agasso.Uf7xnXZo.mp4.part",
     "proyectos/happiness.png",
     "proyectos/cine.png",
     "proyectos/proyecto.md",
