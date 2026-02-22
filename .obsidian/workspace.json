@@ -6,6 +6,7 @@
       {
         "id": "0294745504c79b62",
         "type": "tabs",
+        "dimension": 64.91228070175438,
         "children": [
           {
             "id": "bf867c954c8c52c8",
@@ -24,11 +25,12 @@
         ]
       },
       {
-        "id": "8571fb03112cee68",
+        "id": "31e7d7fbdce1126a",
         "type": "tabs",
+        "dimension": 35.08771929824561,
         "children": [
           {
-            "id": "4c585b53613c2985",
+            "id": "70a9660b973bde61",
             "type": "leaf",
             "state": {
               "type": "reveal-preview-view",
@@ -188,18 +190,18 @@
   },
   "active": "bf867c954c8c52c8",
   "lastOpenFiles": [
-    "Jeronimo.md",
-    "README.md",
-    "Lospibe",
-    "Assets/Grasshoppertree.png",
     "Assets/Grasshopperaudio.png",
+    "Untitled",
+    "Assets/Grasshoppertree.png",
+    "README.md",
+    "Jeronimo.md",
+    "Lospibe",
     "Assets",
     "Nueva carpeta",
     "PRESENTACION LUNES 2.md",
     "Untitled.base",
     "PRESENTACION.md",
     "Screenshot.md",
-    "Untitled",
     "Screenshot 2026-02-02 at 16.06.45.png",
     "Screenshot 2026-02-02 at 16.07.32.png",
     "Screenshot 2026-02-02 at 16.08.14 1.png",
