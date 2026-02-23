@@ -23,9 +23,20 @@ https://opendata-ajuntament.barcelona.cat/data/en/dataset/punts-informacio-turis
 
 Crear data set a partir de este informe https://observatoriturisme.barcelona/en/destination-barcelona-tourism-activity-latest-data/
 
+Scrap de twiter con palabras como skate y barcelona en el mismo tweet
+(hacer un scrip para sacar sentimientos de los tweets)
+
+
 **Projectos de referencia**
 
 Gryroscopio y accelerometro para crear visualizaciones de la tabla de skate: https://www.design-io.com/projects/skataviz
+
+
+**Ideas:**
+
+Dependiendo de la intensidad de los sonidos hacer diferentes haz de luces con un producto fisico.
+
+Hacer un mapping de datasets de turismo y tiempo para modificar una animacion de x tiempo de un skater 
 
 
    
