@@ -23,6 +23,9 @@ https://opendata-ajuntament.barcelona.cat/data/en/dataset/punts-informacio-turis
 
 Crear data set a partir de este informe https://observatoriturisme.barcelona/en/destination-barcelona-tourism-activity-latest-data/
 
+**Projectos de referencia**
+
+Gryroscopio y accelerometro para crear visualizaciones de la tabla de skate: https://www.design-io.com/projects/skataviz
 
 
    
