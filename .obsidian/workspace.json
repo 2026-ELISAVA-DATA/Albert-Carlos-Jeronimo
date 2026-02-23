@@ -6,7 +6,6 @@
       {
         "id": "0294745504c79b62",
         "type": "tabs",
-        "dimension": 64.91228070175438,
         "children": [
           {
             "id": "bf867c954c8c52c8",
@@ -20,23 +19,6 @@
               },
               "icon": "lucide-file",
               "title": "README"
-            }
-          }
-        ]
-      },
-      {
-        "id": "31e7d7fbdce1126a",
-        "type": "tabs",
-        "dimension": 35.08771929824561,
-        "children": [
-          {
-            "id": "70a9660b973bde61",
-            "type": "leaf",
-            "state": {
-              "type": "reveal-preview-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Slide Preview"
             }
           }
         ]
