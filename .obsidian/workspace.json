@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Assets/Creación de app.md",
+                "file": "Assets/App.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Creación de app"
+              "title": "App"
             }
           }
         ]
@@ -191,12 +191,12 @@
   "active": "bf867c954c8c52c8",
   "lastOpenFiles": [
     "Assets/videoModelomacba.mp4",
-    "Assets/UI MORPHSOUND 1.png",
     "Assets/UIMORPHSOUND.png",
-    "UIMORPHSOUND.png",
-    "Assets/Creación de app.md",
-    "Assets/Grasshopperaudio.png",
     "Assets/Grasshoppertree.png",
+    "Assets/Grasshopperaudio.png",
+    "Assets/App.md",
+    "Assets/UI MORPHSOUND 1.png",
+    "UIMORPHSOUND.png",
     "Assets/video Modelo macba.mp4",
     "Assets/Macba animacion deforma agua.mp4",
     "video Modelo macba 1.mp4",
@@ -212,7 +212,6 @@
     "Jeronimo.md",
     "DATASETSCARLOS/Shoe prices.csv",
     "DATASETSCARLOS/practicasesion4.ipynb",
-    "DATASETSCARLOS",
     "PRESENTACION LUNES 2.md",
     "PRESENTACION.md",
     "Screenshot.md",
