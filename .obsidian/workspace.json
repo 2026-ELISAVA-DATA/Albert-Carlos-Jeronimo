@@ -6,10 +6,7 @@
       {
         "id": "0294745504c79b62",
         "type": "tabs",
-<<<<<<< HEAD
         "dimension": 50,
-=======
->>>>>>> 78a6678a866a4ec2652e685250dfd69a86f8ac2f
         "children": [
           {
             "id": "bf867c954c8c52c8",
@@ -17,29 +14,13 @@
             "state": {
               "type": "image",
               "state": {
-                "file": "Assets/Grasshopperaudio.png"
+                "file": "Assets/Grasshoppertree.png"
               },
               "icon": "lucide-image",
-              "title": "Grasshopperaudio"
-            }
-          },
-          {
-            "id": "aeacbfb38f912771",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Assets/App Morphsound.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "App Morphsound"
+              "title": "Grasshoppertree"
             }
           }
-<<<<<<< HEAD
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "3899be012a6e4a0b",
@@ -56,8 +37,6 @@
               "title": "Slide Preview"
             }
           }
-=======
->>>>>>> 78a6678a866a4ec2652e685250dfd69a86f8ac2f
         ]
       }
     ],
@@ -207,27 +186,28 @@
       "slides-extended:Show Slide Preview": false
     }
   },
-  "active": "aeacbfb38f912771",
+  "active": "bf867c954c8c52c8",
   "lastOpenFiles": [
     "Assets/UI MORPHSOUND 1.png",
-    "Assets/videaso.mp4",
-    "videaso.mp4",
-    "UI MORPHSOUND 1.png",
-    "Assets/Grasshoppertree.png",
+    "Assets/video Modelo macba.mp4",
+    "Assets/Macba animacion deforma agua.mp4",
+    "video Modelo macba 1.mp4",
+    "video Modelo macba.mp4",
     "UI MORPHSOUND.png",
-    "Assets/App Morphsound.md",
-    "morphsound-1771954844522 1.webm",
-    "Assets/UI MORPHSOUND.png",
     "Assets/Grasshopperaudio.png",
-    "README.md",
+    "Assets/Creación de app.md",
+    "Assets/Grasshoppertree.png",
+    "UI MORPHSOUND 1 1.png",
+    "UI MORPHSOUND 1.png",
+    "morphsound-1771954844522 1.webm",
     "morphsound-1771954844522.webm",
+    "videaso.mp4",
+    "Assets/UI MORPHSOUND.png",
+    "README.md",
     "Jeronimo.md",
     "DATASETSCARLOS/Shoe prices.csv",
     "DATASETSCARLOS/practicasesion4.ipynb",
     "DATASETSCARLOS",
-    "Untitled",
-    "Lospibe",
-    "Assets",
     "PRESENTACION LUNES 2.md",
     "PRESENTACION.md",
     "Screenshot.md",
@@ -235,7 +215,6 @@
     "Screenshot 2026-02-02 at 16.07.32.png",
     "Screenshot 2026-02-02 at 16.08.14 1.png",
     "Untitled.canvas",
-    "Screenshot 2026-02-02 at 16.08.14.png",
     "sesiones/20260129_sesion_2/MI_TITULO.md",
     "sesiones/20260129_sesion_2/README.md",
     "2026-01-29.md",
@@ -254,7 +233,6 @@
     "sesiones/20260226_sesion_6/README.md",
     "sesiones/20260225_sesion_5/README.md",
     "sesiones/20260205_sesion_4/README.md",
-    "sesiones/20260201_sesion_3/README.md",
-    "proyectos/happiness.png"
+    "sesiones/20260201_sesion_3/README.md"
   ]
 }
