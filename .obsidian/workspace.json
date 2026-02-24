@@ -12,12 +12,14 @@
             "id": "bf867c954c8c52c8",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Assets/Grasshoppertree.png"
+                "file": "Assets/Creación de app.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Grasshoppertree"
+              "icon": "lucide-file",
+              "title": "Creación de app"
             }
           }
         ]
@@ -188,15 +190,18 @@
   },
   "active": "bf867c954c8c52c8",
   "lastOpenFiles": [
+    "Assets/videoModelomacba.mp4",
     "Assets/UI MORPHSOUND 1.png",
+    "Assets/UIMORPHSOUND.png",
+    "UIMORPHSOUND.png",
+    "Assets/Creación de app.md",
+    "Assets/Grasshopperaudio.png",
+    "Assets/Grasshoppertree.png",
     "Assets/video Modelo macba.mp4",
     "Assets/Macba animacion deforma agua.mp4",
     "video Modelo macba 1.mp4",
     "video Modelo macba.mp4",
     "UI MORPHSOUND.png",
-    "Assets/Grasshopperaudio.png",
-    "Assets/Creación de app.md",
-    "Assets/Grasshoppertree.png",
     "UI MORPHSOUND 1 1.png",
     "UI MORPHSOUND 1.png",
     "morphsound-1771954844522 1.webm",
@@ -212,8 +217,6 @@
     "PRESENTACION.md",
     "Screenshot.md",
     "Screenshot 2026-02-02 at 16.06.45.png",
-    "Screenshot 2026-02-02 at 16.07.32.png",
-    "Screenshot 2026-02-02 at 16.08.14 1.png",
     "Untitled.canvas",
     "sesiones/20260129_sesion_2/MI_TITULO.md",
     "sesiones/20260129_sesion_2/README.md",
