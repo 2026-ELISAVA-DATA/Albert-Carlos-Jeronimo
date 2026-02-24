@@ -6,7 +6,10 @@
       {
         "id": "0294745504c79b62",
         "type": "tabs",
+<<<<<<< HEAD
         "dimension": 50,
+=======
+>>>>>>> 78a6678a866a4ec2652e685250dfd69a86f8ac2f
         "children": [
           {
             "id": "bf867c954c8c52c8",
@@ -34,6 +37,7 @@
               "title": "App Morphsound"
             }
           }
+<<<<<<< HEAD
         ],
         "currentTab": 1
       },
@@ -52,6 +56,8 @@
               "title": "Slide Preview"
             }
           }
+=======
+>>>>>>> 78a6678a866a4ec2652e685250dfd69a86f8ac2f
         ]
       }
     ],
