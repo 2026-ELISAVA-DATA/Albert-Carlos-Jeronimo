@@ -2,6 +2,8 @@
 
 Link al video creado en blender como primera toma de contacto: https://youtu.be/NWQ93IeQJHY
 
+Link a el screencast de el viewport con el audio reactive setup: https://youtu.be/Bgp9kNwHFvQ
+
 --
 
 Referentes de blender + audio:
