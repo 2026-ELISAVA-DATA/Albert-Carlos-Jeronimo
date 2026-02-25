@@ -4,6 +4,8 @@ Una de las estrategias de presentación del proyecto consiste en realizar un map
 
 A diferencia de un mapping arquitectónico convencional, que suele proyectarse sobre fachadas completas o volúmenes neutros, en este caso la proyección se sitúa sobre superficies que ya contienen huellas físicas del uso, es decir, marcas, desgastes y rayaduras producidas por años de práctica skate.
 
-Con el software *Mad Mapping* se ha podido realizar alguna prueba previa, para ver el alcance de este tipo de representación.
+Con el software *MadMapper* se ha podido realizar alguna prueba previa, para ver el alcance de este tipo de representación.
 
 ![[mapping diy.png]]
+![[Assets/macba partes.png]]
+![[Assets/ola monumento.jpg]]
