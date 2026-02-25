@@ -3,7 +3,9 @@
 Link al video creado en blender como primera toma de contacto: 
 
 Referentes de blender + audio:https://youtu.be/NWQ93IeQJHY
+--
 Link 1:https://www.youtube.com/watch?v=YOx9me2MnGA
+--
 Link 2:https://www.youtube.com/watch?v=l8RHRNZQEuE
 
 
