@@ -8,5 +8,6 @@ Con el software *MadMapper* se ha podido realizar alguna prueba previa, para ver
 
 
 ![MACBAPARTES](./MACBAPARTES.png)
-![OLAMONUMENTO](./OLAMONUMENTO.jpeg)
+
+
 ![videopruebamapping](./videopruebamapping.mp4)
