@@ -6,8 +6,8 @@ A diferencia de un mapping arquitectónico convencional, que suele proyectarse s
 
 Con el software *MadMapper* se ha podido realizar alguna prueba previa, para ver el alcance de este tipo de representación.
 
-![[MACBAPARTES.png]]
-![[OLAMONUMENTO.jpg]]
+
+![MACBAPARTES](./MACBAPARTES.png)
 
 
 ![videopruebamapping](./videopruebamapping.mp4)
