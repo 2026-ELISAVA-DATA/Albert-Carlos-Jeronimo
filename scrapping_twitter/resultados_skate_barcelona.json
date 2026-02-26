@@ -1,8 +1,438 @@
 [
   {
-    "titulo": "Ungravity Freestyle Company - Escuela,Club,Camps,Eventos,Parks de ...",
-    "url": "https://ungravityboard.com/",
-    "snippet": "Nuestra escuela de Skate, BMX, Scooter, Patinaje y Longboard te ofrece cursos en grupo, clases particulares, casales, campamentos, club y mucho más en Barcelona. Apúntate a una de nuestras actividades y/o cursos y disfruta de los deportes de deslizamiento con uno de nuestros monitores."
+    "titulo": "10 der besten Skatespots in Barcelona und wie man sie findet",
+    "url": "https://www.hostelworld.com/blog/de/10-der-besten-skatespots-in-barcelona-und-wie-man-sie-findet/",
+    "snippet": "Skateboarding in Barcelona is world-class. From iconic street skating to indoor parks and ramps, here are 10 of the best Barcelona skate spots for your trip"
+  },
+  {
+    "titulo": "Cruisin Barcelona: a [Cruiser] Skate spot Guide - Cruisin City",
+    "url": "https://cruisincity.com/barcelona-cruiser-skate-spot-guide/",
+    "snippet": "Barcelona - a skateboard paradise in many ways. A quick Google search of \"Barcelona skate spots\" will yield you numerous pages of spot guides and discussions about all the amazing spots the city has to offer. However, for many Cruisin City fans who skate cruisers..."
+  },
+  {
+    "titulo": "FTC Barcelona: POR FIN - YouTube",
+    "url": "https://www.youtube.com/watch?v=BFxGJM_sFUg",
+    "snippet": "Subscribe to our YouTube channel here: https://www.youtube.com/channel/UCTuYNudPxr5rAatvZg8ZndgVideo by Yoryo, Roger Gonzalez and Dani Quintero. Featuring Ma..."
+  },
+  {
+    "titulo": "Barcelona skate spots map - Dónde patinar en BCN? - La Skateosphere",
+    "url": "https://laskateosphere.com/es/barcelona-skate-spots-map-laskateopshere/",
+    "snippet": "Barcelona skate spots map, los mejores lugares donde patinar en Barcelona, en el mismo mapa para poder moverte rápidamente durante tus sesiones de skate."
+  },
+  {
+    "titulo": "10 dos melhores locais para andar de skate em Barcelona e como encontrá ...",
+    "url": "https://www.hostelworld.com/blog/pt/10-dos-melhores-locais-para-andar-de-skate-em-barcelona-e-como-encontr%C3%A1-los/",
+    "snippet": "O skate em Barcelona é de classe mundial. Desde o icónico skate de rua até aos parques e rampas interiores, aqui estão 10 dos melhores locais de skate de Barcelona para a sua viagem"
+  },
+  {
+    "titulo": "Amigos Skateshop | Barcelona",
+    "url": "https://www.facebook.com/amigosskateshop/",
+    "snippet": "Amigos Skateshop, Barcelona. 8,168 likes · 540 were here. AMIGOS SKATE SHOP C/ DOCTOR DOU 16 08001 BARCELONA ESPAÑA TELF:(0034)930178257"
+  },
+  {
+    "titulo": "Inicio - Snow & Skate Barcelona",
+    "url": "https://bcnsnowskate.bendywheels.com/",
+    "snippet": "Tu próxima aventura Todo para skate y snowboard en el corazón de Barcelona. Explorar ahora Pasión por el deslizamiento Ubicados en el corazón de Barcelona, ofrecemos productos y servicios especializados en skate y snowboard para todos los niveles. ¡Vive la experiencia al máximo!"
+  },
+  {
+    "titulo": "Skate Love Barcelona - Street Skate",
+    "url": "https://www.skatelovebcn.com/streetskate",
+    "snippet": "As co-organizer of RollTru Barcelona alongside Skate Love, he's been leading the iconic Street Skate in Barcelona for the past 3 years, a high-energy city ride made for experienced skaters who love to roll hard and fast. Catch Bart guiding the pack through the streets, turning the city into a playground. Let's ride!"
+  },
+  {
+    "titulo": "Skate Barcelona - Cursos y Extraescolares de skate",
+    "url": "https://www.maresmewaves.com/en/skate-barcelona-en/",
+    "snippet": "Aprende skate en Barcelona y alrrededores. Cursos y extraescolares de skate para niños y niñas. También cursos de skate para adultos en Barcelona."
+  },
+  {
+    "titulo": "Skateboarding Barcelona: Best Guide to the City's Best Spots",
+    "url": "https://www.bcn.travel/de/skateboarding-barcelona/",
+    "snippet": "Entdecken Sie die pulsierende Skateboard-Szene Barcelonas - von berühmten Spots wie dem MACBA bis hin zu versteckten Perlen, die für Skater aller Niveaus geeignet sind."
+  },
+  {
+    "titulo": "Skate Agora",
+    "url": "https://www.skateagora.com/",
+    "snippet": "Skate Agora cuenta con una academia de skate de referencia mundial. El diseño profesional de las instalaciones permite a los alumnos aprender skate con máxima seguridad y eficacia, mientras se fomentan los valores de integración. Puede acoger una amplia variedad de eventos, desde competiciones internacionales a festivales de música."
+  },
+  {
+    "titulo": "L'Estel Skates - Premium Skates Factory",
+    "url": "https://www.lestelskates.com/es/",
+    "snippet": "L'Estel Skates tienda premium física y online de patinaje artístico, hockey y Roller skate en Barcelona"
+  },
+  {
+    "titulo": "Skateparks in Barcelona: where the city turns into an urban skating ...",
+    "url": "https://blog.holabarcelona.com/en/love-barcelona/skateparks-barcelona-where-city-turns-urban-skating-circuit",
+    "snippet": "Barcelona is a city that offers many opportunities for skateboarding and other urban sports enthusiasts. With skateparks like those in Mar Bella, Zona Universitària, and Fòrum, the city becomes a vast circuit where you can practice sports in a free and creative way."
+  },
+  {
+    "titulo": "Skate Love Barcelona 2 | Barcelona",
+    "url": "https://www.facebook.com/skatelovebcn2/",
+    "snippet": "Skate Love Barcelona 2, Barcelona. 397 likes. International Skate Music Festival Sept. 11-14, 2025 | Get your tickets! ️☀️ (Original page is missing in Meta hell )"
+  },
+  {
+    "titulo": "Les meilleurs skateparks de Barcelone ! - A la une",
+    "url": "https://to-barcelona.com/blog/les-meilleurs-skateparks-de-barcelone/",
+    "snippet": "Barcelone, ville numéro un du skate dans le monde, regroupe de nombreux spots pour rider. Dans cet article, on vous dévoile les meilleurs !"
+  },
+  {
+    "titulo": "Las mejores tiendas de skate en Barcelona",
+    "url": "https://www.salir.com/las-mejores-tiendas-de-skate-en-barcelona-art-2800.html",
+    "snippet": "Kaina Skate Shop es una de las mejores tiendas de skate en Barcelona, ya que ofrecen sus servicios desde hace más de 10 años. El equipo de trabajadores se compromete a asesorarte para comprar el skateboard que mejor encaja contigo, fijándose en la calidad y también en el presupuesto que tienes."
+  },
+  {
+    "titulo": "Barcelona, a meca europeia do Skate - 360meridianos",
+    "url": "https://www.360meridianos.com/barcelona-skate/",
+    "snippet": "Descubra porque Barcelona é considerada uma das principais cidades para a prática de skate na Europa e conheça lugares para andar de skate em Barcelona."
+  },
+  {
+    "titulo": "Barcelona Skate Shops | The Skateboard Shop Directory",
+    "url": "https://elskateshop.com/skateboard-shops/barcelona-skate-shops/",
+    "snippet": "Barcelona - a.k.a. - skateboarding paradise, has plenty of shops around town. And the best part is, the skate shop owners of Barcelona are probably the nicest people in the city."
+  },
+  {
+    "titulo": "Exploring the Legendary MACBA: The Heart of Skateboarding in Barcelona",
+    "url": "https://skatesided.com/exploring-the-legendary-macba-the-heart-of-skateboarding-in-barcelona/",
+    "snippet": "It has been featured in countless skate videos, and many of the world's top professional skaters have left their mark on the spot. The unique architecture of the plaza, combined with the urban backdrop of Barcelona, has made MACBA a favorite for filmmakers and photographers looking to capture the essence of street skating."
+  },
+  {
+    "titulo": "Sports | Extreme Barcelona | September 13-15",
+    "url": "https://extremebarcelona.com/en/sports/",
+    "snippet": "Here you will find all the disciplines that will be practiced during the event Extreme Barcelona 2024."
+  },
+  {
+    "titulo": "Al Carrer Skate Co. | Barcelona",
+    "url": "https://www.facebook.com/alcarrerskate/",
+    "snippet": "Al Carrer Skate Co., Barcelona. 637 likes · 5 talking about this · 747 were here. P R E S E R V E L A C U L T U R A."
+  },
+  {
+    "titulo": "Inline Skate / Rollerblade Rental in Barcelona",
+    "url": "https://www.inercia.com/en/skate-rental",
+    "snippet": "Barcelona and online shop where to buy, rent and repair fitness skates, freeskate, aggressive, hockey, children, speed, slalom, initiation, ice skates, quads ..."
+  },
+  {
+    "titulo": "Barcelona Skate Park - Sant Jordi Hostels",
+    "url": "https://www.santjordihostels.com/mar-bella-skate-park-barcelona/",
+    "snippet": "A Professional Quality Skate Park in Barcelona! A free public skate park on the Beach in Barcelona, the Mar Bella Skate Park is a professionally designed, public skate park for locals and tourists alike."
+  },
+  {
+    "titulo": "Roots Skateshop (@rootsbcn) • Instagram photos and videos",
+    "url": "https://www.instagram.com/rootsbcn/",
+    "snippet": "6,672 Followers, 407 Following, 1,222 Posts - Roots Skateshop (@rootsbcn) on Instagram: \"De Lunes a Sábado. 11:00h a 20.00h Since 2016.\""
+  },
+  {
+    "titulo": "Las 18 mejores tiendas de skate en Barcelona",
+    "url": "https://barcelona.place/skateshop/",
+    "snippet": "Si eres un amante del skate y estás en Barcelona, estás en el lugar adecuado. Con más de tiendas de skate en la ciudad, encontrarás todo lo que necesitas para"
+  },
+  {
+    "titulo": "INDOORPARK · Ungravity Freestyle Company",
+    "url": "https://ungravityboard.com/es/indoorpark/index/",
+    "snippet": "THE UNGRAVITY ACADEMY: SKATEPARK INDOOR BARCELONA Nace the Ungravity Academy, el primer skatepark indoor en Barcelona creado especialmente para que puedas practicar, aprender y disfrutar de tu deporte favorito: skate, scooter, BMX y patinaje sea cual sea tu nivel."
+  },
+  {
+    "titulo": "The Thriving Skateboarding Scene in Barcelona: A European Skate Mecca",
+    "url": "https://whiteboardmeeting.com/the-thriving-skateboarding-scene-in-barcelona-a-european-skate-mecca/",
+    "snippet": "The impact of Barcelona's skateboarding scene extends beyond the city's borders. Skateboarding videos shot in Barcelona influence skaters worldwide, leading them to dream of one day visiting the Catalan capital. The city's appeal is not solely due to its skate spots but also its atmosphere of adventure, freedom, and endless potential."
+  },
+  {
+    "titulo": "Sessions | Skate Love Festival",
+    "url": "https://www.skatelovebcn.com/sessions",
+    "snippet": "Based in Barcelona, Marcela is a skater and teacher specializing in rollerdance, artistic skating, and rollerfitness. Her sessions focus on fluidity, control, and expression—inviting skaters to explore movement with intention and flow."
+  },
+  {
+    "titulo": "Scooter, Bike & Inline Skates Rental in Barcelona | RSB Olympic Village",
+    "url": "https://rentalscooterbarcelona.com/",
+    "snippet": "Rent scooters, bikes and inline skates in Barcelona. RSB Rental Scooter Barcelona is located in Olympic Village near Barceloneta Beach. Easy pickup, flexible rentals and great Google reviews."
+  },
+  {
+    "titulo": "Clases de Skate Barcelona - Desde 17€/h",
+    "url": "https://www.superprof.es/clases/skate/barcelona/",
+    "snippet": "☞ Clases de skate al mejor precio. Aprende a patinar con un skater profesional en Barcelona. Clases para niños y adultos, reserva tu clase en 3 clics."
+  },
+  {
+    "titulo": "Así será el gran evento de skate que llenará Barcelona de riders ...",
+    "url": "https://www.larazon.es/cataluna/barcelona/asi-sera-gran-evento-skate-que-llenara-barcelona-riders-adrenalina-cultura-urbana-este-sabado_20250425680b38c85d71dc778a8e79a6.html",
+    "snippet": "Barcelona, capital europea del skate Barcelona no solo acoge el evento de Red Bull Spot Check 2025, también lo protagoniza."
+  },
+  {
+    "titulo": "Home - Escola Oficial Patinatge Inline",
+    "url": "https://escolapatinatge.com/en/",
+    "snippet": "Skating lessons in Barcelona. Learn to skate at the best skating school. Courses for all ages and levels."
+  },
+  {
+    "titulo": "The Barcelona skate scene overview",
+    "url": "https://www.livetheworld.com/post/the-barcelona-skate-scene-overview-hjfh",
+    "snippet": "I want to help you know where the different places that you see in the videos are, and how the Barcelona skate scene looks today. Here you have it, the official overview of the skate-scene in Barcelona."
+  },
+  {
+    "titulo": "COYOTE SKATE SCHOOL - Skate School, Surf Skate School, Escuela de Skate ...",
+    "url": "https://coyoteskateschool.org/",
+    "snippet": "Coyote Skate School é la prima scuola di skateboarding di Milano e La Escuela de Skate de Barcelona."
+  },
+  {
+    "titulo": "Skating lessons in Barcelona - Escola Oficial Patinatge Inline",
+    "url": "https://escolapatinatge.com/en/skating-lessons-in-barcelona/",
+    "snippet": "As the first skating school in Barcelona, the Official Inline Skating School offers probably the widest range of skating classes, courses and activities in Spain."
+  },
+  {
+    "titulo": "Barcelona Skate Park - Sant Jordi Hostels",
+    "url": "https://www.santjordihostels.com/barcelona-skate-park/",
+    "snippet": "Barcelona has, for a long time, been the mecca of skateboarding in Europe and skaters from around the world have been making pilgrimage to Barcelona ever since the European skate scene was born. Barcelona skate spots like, MACBA, Paralel, Universitat, and the Forum are regulars in the most popular skate videos."
+  },
+  {
+    "titulo": "Skate Camp Barcelona",
+    "url": "https://www.skatinginstruction.com/store/GKA4LbTN",
+    "snippet": "Skate Camp Barcelona 2026 is a must-see event for skating enthusiasts of all levels. Whether you are a beginner or an advanced skater, our urban skate camp is for you!"
+  },
+  {
+    "titulo": "Skating MACBA & The Streets of Barcelona - YouTube",
+    "url": "https://www.youtube.com/watch?v=TXvR-eZ2ZRU",
+    "snippet": "More worldwide skate adventures here! http://win.gs/SkateDaWorldKick it with the locals in Barcelona as we go street-level in the capital city of skateboard..."
+  },
+  {
+    "titulo": "Barcelona, la mejor ciudad del mundo para hacer skate",
+    "url": "https://viajar.elperiodico.com/planes/barcelona-mejor-ciudad-mundo-skate-99325881",
+    "snippet": "La aparición de Internet, especialmente a través de plataformas como Youtube, contribuyó enormemente a difundir la escena skate en la urbe. Además, la elección de Barcelona como sede de los X Games en 2013 la catapultó aún más al escenario internacional del deporte extremo."
+  },
+  {
+    "titulo": "Les millors pistes d'skate de Barcelona",
+    "url": "https://beteve.cat/agenda/skaters-les-millors-pistes-a-barcelona-i-a-prop/",
+    "snippet": "On anar amb Skate a Barcelona? Fem una selecció de les millors pistes d'skate de Barcelona perquè trobis la que tens més a prop de casa!"
+  },
+  {
+    "titulo": "Skate Love Music Festival at Skate Love Barcelona, Barcelona",
+    "url": "https://ra.co/events/1988285",
+    "snippet": "Skate Love Music Festival is more than just a festival—it's a global celebration of music, dancing and roller skating. Held at a beach event location in Barcelona, next to the Mar Bella Sports Complex, this one-of-a-kind festival brings together dancers, roller skaters and music lovers from all over the world to groove, roll, and connect."
+  },
+  {
+    "titulo": "Skate Love Barcelona vuelve a la Mar Bella para cuatro días de patinaje ...",
+    "url": "https://www.catacultural.com/skate-love-barcelona-vuelve-a-la-mar-bella-para-cuatro-dias-de-patinaje-baile-y-musica-en-su-tan-esperado-espacio-skateland-su-sede-en-barcelona-14-15-16-y-17-de-septiembre/",
+    "snippet": "Skate Love Barcelona vuelve a la Mar Bella para cuatro días de patinaje, baile y música, en su tan esperado espacio \"SkateLand\", su sede en Barcelona 14, 15, 16 y 17 de septiembre"
+  },
+  {
+    "titulo": "Skate Hostel Barcelona - Sant Jordi Hostels",
+    "url": "https://www.santjordihostels.com/skate-hostel-barcelona/",
+    "snippet": "What makes a skate hostel different from any other hostel and why is Sant Jordi Hostel Sagrada Familia the best hostel for skateboarders in Barcelona? First, we offer some of the best facilities and services of any hostel in Barcelona, maybe even the world. Second, we are totally dedicated to the Barcelona Skateboarding scene."
+  },
+  {
+    "titulo": "Barcelona Skate Parks",
+    "url": "https://www.whatbarcelona.com/barcelona-skate.html",
+    "snippet": "The most significant recent boom of any Barcelona sport has been skate boarding. Often referred to as the \"Skate Capital of the World,\" Barcelona is full of plazas and parks perfect for meeting other like-minded skaters and perfecting new and old tricks. Most of the popular spots are in the neighborhood of El Raval, such as the Plaça de Universitat or in front of the Museum of Contemporary ..."
+  },
+  {
+    "titulo": "Skateboard Barcelona",
+    "url": "https://www.whatbarcelona.com/guiabarcelona/skateboard-barcelona.html",
+    "snippet": "A menudo conocida como \"la Capital Mundial del Skate\", Barcelona está llena de plazas y parques perfectos para encontrarse con otros amantes del skate y perfeccionar trucos nuevos y viejos. Algunos de los lugares más conocidos están en El Raval, tales como la Plaça de la Universitat o frente al MACBA. Como alternativa, puedes comprar un pase mensual para las pistas de Skate del Carrer ..."
+  },
+  {
+    "titulo": "Barcelona is Still a Magic Mecca for Skateboarders",
+    "url": "https://www.skateboarding.com/news/barcelonas-magic-mecca-for-skateboarders",
+    "snippet": "The new Lakai team continues to grow, adding new talent, and this time the crew took on Barcelona, Spain—a golden well of skate spots for decades."
+  },
+  {
+    "titulo": "Skate Love Barcelona | Things to do in Barcelona",
+    "url": "https://www.timeout.com/barcelona/things-to-do/skate-love-barcelona",
+    "snippet": "If you're a fan of roller skating, you can't miss this third edition of Skate Love Barcelona on September 14 and 15, celebrating skating on wheels with a festiv"
+  },
+  {
+    "titulo": "Rent a Board in Barcelona | Sk8Tpy",
+    "url": "https://www.sk8tpy.com/product/rent-skate-longboard-barcelona",
+    "snippet": "We can customize Street skates, surfskates, longboards (dancing and drop through) and bring it to your hotel or to a meeting point in Barcelona. Rents for 1 day only are to be picking up in Gracia neighborhood, if you want to rent only for one day we have a selection of streetskates, you can combine it with a discounted street skate class in to."
+  },
+  {
+    "titulo": "SKATE Barcelona with Jesus Fernandez Pt. 1 - YouTube",
+    "url": "https://www.youtube.com/watch?v=brbdi0Aowsc",
+    "snippet": "You'll discover some of the best skate, chill, gear, food, and beer spots as you get the vibe of a new city."
+  },
+  {
+    "titulo": "Barcelona Born Skateplaza — SKATE ARCHITECTS",
+    "url": "http://www.skatearchitects.com/barcelona-skateplaza-born-ciutadella-ciutat-vella/",
+    "snippet": "Granite Skateplaza in Parc de la Ciutadella, Barcelona. Born Skateplaza: A new public skatespot for the city."
+  },
+  {
+    "titulo": "Doctown Escuela de Skate & Skate Camp",
+    "url": "https://doctown.es/",
+    "snippet": "Doctown es la Escuela Nacional de Skate de referencia. Aprende a patinar con nuestro equipo de skaters profesionales y en verano disfruta de los campamentos!"
+  },
+  {
+    "titulo": "Guía del skater en Barcelona: Los mejores Skate Parks",
+    "url": "https://blog.apartmentbarcelona.com/es/skateboarders-guia-bcn/",
+    "snippet": "¿Estás de vacaciones en Barcelona y quieres moverte? ¿Por qué no probar el skate? En la capital catalana hay un montón de spots para skate en cada esquina, listos para explorar. Barcelona es famosa por su ambiente relajado, su buen tiempo y la amabilidad de sus gentes. ¡Todos estos factores la convierten en el lugar"
+  },
+  {
+    "titulo": "Ruta de skateparks en Barcelona - Nomadizers",
+    "url": "https://www.nomadizers.com/nomadizers-speedroute/que-hacer-en/Barcelona/Ruta-de-skateparks-en-Barcelona/42776/",
+    "snippet": "Si lo tuyo es ir en skate, no puedes perderte nuestra ruta de skateparks por Barcelona. Se trata de una ruta para disfrutar de los encantos de la ciudad y la playa. Son muchos los que disfrutan practicando skate, así que este plan te ayudará a salir de la rutina solo o con tus amigos y saber qué hacer en Barcelona. Si quieres un plan tranquilo y disfrutar de los colores del cielo de la ..."
+  },
+  {
+    "titulo": "RUFUS MACBA - Rufus Macba",
+    "url": "https://rufusmacba.com/",
+    "snippet": "Rufus Macba Offers, new products and launching. Directly to your device screen"
+  },
+  {
+    "titulo": "THE BEST 10 SKATE SHOPS in BARCELONA, SPAIN - Updated 2026 - Hours - Yelp",
+    "url": "https://www.yelp.com/search?cflt=skateshops&find_loc=Barcelona",
+    "snippet": "Best Skate Shops in Barcelona, Spain - Last Updated January 2026 - State BCN, Petshop Skateboards Barcelona Skateshop, Amigos Skate Shop, Wood Box, City00, Rollergrind360, Kids On Wheels, Inercia, Al Carrer, Furtivo Skateboarding"
+  },
+  {
+    "titulo": "Barcelona Skateboarding (@barcelona_skateboarding) • Instagram photos ...",
+    "url": "https://www.instagram.com/barcelona_skateboarding/",
+    "snippet": "50K Followers, 420 Following, 5,313 Posts - Barcelona Skateboarding (@barcelona_skateboarding) on Instagram: \"\""
+  },
+  {
+    "titulo": "Barcelona Espana Lecciones De Skateboard Skateboard Lessons - GOSKATE ...",
+    "url": "https://goskate.com/go/barcelona-espana-lecciones-de-skateboard-skateboard-lessons",
+    "snippet": "1-on-1 Skateboard Lessons in Barcelona Espana Lecciones De Skateboard. We Come To You! Be taught how to skateboard in only four sessions. Beginner skateboard classes for kids & adults, camps, parties, and more.."
+  },
+  {
+    "titulo": "Great Skateboarding Cities of the Summer: A History of Barcelona, Spain",
+    "url": "https://www.youtube.com/watch?v=3lVITwmE2SE",
+    "snippet": "Tyler Surrey, Enrique Lorenzo, Jose Roura, Anthony Claravall, Thomas Winkle and more break down the rich history of Spain's skateboarding Mecca. From the cla..."
+  },
+  {
+    "titulo": "Top 3 Skateparks para Principiantes en Barcelona | Adrenaline Atlas",
+    "url": "https://www.adrenalineatlas.com/blog/i/88224953/top-3-skateparks-en-barcelona-ideales-para-principiantes-guia-de-adrenaline-atlas",
+    "snippet": "Descubre los 3 mejores skateparks en Barcelona para principiantes. Spots seguros, tranquilos y perfectos para tus primeros trucos. Guía completa en Adrenaline Atlas."
+  },
+  {
+    "titulo": "Barcelona Skate School - COYOTE SKATE SCHOOL",
+    "url": "https://coyoteskateschool.org/tag/barcelona-skate-school/",
+    "snippet": "En la Escuela de Skateboarding más clásica de Barcelona estamos encantad@s de inaugurar la nueva temporada de Skate extraescolar y lo hacemos con muchísima ilusión. El curso de clases de skateboarding extraescolar 2024-2025 en Barcelona ya está en marcha para que te puedas unir a nosotr@s cuando lo desees."
+  },
+  {
+    "titulo": "Los Mejores Skateparks de Barcelona",
+    "url": "https://liveskate.com/skateparks/barcelona-espana/",
+    "snippet": "Encuentra los mejores skate spots y skateparks en Barcelona (Cataluña - España): MACBA, Skatepark Forum, Marbella y muchos más"
+  },
+  {
+    "titulo": "Ice Rink - FC Barcelona Official Channel",
+    "url": "https://www.fcbarcelona.com/en/tickets/ice-rink",
+    "snippet": "If you enjoy excitement and want to have fun with your family, partner or friends, come and experience the top ice skating rink in Barcelona."
+  },
+  {
+    "titulo": "Las mejores tiendas de skate de Barcelona | ShBarcelona",
+    "url": "https://www.shbarcelona.es/blog/es/skate-barcelona-3/",
+    "snippet": "Se trata de Bodo Barcelona (Carrer de la Ribera 6), donde podrás encontrar tablas pequeñas por 47 euros. Artículo relacionado: Clases de skate en Barcelona Tiendas de skate en el Eixample Otra de las mejores tiendas de skate en Barcelona las encontrarás en el Eixample, la zona que rodea al Arco del Triunfo y que toca el parque de la Ciudadela."
+  },
+  {
+    "titulo": "NEVERMIND BAR, Barcelona - 2026 Reviews & Information",
+    "url": "https://www.tripadvisor.co.uk/Restaurant_Review-g187497-d1596756-Reviews-Nevermind_Bar-Barcelona_Catalonia.html",
+    "snippet": "Nevermind Bar, Barcelona: See 296 unbiased reviews of Nevermind Bar, rated 4.4 of 5 on Tripadvisor and ranked #914 of 9,194 restaurants in Barcelona."
+  },
+  {
+    "titulo": "Skatia - Tu escuela de skate en Cataluña - Skatia",
+    "url": "https://skatia.es/",
+    "snippet": "La escuela de Skate más grande de Cataluña. Encuéntra la sede más cercana, aprende a patinar con un equipo dedicado a tu progreso y disfrute"
+  },
+  {
+    "titulo": "Super fast skating through Barcelona on F4 Inline skates.",
+    "url": "https://www.youtube.com/watch?v=qJBEMesn4_M",
+    "snippet": "We consider this skate to be the most comfortable skate on the market, with comfortable lining and a wide fit, we expect it to be one of the most popular skates of 2018."
+  },
+  {
+    "titulo": "6 mejores SKATEPARK en Barcelona",
+    "url": "https://www.salir.com/los-mejores-skatepark-en-barcelona-498.html",
+    "snippet": "Barcelona es considerada como una ciudad referencia en el mundo del skateboard y de otros deportes de ruedas. En la ciudad Condal existen muchos spots que, debido a su infraestructura, se han convertido en lugares ideales para practicar skateboarding (y otros deportes)."
+  },
+  {
+    "titulo": "Visit Besos bumps skatepark in Barcelona | Live the World",
+    "url": "https://www.livetheworld.com/activities/spania/besos-bumps-skatepark",
+    "snippet": "So, if you're a skateboarding enthusiast visiting Barcelona, make sure to add Besos Bumps Skatepark to your itinerary. Experience the thrill of skating in the birthplace of Barcelona's skateboarding scene, and immerse yourself in the vibrant skate culture that surrounds this iconic spot."
+  },
+  {
+    "titulo": "Coyote Skate School-barcelona Escuela De Skate Del Poblenou",
+    "url": "https://coyoteskateschool.org/escuela-skate-barcelona/",
+    "snippet": "Cursos y clases particulares de skateboard y surf skate para niños y adultos en Barcelona. Somos la Escuela de Skate del Poblenou, pioneros en la enseñanza de skateboarding en Barcelona."
+  },
+  {
+    "titulo": "Skate Barcelona - Cursos y Extraescolares de skate",
+    "url": "https://www.maresmewaves.com/skate-barcelona/",
+    "snippet": "Una de nuestras pasiones es el skate y por ello nuestra escuela de skate en Barcelona lo que quiere transmitir ese esa pasión a todos y todas las personas que hagan clases, cursos y extraescolares con nosotros."
+  },
+  {
+    "titulo": "AMIGOS Skateshop online | skate shop | tienda de skate : tablas ...",
+    "url": "https://www.amigosskateshop.com/es/",
+    "snippet": "AMIGOS Skateshop = ¡la mejor opción al mejor precio para comprar tablas de skate, zapatillas de skate y ropa de skate!"
+  },
+  {
+    "titulo": "Get your Tickets | Skate Love Festival 2025",
+    "url": "https://www.skatelovebcn.com/tickets",
+    "snippet": "Get your tickets for the 9th Skate Love Festival, September 11-14 at CEM Mar Bella, Barcelona. Don't miss out!"
+  },
+  {
+    "titulo": "Rent a Skateboard Barcelona - Coyote Skate School",
+    "url": "https://coyoteskateschool.org/rent-a-skateboard-barcelona/",
+    "snippet": "We have skateboard for rent in Barcelona. Skateboardi in affitto. Alquiler de skate en Barcelona."
+  },
+  {
+    "titulo": "Skate | Deportes Extreme Barcelona | 15 al 17 de Septiembre",
+    "url": "https://extremebarcelona.com/en/sports/skate/",
+    "snippet": "A 40×15-meter skate plaza built especially for the occasion will be the battleground to crown the new Extreme Barcelona champions. Spanish skateboarding was the dominant force in the women's competition, as two of the three podium finishers from the previous edition were homegrown talents."
+  },
+  {
+    "titulo": "RollerGrind360",
+    "url": "https://rollergrind360.com/en/",
+    "snippet": "Skate Shop in Barcelona | RollerGrind360 | Freeskate, Slalom, Aggressive Skates | Expert Advice | High Quality and Exceptional Service."
+  },
+  {
+    "titulo": "Skate en Barcelona",
+    "url": "https://www.timeout.es/barcelona/es/que-hacer/skate-en-barcelona",
+    "snippet": "¿Por qué Barcelona es la meca europea del skate? Bowls, skateparks, bares, hoteles, tiendas, el clima, la arquitectura… ¡Barcelona es ciudad de peregrinación para los skaters!"
+  },
+  {
+    "titulo": "YouTube",
+    "url": "https://www.youtube.com/watch?v=83xD97c8xro",
+    "snippet": "This Is Mexico City where the locals skaters hold a skate competition. This was in memories of a local hero who lived in the park and recently passed away. T..."
+  },
+  {
+    "titulo": "The Skate Hub: El mejor skatepark indoor de Barcelona",
+    "url": "https://liveskate.com/skateparks/barcelona-theskatehub/",
+    "snippet": "The Skate Hub es para nosotros el skatepark indoor mas completo en Barcelona. Con más de 1.400 metros cuadrados, este skatepark indoor ofrece instalaciones de primer nivel y actividades para todos, desde principiantes hasta profesionales."
+  },
+  {
+    "titulo": "Los mejores skateparks de Barcelona",
+    "url": "https://dondego.es/barcelona/list/los-mejores-skateparks-de/",
+    "snippet": "presentamos una lista de los mejores skateparks de Barcelona, cada uno con su propio carácter único, desafiantes obstáculos y comunidades acogedoras. Prepárate para descubrir tu nuevo spot favorito en esta ciudad que respira skate por todos sus poros."
+  },
+  {
+    "titulo": "Inercia.com - Tienda de patines en linea, longboard, patinetes y skate ...",
+    "url": "https://www.inercia.com/",
+    "snippet": "Tienda online y en Barcelona donde comprar, alquilar y reparar patines de fitness, freeskate, agresivo, hockey, infantil, velocidad, slalom, iniciación, patines de ..."
+  },
+  {
+    "titulo": "Skating Outlet - Tienda Oulet de patines, skate, longboard y patinetes ...",
+    "url": "https://skating-outlet.com/",
+    "snippet": "La única tienda con chollos, ofertas y outlet en patines, skate, longboard y patinetes de Barcelona. Antes de ir a otra tienda, pasa por nuestro almacén."
+  },
+  {
+    "titulo": "Masterclasses | Skate Love Festival",
+    "url": "https://www.skatelovebcn.com/masterclasses",
+    "snippet": "Explore Skate Love Barcelona's masterclasses to enhance your skating skills and connect with a vibrant community of skate enthusiasts."
+  },
+  {
+    "titulo": "Mejores Skateparks en Barcelona | Mapa y Guía Completa 2025",
+    "url": "https://sk8spain.com/skatepark/de/barcelona",
+    "snippet": "Encuentra todos los skateparks en Barcelona: localizaciones, fotos, instalaciones y opiniones actualizadas. La guía definitiva para skaters en Barcelona"
+  },
+  {
+    "titulo": "Skateparks en Barcelona: donde la ciudad se convierte en un circuito de ...",
+    "url": "https://blog.holabarcelona.com/es/love-barcelona/skateparks-en-barcelona-donde-la-ciudad-se-convierte-en-un-circuito-de-patinaje",
+    "snippet": "Los skateparks en Barcelona son puntos de encuentro para jóvenes y adultos que quieren disfrutar del patinaje y el entrenamiento. Te invitamos a descubrir algunos de los mejores skateparks de la ciudad, donde la diversión y el movimiento en monopatín se fusionan en un ambiente vibrante. ¡Hola Barcelona te lleva!"
+  },
+  {
+    "titulo": "10 Best Skate Spots in Barcelona You Must Visit | Hostelworld",
+    "url": "https://www.hostelworld.com/blog/best-places-skating-barcelona/",
+    "snippet": "Discover Barcelona's best skate spots, from MACBA to Mar Bella Skatepark. Get tips, locations, and insider recommendations for skating in Barcelona!"
+  },
+  {
+    "titulo": "Barcelona Skateboarding 〜 The Insiders Guide",
+    "url": "https://barcelonanavigator.com/barcelona-skateboarding-guide/",
+    "snippet": "Barcelona is widely known as the top skateboarding city in the world and as a mecca for the sport. Discover the best skate spots, places to hang out and where to stay."
+  },
+  {
+    "titulo": "Barcelona skate spots map - Where to skate in BCN? - La Skateosphere",
+    "url": "https://laskateosphere.com/en/the-barcelona-skate-spots-map/",
+    "snippet": "Barcelona skate spots map, the best spots all grouped on the same map, to be able to move quickly during your roadtrip skate sessions."
   },
   {
     "titulo": "Los 8 mejores Skateparks de Barcelona",
@@ -15,14 +445,9 @@
     "snippet": "En State BCN, tu tienda skate en Barcelona, encontrarás tablas, ruedas y streetwear de marcas como Santa Cruz, Bones e Independent. ¡Envíos express!"
   },
   {
-    "titulo": "Get your Tickets | Skate Love Festival 2025 - Skate Love Barcelona",
-    "url": "https://www.skatelovebcn.com/tickets",
-    "snippet": "Get your tickets for the 9th Skate Love Festival, September 11-14 at CEM Mar Bella, Barcelona. Don't miss out!"
-  },
-  {
-    "titulo": "10 Best Skate Spots in Barcelona You Must Visit | Hostelworld",
-    "url": "https://www.hostelworld.com/blog/best-places-skating-barcelona/",
-    "snippet": "Discover Barcelona's best skate spots, from MACBA to Mar Bella Skatepark. Get tips, locations, and insider recommendations for skating in Barcelona!"
+    "titulo": "Clases de skate - The Skate Hub",
+    "url": "https://www.thesk8hub.com/",
+    "snippet": "The Skate Hub es un skatepark indoor situado en Hospitalet de Llobregat, Barcelona. Escuela de skateboarding y surfskate, realización de eventos y mucho más."
   },
   {
     "titulo": "Skateboarding Barcelona: Best Guide to the City's Best Spots",
@@ -30,9 +455,9 @@
     "snippet": "Sep 15, 2024Barcelona is a global hotspot for skateboarding, renowned for its skate-friendly urban architecture and vibrant street culture. The city's numerous parks and plazas attract both local skateboarders and international professionals, making it a dynamic hub of the sport."
   },
   {
-    "titulo": "Barcelona skate spots map - Where to skate in BCN? - La Skateosphere",
-    "url": "https://laskateosphere.com/en/the-barcelona-skate-spots-map/",
-    "snippet": "Barcelona skate spots map, the best spots all grouped on the same map, to be able to move quickly during your roadtrip skate sessions."
+    "titulo": "Best Barcelona Skatespots - Sant Jordi Hostels",
+    "url": "https://www.santjordihostels.com/best-barcelona-skatespots/",
+    "snippet": "Marbella - Barcelona Skatepark Located right on the waterfront of Mar bella Beach, this Barcelona Skate Park is a worthy place to visit. Mar Bella is all about carving and flow. Reminiscent of Venice beach, this ocean inspired skate park has three main zones - Street, Flow and Bowl."
   },
   {
     "titulo": "Barcelona Skateboarding Adventures: Discover the City's Best Spot",
@@ -40,13 +465,243 @@
     "snippet": "Capture the essence of Barcelona's skateboarding scene, from iconic spots to local legends—discover how this city shapes skaters worldwide."
   },
   {
-    "titulo": "Barcelona Skateboarding 〜 The Insiders Guide",
-    "url": "https://barcelonanavigator.com/barcelona-skateboarding-guide/",
-    "snippet": "Barcelona is widely known as the top skateboarding city in the world and as a mecca for the sport. Discover the best skate spots, places to hang out and where to stay."
+    "titulo": "DC Shoes® Skate Shoes & Snowboard Boots",
+    "url": "https://www.dcshoes.com/",
+    "snippet": "Drop in to the world of DC Shoes and discover the latest in Skate & Snowboard styles."
   },
   {
-    "titulo": "Best Barcelona Skatespots - Sant Jordi Hostels",
-    "url": "https://www.santjordihostels.com/best-barcelona-skatespots/",
-    "snippet": "Marbella - Barcelona Skatepark Located right on the waterfront of Mar bella Beach, this Barcelona Skate Park is a worthy place to visit. Mar Bella is all about carving and flow. Reminiscent of Venice beach, this ocean inspired skate park has three main zones - Street, Flow and Bowl."
+    "titulo": "Class weekend for @tweeks_gram stag/skate trip in Barcelona. First time ...",
+    "url": "https://www.facebook.com/reel/923826186711261/",
+    "snippet": "Class weekend for @tweeks_gram stag/skate trip in Barcelona. First time there for me and was well worth it with the crew #skate #skating #barcelona #barca #skatetrip"
+  },
+  {
+    "titulo": "Golden Skate - Your international resource for Figure Skating",
+    "url": "https://www.goldenskate.com/",
+    "snippet": "Founded in 1999, Golden Skate provides resources for the sport of figure skating worldwide. This includes interviews, features, videos, club listings, a discussion board and more."
+  },
+  {
+    "titulo": "SkeeeYeee at Skate Love Barcelona 2024 #rollerskater #rollerskate #rol ...",
+    "url": "https://www.tiktok.com/@foxi_roxi_skater/video/7479186961001942318",
+    "snippet": "41 Likes, TikTok video from Foxi Roxi (@foxi_roxi_skater): \"SkeeeYeee at Skate Love Barcelona 2024 #rollerskater #rollerskate #rollerskating #blackgirltravel #Barcelona #womenhistorymonth\". original sound - Foxi Roxi."
+  },
+  {
+    "titulo": "Skate Style on Steam",
+    "url": "https://store.steampowered.com/app/3862790/Skate_Style/",
+    "snippet": "Skate Style is a next-gen skateboarding game with high-end graphics, an advanced character creator, and a built-in animation editor. Skate iconic spots like Barcelona and Prague, create your style, and share it with friends. Enjoy precise dual stick controls for ultimate trick freedom."
+  },
+  {
+    "titulo": "YouTube",
+    "url": "https://www.youtube.com/shorts/obrbbProxrA",
+    "snippet": "@amco Barcelona Baby🇪🇸 #shorts #skateboarding #skate #skateboard #barcelona 15 Dislike"
+  },
+  {
+    "titulo": "How Many Skateboarders are There in the World",
+    "url": "https://www.spoliamag.com/how-many-skateboarders-are-there-in-the-world/",
+    "snippet": "Barcelona, in particular, is famous for its ideal infrastructure, and iconic spots including MACBA, Sants, Mar Bella beach, and Skate Agora make Barcelona a premier destination for skateboarders in Europe. Asia has seen some of the fastest growth in recent years."
+  },
+  {
+    "titulo": "Barcelona Skate Map",
+    "url": "https://barcelonaskatespots.wordpress.com/skate-map/",
+    "snippet": "This map is an attempt to accurately map every skate spot that exists in Barcelona. This includes famous spots, new spots, old spots or any spot in Barcelona that is skateable. The locations are ex…"
+  },
+  {
+    "titulo": "The Best Places To Skate In Barcelona",
+    "url": "https://theculturetrip.com/europe/spain/articles/the-best-places-to-skate-in-barcelona",
+    "snippet": "Explore the best spots to show off your skateboarding skills in the beautiful parks and open spaces of Barcelona."
+  },
+  {
+    "titulo": "Barcelona Skateboard | Phone Case iPhone 17 | Siegeworks",
+    "url": "https://www.threadless.com/shop/@Siegeworks/design/barcelona-skateboard/accessories/phone-case/iphone-17",
+    "snippet": "Artist Statement Skate Barcelona in this detailed city illustration Artist Chris Jackson @Siegeworks London Designer, illustrator and screen printer from the UK. Lover of cartoons, pop art and history"
+  },
+  {
+    "titulo": "Roots BCN | Tienda de skate y streetwear | Skateshop Barcelona",
+    "url": "https://www.skaterootsbcn.com/",
+    "snippet": "Encuentra las mejores marcas de skate y streetwear en Roots BCN. Santa Cruz, Powell Peralta, Vans, Dickies, Mini Logo y mucho más. Tienda online en toda España y tienda física en Barcelona. Skate shop local con bowl para patinar."
+  },
+  {
+    "titulo": "Barcelona Skate Spots | A Barcelona Skate Spot Map",
+    "url": "https://barcelonaskatespots.wordpress.com/",
+    "snippet": "Barcelona is well known for its great street spots but recently its added a few new parks into the mix. In case you get tired of street skating here are the newest two parks for you to check out."
+  },
+  {
+    "titulo": "The best skate spots of Barcelona | CityLegends",
+    "url": "https://www.citylegends.io/blog/best-skate-spots-barcelona",
+    "snippet": "In Barcelona, you can practically skate anywhere! There are a lot of cool spots and parks to skate, so let's go over a view of those."
+  },
+  {
+    "titulo": "Skateboarding Barcelona, a Locals Guide: MACBA - Sant Jordi Hostels",
+    "url": "https://www.santjordihostels.com/skateboarding-barcelona-a-locals-guide-macba/",
+    "snippet": "Everything you need to know about one of the most famous skate spots in the world - MACBA skate spot in Barcelona"
+  },
+  {
+    "titulo": "Skateboarding Culture in Barcelona - A Hub for Urban Skaters",
+    "url": "https://travelswithbibi.com/skateboarding-culture-in-barcelona/",
+    "snippet": "Unlock the secrets of Barcelona's thriving skateboarding culture and discover what makes this city a skater's paradise. Curious to find out more?"
+  },
+  {
+    "titulo": "Skateboarding in Barcelona | Barcelona Expat Life",
+    "url": "https://barcelonaexpatlife.com/skateboarding-in-barcelona/",
+    "snippet": "Discover the vibrant skateboarding scene in Barcelona with our guide Charlotte Wilkins. From iconic skate spots to trendy skate shops, explore the essence of skateboarding in Barcelona in this must-read blog."
+  },
+  {
+    "titulo": "Barcelona Skateboarding Guide - Barcelona 11s",
+    "url": "https://barcelona11s.org/barcelona-skateboarding-guide/",
+    "snippet": "Nevermind Bar Barcelona Skateboarding Events Skate Love Barcelona A unique international music festival on wheels, dedicated to a community that shares the passion for music, dancing and rolling in a social and multicultural environment. Extreme Barcelona Features urban sports with skateboarding, BMX, scooter and roller freestyle competitions."
+  },
+  {
+    "titulo": "Venero - Skate Shop Barcelona",
+    "url": "https://venerobcn.com/",
+    "snippet": "Skate Shop Barcelona We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you are happy with it. Ok"
+  },
+  {
+    "titulo": "AMIGOS Skateshop online | skate shop : boards, shoes, wear | Barcelona ...",
+    "url": "https://www.amigosskateshop.com/",
+    "snippet": "AMIGOS Skateshop = the best option at the best price to buy skateboards, skate shoes and skate wear!"
+  },
+  {
+    "titulo": "A Skateboarder's Guide to Barcelona: Best Skate Parks",
+    "url": "https://blog.apartmentbarcelona.com/skateboarders-guide-bcn/",
+    "snippet": "Barcelona is full of great skating opportunities, with a vibrant skating culture and great skate parks to explore. This is a skateboarder's guide to Barcelona!"
+  },
+  {
+    "titulo": "Skate Los mejores spots para patinar en Barcelona",
+    "url": "https://www.redbull.com/es-es/spots-skate-mas-famosos-barcelona-ciudad",
+    "snippet": "Y es que Barcelona reúne una serie de factores -clima, arquitectura, calidad de vida, etc- que la han convertido en un sitio de referencia en el mundo del skate."
+  },
+  {
+    "titulo": "Ungravity Freestyle Company - Escuela,Club,Camps,Eventos,Parks de ...",
+    "url": "https://ungravityboard.com/",
+    "snippet": "STREET Nuestra escuela de Skate, BMX, Scooter, Patinaje y Longboard te ofrece cursos en grupo, clases particulares, casales, campamentos, club y mucho más en Barcelona. Apúntate a una de nuestras actividades y/o cursos y disfruta de los deportes de deslizamiento con uno de nuestros monitores."
+  },
+  {
+    "titulo": "Barcelona Skateboarding: The Mecca of Skateboarding",
+    "url": "https://www.skateboardhere.com/barcelona-skateboarding.html",
+    "snippet": "Barcelona had the Olympics in 92 and that probably added to the great plazas and public spaces in the city. Every corner, every Metro stop has a surprise skate spot."
+  },
+  {
+    "titulo": "Skateboarding Barcelona: Best Guide to the City's Best Spots",
+    "url": "https://www.bcn.travel/es/skateboarding-barcelona/",
+    "snippet": "Explore the vibrant skateboarding Barcelona scene - from iconic spots like MACBA to hidden gems, perfect for skaters of all levels."
+  },
+  {
+    "titulo": "C-Vida Skate Shop Barcelona | Tienda Skate Online",
+    "url": "https://www.cvidaskateshop.com/",
+    "snippet": "The meeting point for skateboarders! Shapes, parts, clothes and accessories of the highest quality to elevate your ride. More than just a store, we're part of the scene that breathes attitude and celebrates skate culture every day. Long live skateboarding, long live C-VIDA! 🛹🔥"
+  },
+  {
+    "titulo": "Barcelona Skate Spots- Skateboarder's paradise - SuiteLife",
+    "url": "https://suitelife.com/sports-in-barcelona/barcelona-skate-spots-skateboarders-paradise/",
+    "snippet": "In a previous blog post on skate spots in Barcelona, we already talked about the two most famous ones, namely Plaça de la Universitat and the MACBA Museum. Covering all of the Barcelona skate spots would be a rather hopeless task, the best thing to do is take your board and go exploring, really."
+  },
+  {
+    "titulo": "Los 19 mejores skateparks en Barcelona",
+    "url": "https://barcelona.place/skate-park/",
+    "snippet": "¿Eres un amante del skateboarding? ¡Estás de suerte! En Barcelona, puedes encontrar los mejores Skate parks para deslizarte y hacer trucos con tu tabla. En"
+  },
+  {
+    "titulo": "Best Skateboarding Spots in Barcelona - Top Places to Shred",
+    "url": "https://travelswithbibi.com/best-skateboarding-spots-in-barcelona/",
+    "snippet": "Discover the best skateboarding spots in Barcelona! Explore popular skateparks, street spots, and hidden gems perfect for skaters."
+  },
+  {
+    "titulo": "Inercia.com - Shop for inline skates, longboards, scooters and skate ...",
+    "url": "https://www.inercia.com/en/",
+    "snippet": "Barcelona and online shop where to buy, rent and repair fitness skates, freeskate, aggressive, hockey, children, speed, slalom, initiation, ice skates, quads, longboard, scooters, skateboards, protections parts and accessories for skates, longboard and scooters."
+  },
+  {
+    "titulo": "Hey Ho! Skate Shop - Tienda Skate online & Barcelona",
+    "url": "https://www.heyhoskateshop.com/",
+    "snippet": "Ropa, tablas y otros artículos de skate. Tienda online y en Barcelona. Hey Ho! Skateshop, desde 2004, de Skaters para Skaters."
+  },
+  {
+    "titulo": "Skateboard Hardware Footwear Apparel - Al Carrer Skateshop",
+    "url": "https://alcarrerskateshop.com/",
+    "snippet": "Al Carrer Skateshop established in 2015, is an independently Skater Owner Shop located in Barcelona, offering the finest skateboard hardware, footwear and apparel."
+  },
+  {
+    "titulo": "Top 5 places to skate in Barcelona - Erasmus Barcelona",
+    "url": "https://erasmusbarcelona.com/top-5-places-to-skate-in-barcelona/",
+    "snippet": "In matter of fact you even have a skate hostel in Barcelona, which is a unique experience. Famous skaters from the whole world come all the time to visit this amazing city and skateboard while enjoying the weather and BCN vibes."
+  },
+  {
+    "titulo": "Las 7 mejores tiendas de skate en Barcelona - Gimnasios BCN",
+    "url": "https://gimnasiosbarcelona.com/compras/tiendas-skate-barcelona/",
+    "snippet": "Por ello hemos elaborado un listado con las mejores tiendas de skate en Barcelona. Si estás interesado en comprar monopatines, ropa de skate, zapatillas, accesorios o cualquier otro producto relacionado, aquí podrás encontrar el material apropiado junto con el asesoramiento de los mejores profesionales."
+  },
+  {
+    "titulo": "Barcelona skate spots map - Où skater à BCN ? - La Skateosphere",
+    "url": "https://laskateosphere.com/barcelona-skate-spots-map/",
+    "snippet": "Barcelona skate spot map, les meilleurs spots tous regroupés sur une même map, pour pouvoir vous déplacer rapidement lors de vos sessions skate."
+  },
+  {
+    "titulo": "BARCELONA SPAIN SKATE LIFE - YouTube",
+    "url": "https://www.youtube.com/watch?v=-wnazaHbrnY",
+    "snippet": "8 9 3 views 51 seconds ago Watch the Lakai in Barcelona video on Lakai's Youtube: • LAKAI IN BARCELONA https://www.lakai.com/ | @Lakailtd...more"
+  },
+  {
+    "titulo": "2025 Program | Skate Love Festival",
+    "url": "https://www.skatelovebcn.com/program-info",
+    "snippet": "Join us at the 9th Skate Love Festival in Barcelona, September 11-14, 2025, for an unforgettable celebration of roller dance, music, and urban culture."
+  },
+  {
+    "titulo": "FAQ | Skate Love Festival",
+    "url": "https://www.skatelovebcn.com/faq",
+    "snippet": "Have questions about the Skate Love Festival? Check out our FAQ for all the answers!"
+  },
+  {
+    "titulo": "Prim Skatepark \"Olas\" - LiveSkate",
+    "url": "https://liveskate.com/skateparks/barcelona-prim-skatepark/",
+    "snippet": "El Skatepark Prim, también conocido como «Olas», es uno de los espacios más emblemáticos para los amantes del skateboarding en Barcelona. Ubicado en la Rambla de Prim, este parque se ha convertido en un punto de encuentro para skaters, ciclistas de BMX y patinadores en línea que buscan un lugar donde expresar su pasión por el deporte urbano."
+  },
+  {
+    "titulo": "Skating in Barcelona | Barcelona-Home",
+    "url": "https://barcelona-home.com/blog/skating-barcelona/",
+    "snippet": "There are two indoor ice rinks in Barcelona - FC Barcelona near the FC Barcelona football stadium and Skating Barcelona, Roger de Flor 168. Over the Christmas period, an outdoor ice rink is set up at Plaza Catalunya and there's no better way to get into the Christmas spirit than ice skating in this incredible setting and atmosphere."
+  },
+  {
+    "titulo": "Where to skateboard in Barcelona",
+    "url": "https://barcelona-top-travel-tips.com/skateboard/",
+    "snippet": "Barcelona is the European skateboard capital, with numerous skateparks. If you need help choosing your favourite spot then skate this way."
+  },
+  {
+    "titulo": "Showcase | Skate Love Festival",
+    "url": "https://www.skatelovebcn.com/showcase",
+    "snippet": "SHOWCASE Once again, Skate Love brings us an unforgettable SHOWCASE, where community, talent, creativity, and pure joy come alive on wheels! Place: SkateLand - CEM Mar Bella Address: Av. del Litoral, 86-96, 08005 Barcelona Schedule: Saturday at 21h Duration: 35 mins"
+  },
+  {
+    "titulo": "TOP 10 BEST Skate Shops in Barcelona, Spain - Updated 2024 - Yelp",
+    "url": "https://www.yelp.com/search?find_desc=Skate+Shops&find_loc=Barcelona",
+    "snippet": "Top 10 Best Skate Shops in Barcelona, Spain - November 2024 - Yelp - State BCN, Petshop Skateboards Barcelona Skateshop, Amigos Skate Shop, Wood Box, Inercia, Al Carrer, City00, Kids On Wheels, Rollergrind360, Furtivo Skateboarding"
+  },
+  {
+    "titulo": "Rent Inline Skates in Barcelona - Rollerblades by Vila Olímpica",
+    "url": "https://rentalscooterbarcelona.com/rollerblades/",
+    "snippet": "Inline skates rental in Barcelona next to Vila Olímpica. Protections included. Best price and direct access to the seafront."
+  },
+  {
+    "titulo": "Her Moves Festival - Skate Film Screening",
+    "url": "https://allevents.in/barcelona/her-moves-festival-skate-film-screening/100001983619033928",
+    "snippet": "Find tickets & information for Her Moves Festival - Skate Film Screening. happening at la textil collective / 303 audiophile bar, Barcelona, CT on Thu, 05 Mar, 2026 at 06:00 pm. Register or Buy Tickets, Price information."
+  },
+  {
+    "titulo": "NevermindBar (@nevermindbcn) • Instagram photos and videos",
+    "url": "https://www.instagram.com/nevermindbcn/",
+    "snippet": "37K Followers, 4,738 Following, 928 Posts - NevermindBar (@nevermindbcn) on Instagram: \"Skate & Grunge Bar ⚠ NO RESERVATIONS ⚠\""
+  },
+  {
+    "titulo": "Skate Agora",
+    "url": "https://www.skateagora.com/en/",
+    "snippet": "Skate Agora cuenta con una academia de skate de referencia mundial. El diseño profesional de las instalaciones permite a los alumnos aprender skate con máxima seguridad y eficacia, mientras se fomentan los valores de integración. Puede acoger una amplia variedad de eventos, desde competiciones internacionales a festivales de música."
+  },
+  {
+    "titulo": "Kulture Skate Shop | Scooter, Tablas, Zapatillas, Ropa en Barcelona",
+    "url": "https://kultureshop.com/",
+    "snippet": "Tienda de Skate en Terrassa / Barcelona. Compra en nuestra tienda con los mejores precios. Skateboards, Surfskates, Scooters, Zapatillas de Skate, Ropa de Skate."
+  },
+  {
+    "titulo": "The Newest Skateboard Hostel in Barcelona - Sant Jordi Hostels",
+    "url": "https://www.santjordihostels.com/newest-barcelona-skate-hostel/",
+    "snippet": "Europe's first Barcelona skateboard hostel designed specifically for skateboarders"
   }
 ]

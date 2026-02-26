@@ -93,7 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 243.5
+    "width": 459.5
   },
   "right": {
     "id": "59d0d4efaa3c3e9f",
@@ -185,19 +185,24 @@
       "slides-extended:Show Slide Preview": false
     }
   },
-  "active": "5d665c478dee3697",
+  "active": "7312ab1974d098a0",
   "lastOpenFiles": [
-    "Python.ELISAVA/tweets_skate_barcelona.json",
-    "Python.ELISAVA/scrapp_skate.py",
-    "Python.ELISAVA/SCRAPING.py",
-    "Python.ELISAVA/SCRAPING.ipynb",
-    "Python.ELISAVA/Untitled.ipynb",
-    "Python.ELISAVA",
-    "Python",
-    "untitled folder",
-    "macba_skate_articles.csv",
-    "CARPETADATASETS/darknet/darknet",
-    "CARPETADATASETS/darknet/obj/darknet.o",
+    "scrapping_twitter/Scrapduck_chrome_datesfixed.csv",
+    "scrapping_twitter/Scrapduck_chrome_datesfixed.json",
+    "scrapping_twitter/Scrapduck_chrome_datesfixed.py",
+    "scrapping_twitter/scrapp_duck_Macba_skate_aCSV copy.py",
+    "scrapping_twitter/results_skate_macba.csv",
+    "scrapping_twitter/results_skate_macba.json",
+    "scrapping_twitter/scrapp_duck_Macba_skate_aCSV.py",
+    "scrapping_twitter/scrapp_duck_Macba_skate copy.py",
+    "scrapping_twitter/resultados_skate_Macba_skate.json",
+    "scrapping_twitter/scrapp_duck_Macba_skate.py",
+    "scrapping_twitter/scrapp_duck copy.py",
+    "scrapping_twitter/README.md",
+    "Assets/olamonumento.jpg",
+    "Assets/mappingdiy.png",
+    "Assets/macbapartes.png",
+    "Assets/Proyeccion + mapping.md",
     "CARPETADATASETS/darknet/data/labels/99_7.png",
     "CARPETADATASETS/darknet/data/labels/99_6.png",
     "CARPETADATASETS/darknet/data/labels/99_5.png",
@@ -205,9 +210,6 @@
     "CARPETADATASETS/darknet/data/labels/99_3.png",
     "CARPETADATASETS/darknet/data/labels/99_2.png",
     "CARPETADATASETS/darknet/data/labels/99_1.png",
-    "CARPETADATASETS/darknet/data/labels/99_0.png",
-    "CARPETADATASETS/darknet/data/labels/98_7.png",
-    "CARPETADATASETS/darknet/data/labels/98_6.png",
     "CARPETADATASETS/darknet/README.md",
     "README.md",
     "NARRATIVA.md",
@@ -231,8 +233,6 @@
     "sesiones/20260128_sesion_1/README.md",
     "Sesión 8 - Presentación de proyecto.md",
     "referencias/teoria_tecnica/dataVizs/README.md",
-    "sesiones/20260305_sesion_8/README.md",
-    "sesiones/20260302_sesion_7/README.md",
-    "sesiones/20260226_sesion_6/README.md"
+    "sesiones/20260305_sesion_8/README.md"
   ]
 }
