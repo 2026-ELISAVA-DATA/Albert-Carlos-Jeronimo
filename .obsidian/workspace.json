@@ -34,9 +34,23 @@
               "icon": "lucide-file",
               "title": "NARRATIVA"
             }
+          },
+          {
+            "id": "55db2868ab2a76f1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "scrapping_twitter/Codigos de scrapping de twiter.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Codigos de scrapping de twiter"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -185,19 +199,22 @@
       "slides-extended:Show Slide Preview": false
     }
   },
-  "active": "7312ab1974d098a0",
+  "active": "55db2868ab2a76f1",
   "lastOpenFiles": [
+    "scrapping_twitter/tweets_macba_skate.csv",
+    "scrapping_twitter/tweets_macba_skate.json",
+    "scrapping_twitter/scrapp_twitter_V3.py",
+    "scrapping_twitter/scrapp_twitter_V2 copy.py",
+    "VIDEOS PRESENTACION/Screen Recording 2026-02-27 at 16.38.53.mov",
+    "VIDEOS PRESENTACION",
+    "untitled folder",
+    "Untitled.md",
+    "scrapping_twitter/Codigos de scrapping de twiter.md",
+    "NARRATIVA.md",
     "scrapping_twitter/Scrapduck_chrome_multiplequeryes.csv",
     "scrapping_twitter/Scrapduck_chrome_multiplequeryes.json",
     "scrapping_twitter/Scrapduck_chrome_multiplequeryes.py",
     "scrapping_twitter/Scrapduck_chrome_multiplequeryespy.py",
-    "scrapping_twitter/Scrapduck_chrome_datesfixed copy.py",
-    "scrapping_twitter/Scrapduck_chrome_datesfixed_50clicks.csv",
-    "scrapping_twitter/Scrapduck_chrome_datesfixed_50clicks.json",
-    "scrapping_twitter/Scrapduck_chrome_datesfixed.csv",
-    "scrapping_twitter/Scrapduck_chrome_datesfixed.json",
-    "scrapping_twitter/Scrapduck_chrome_datesfixed.py",
-    "scrapping_twitter/scrapp_duck_Macba_skate_aCSV copy.py",
     "scrapping_twitter/README.md",
     "Assets/olamonumento.jpg",
     "Assets/mappingdiy.png",
@@ -212,7 +229,6 @@
     "CARPETADATASETS/darknet/data/labels/99_1.png",
     "CARPETADATASETS/darknet/README.md",
     "README.md",
-    "NARRATIVA.md",
     "Assets/Blender + Audio reactive.md",
     "Assets/App.md",
     "Jeronimo.md",
@@ -231,8 +247,6 @@
     "proyectos/README.md",
     "proyectos/de la observacion al dato/README.md",
     "sesiones/20260128_sesion_1/README.md",
-    "Sesión 8 - Presentación de proyecto.md",
-    "referencias/teoria_tecnica/dataVizs/README.md",
-    "sesiones/20260305_sesion_8/README.md"
+    "Sesión 8 - Presentación de proyecto.md"
   ]
 }
