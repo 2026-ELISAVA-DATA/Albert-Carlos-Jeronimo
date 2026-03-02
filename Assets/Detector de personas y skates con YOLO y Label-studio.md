@@ -24,7 +24,8 @@ Criterios de selección:
 - Occlusiones parciales
 - Distintas condiciones de luz
 
-![[Captura de pantalla 2026-03-01 220407.png]]
+<img width="1723" height="647" alt="IMFOLDER" src="https://github.com/user-attachments/assets/4173e30d-03f4-4aaa-a21d-d5bd19a43ee2" />
+
 
 ## 3. Anotación manual con Label Studio
 
@@ -53,7 +54,8 @@ Se anotaron manualmente:
 
 Esto generó un dataset **muy limpio y consistente** pese al tamaño reducido.
 
-![[Captura de pantalla 2026-03-01 220836.png]]
+<img width="1872" height="911" alt="LABELSTUDIO" src="https://github.com/user-attachments/assets/78f6c280-6cf5-4f74-a8bf-7381d9a8e624" />
+
 
 ### 3.3 Exportación en formato YOLO
 
@@ -89,6 +91,7 @@ Repositorio oficial:
 
 Se consigue un modelo entrenado que nos muestra las imagenes usadas
 
+![TRAINBATCH](https://github.com/user-attachments/assets/881e7838-68bd-4e9a-bdae-01004f1020ad)
 
 
 
@@ -125,6 +128,10 @@ Archivo python
 
 
 Con esto, se obtendrá un archivo .avi con el video output con la deteccion predict de skates y personas.
+
+
+
+https://github.com/user-attachments/assets/d3457221-1f0d-4846-a335-5bc5163cd3c9
 
 
 
