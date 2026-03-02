@@ -19,24 +19,20 @@ SEARCH_QUERIES = [
     "macba sk8",
     "macba skatepark",
     "saveMACBA",
+    "MACBA skate cultura",
+    "MACBA skate historia",
 ]
 
-def build_search_url(query):
-    encoded = query.replace(" ", "%20")
-    return f"https://x.com/search?q={encoded}&f=live"
+# Each query will be searched in 3 tabs: top, latest, media
+SEARCH_TABS = {
+    "top":    "https://x.com/search?q={query}&src=typed_query",
+    "latest": "https://x.com/search?q={query}&src=typed_query&f=live",
+    "media":  "https://x.com/search?q={query}&src=typed_query&f=image",
+}
 
-def close_grok_if_open(page):
-    try:
-        grok_panel = page.query_selector("[data-testid='GrokDrawer']") or \
-                     page.query_selector("[aria-label='Grok']")
-        if grok_panel:
-            close_btn = page.query_selector("[aria-label='Close']")
-            if close_btn:
-                close_btn.click()
-                print("  Closed Grok panel")
-                time.sleep(1)
-    except Exception:
-        pass
+def build_search_url(query, tab):
+    encoded = query.replace(" ", "%20")
+    return SEARCH_TABS[tab].format(query=encoded)
 
 def check_and_reload_if_error(page):
     try:
@@ -49,13 +45,12 @@ def check_and_reload_if_error(page):
             print("  Twitter error detected — reloading...")
             page.reload()
             time.sleep(6)
-            close_grok_if_open(page)
             return True
     except Exception:
         pass
     return False
 
-def extract_tweet_data(article, query=""):
+def extract_tweet_data(article, query="", tab=""):
     try:
         user_el = article.query_selector("div[data-testid='User-Name']")
         title = user_el.inner_text().replace("\n", " ").strip() if user_el else ""
@@ -81,7 +76,7 @@ def extract_tweet_data(article, query=""):
             "url": url,
             "date": date,
             "description": description,
-            "query": query,
+            "query": f"{query} [{tab}]",
         }
     except Exception as e:
         print(f"  Error parsing tweet: {e}")
@@ -102,7 +97,6 @@ def retry_if_empty(page, url, max_retries=3):
         page.goto(url)
         time.sleep(6)
 
-        close_grok_if_open(page)
         check_and_reload_if_error(page)
 
         if wait_for_tweets(page, timeout=15):
@@ -114,16 +108,13 @@ def retry_if_empty(page, url, max_retries=3):
 
     return False
 
-def scroll_and_collect(page, query, scroll_times=30, scroll_pause=3.5):
-    close_grok_if_open(page)
-
+def scroll_and_collect(page, query, tab, scroll_times=30, scroll_pause=2.5):
     seen_urls = set()
     results = []
     empty_scroll_streak = 0
 
     for i in range(scroll_times):
         if i % 5 == 0:
-            close_grok_if_open(page)
             check_and_reload_if_error(page)
 
         articles = page.query_selector_all("article[role='article']")
@@ -131,7 +122,7 @@ def scroll_and_collect(page, query, scroll_times=30, scroll_pause=3.5):
 
         new_this_scroll = 0
         for article in articles:
-            item = extract_tweet_data(article, query=query)
+            item = extract_tweet_data(article, query=query, tab=tab)
             if not item:
                 continue
 
@@ -148,7 +139,7 @@ def scroll_and_collect(page, query, scroll_times=30, scroll_pause=3.5):
             empty_scroll_streak = 0
 
         if empty_scroll_streak == 3:
-            print("  Still stuck, stopping this query.")
+            print("  Still stuck, stopping this tab.")
             break
 
         wall = page.query_selector("[data-testid='LoginForm']") or \
@@ -169,48 +160,47 @@ with sync_playwright() as p:
     context = browser.contexts[0]
     page = context.pages[0]
 
-    close_grok_if_open(page)
-
     all_data = []
     seen_keys = set()
 
     for query in SEARCH_QUERIES:
-        print(f"\n{'='*50}")
-        print(f"Searching: {query}")
-        print(f"{'='*50}")
+        for tab in ["top", "latest", "media"]:
+            print(f"\n{'='*50}")
+            print(f"Searching: {query} [{tab}]")
+            print(f"{'='*50}")
 
-        search_url = build_search_url(query)
+            search_url = build_search_url(query, tab)
 
-        loaded = retry_if_empty(page, search_url, max_retries=3)
-        if not loaded:
-            print(f"  Could not load tweets for '{query}', skipping.")
-            time.sleep(5)
-            continue
+            loaded = retry_if_empty(page, search_url, max_retries=3)
+            if not loaded:
+                print(f"  Could not load tweets for '{query}' [{tab}], skipping.")
+                time.sleep(5)
+                continue
 
-        results = scroll_and_collect(page, query=query, scroll_times=30, scroll_pause=2.5)
+            results = scroll_and_collect(page, query=query, tab=tab, scroll_times=30, scroll_pause=2.5)
 
-        new_count = 0
-        for item in results:
-            key = item["url"] or item["description"]
-            if key and key not in seen_keys:
-                seen_keys.add(key)
-                all_data.append(item)
-                new_count += 1
+            new_count = 0
+            for item in results:
+                key = item["url"] or item["description"]
+                if key and key not in seen_keys:
+                    seen_keys.add(key)
+                    all_data.append(item)
+                    new_count += 1
 
-        print(f"  -> {new_count} new unique tweets (total so far: {len(all_data)})")
-        print("  Pausing 10s before next query...")
-        time.sleep(10)
+            print(f"  -> {new_count} new unique tweets (total so far: {len(all_data)})")
+            print("  Pausing 10s before next tab/query...")
+            time.sleep(10)
 
     print(f"\nTotal unique tweets: {len(all_data)}")
 
     # --- Save JSON ---
-    json_path = "tweets_macba_skate_V4.json"
+    json_path = "tweets_macba_skate_V5.json"
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(all_data, f, ensure_ascii=False, indent=2)
     print(f"JSON saved -> {json_path}")
 
     # --- Save CSV ---
-    csv_path = "tweets_macba_skate_V4.csv"
+    csv_path = "tweets_macba_skate_V5.csv"
     fieldnames = ["title", "url", "date", "description", "query"]
 
     with open(csv_path, "w", encoding="utf-8", newline="") as f:
