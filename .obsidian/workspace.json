@@ -20,23 +20,8 @@
               "icon": "lucide-file",
               "title": "App"
             }
-          },
-          {
-            "id": "55db2868ab2a76f1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "scrapping_twitter/Codigos de scrapping de twiter.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Codigos de scrapping de twiter"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -185,21 +170,23 @@
       "slides-extended:Show Slide Preview": false
     }
   },
-  "active": "55db2868ab2a76f1",
+  "active": "bf867c954c8c52c8",
   "lastOpenFiles": [
-    "Assets/Detector de personas y skates con YOLO y Label-studio.md",
-    "CARPETADATASETS/web/Scrapduck_chrome_datesfixed.csv",
-    "Python.ELISAVA/Scrapduck_chrome_datesfixed.py",
-    "CARPETADATASETS/web/Scrapduck_chrome_datesfixed_50clicks.csv",
-    "Python.ELISAVA/scrapp_twitter.V3.py",
-    "Python.ELISAVA/scrapp_twitter_V4.py",
-    "CARPETADATASETS/Tweets/tweets_macba_skate.csv",
-    "CARPETADATASETS/web",
-    "CARPETADATASETS/untitled folder",
-    "CARPETADATASETS/Tweets",
-    "scrapping_twitter/scrapp_twitter_V3.py",
-    "scrapping_twitter/README.md",
     "scrapping_twitter/Codigos de scrapping de twiter.md",
+    "scrapping_twitter_website_iteraciones/tweets_skate_barcelona.json",
+    "scrapping_twitter_website_iteraciones/scrapp_twitter_V4.py",
+    "scrapping_twitter_website_iteraciones/tweets_macba_skate.json",
+    "scrapping_twitter_website_iteraciones/scrapp_twitter_V2.py",
+    "scrapping_twitter_website_iteraciones/scrapp_twitter_V3.py",
+    "scrapping_twitter_website_iteraciones/scrapp_twitter.V3.py",
+    "scrapping_twitter_website_iteraciones/scrapp_duck_Macba_skate_aCSV.py",
+    "scrapping_twitter_website_iteraciones/scrapp_skate.py",
+    "scrapping_twitter_website_iteraciones/scrapp_duck_Macba_skate.py",
+    "scrapping_twitter_website_iteraciones/scrapp_duck.py",
+    "scrapping_twitter_website_iteraciones/README.md",
+    "scrapping_twitter_website_iteraciones/Codigos de scrapping de twiter.md",
+    "Assets/Detector de personas y skates con YOLO y Label-studio.md",
+    "scrapping_twitter/README.md",
     "Untitled.md",
     "NARRATIVA.md",
     "Assets/olamonumento.jpg",
@@ -230,9 +217,6 @@
     "referencias/teoria_tecnica/README.md",
     "referencias/teoria_tecnica/dataVizs/videos/README.md",
     "herramientas/terminal/README.md",
-    "proyectos/README.md",
-    "proyectos/de la observacion al dato/README.md",
-    "sesiones/20260128_sesion_1/README.md",
-    "Sesión 8 - Presentación de proyecto.md"
+    "proyectos/README.md"
   ]
 }

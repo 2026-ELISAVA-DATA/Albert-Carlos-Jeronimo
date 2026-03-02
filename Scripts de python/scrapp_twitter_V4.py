@@ -204,13 +204,13 @@ with sync_playwright() as p:
     print(f"\nTotal unique tweets: {len(all_data)}")
 
     # --- Save JSON ---
-    json_path = "tweets_macba_skate.json"
+    json_path = "tweets_macba_skate_V4.json"
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(all_data, f, ensure_ascii=False, indent=2)
     print(f"JSON saved -> {json_path}")
 
     # --- Save CSV ---
-    csv_path = "tweets_macba_skate.csv"
+    csv_path = "tweets_macba_skate_V4.csv"
     fieldnames = ["title", "url", "date", "description", "query"]
 
     with open(csv_path, "w", encoding="utf-8", newline="") as f:
