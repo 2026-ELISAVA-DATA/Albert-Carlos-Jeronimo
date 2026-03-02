@@ -25,6 +25,19 @@ def build_search_url(query):
     encoded = query.replace(" ", "%20")
     return f"https://x.com/search?q={encoded}&f=live"
 
+def close_grok_if_open(page):
+    try:
+        grok_panel = page.query_selector("[data-testid='GrokDrawer']") or \
+                     page.query_selector("[aria-label='Grok']")
+        if grok_panel:
+            close_btn = page.query_selector("[aria-label='Close']")
+            if close_btn:
+                close_btn.click()
+                print("  Closed Grok panel")
+                time.sleep(1)
+    except Exception:
+        pass
+
 def check_and_reload_if_error(page):
     try:
         error = page.query_selector("[data-testid='error-detail']")
@@ -36,6 +49,7 @@ def check_and_reload_if_error(page):
             print("  Twitter error detected — reloading...")
             page.reload()
             time.sleep(6)
+            close_grok_if_open(page)
             return True
     except Exception:
         pass
@@ -88,6 +102,7 @@ def retry_if_empty(page, url, max_retries=3):
         page.goto(url)
         time.sleep(6)
 
+        close_grok_if_open(page)
         check_and_reload_if_error(page)
 
         if wait_for_tweets(page, timeout=15):
@@ -99,13 +114,16 @@ def retry_if_empty(page, url, max_retries=3):
 
     return False
 
-def scroll_and_collect(page, query, scroll_times=30, scroll_pause=3.5):
+def scroll_and_collect(page, query, scroll_times=30, scroll_pause=2.5):
+    close_grok_if_open(page)
+
     seen_urls = set()
     results = []
     empty_scroll_streak = 0
 
     for i in range(scroll_times):
         if i % 5 == 0:
+            close_grok_if_open(page)
             check_and_reload_if_error(page)
 
         articles = page.query_selector_all("article[role='article']")
@@ -129,7 +147,7 @@ def scroll_and_collect(page, query, scroll_times=30, scroll_pause=3.5):
         else:
             empty_scroll_streak = 0
 
-        if empty_scroll_streak == 5:
+        if empty_scroll_streak == 3:
             print("  Still stuck, stopping this query.")
             break
 
@@ -150,6 +168,8 @@ with sync_playwright() as p:
 
     context = browser.contexts[0]
     page = context.pages[0]
+
+    close_grok_if_open(page)
 
     all_data = []
     seen_keys = set()
@@ -184,13 +204,13 @@ with sync_playwright() as p:
     print(f"\nTotal unique tweets: {len(all_data)}")
 
     # --- Save JSON ---
-    json_path = "tweets_macba_skate_V4.json"
+    json_path = "tweets_macba_skate_V3.json"
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(all_data, f, ensure_ascii=False, indent=2)
     print(f"JSON saved -> {json_path}")
 
     # --- Save CSV ---
-    csv_path = "tweets_macba_skate_V4.csv"
+    csv_path = "tweets_macba_skate_V3.csv"
     fieldnames = ["title", "url", "date", "description", "query"]
 
     with open(csv_path, "w", encoding="utf-8", newline="") as f:
