@@ -3,7 +3,7 @@
 # 1. Descarga Ollama: https://ollama.com/download/windows
 # 2. Abre CMD y ejecuta: ollama pull llama3.2
 # 3. Instala dependencias: pip install ollama
-# 4. Pon tu CSV en la misma carpeta y ejecuta: python sentiment_ollama.py
+# 4. Pon tu CSV en la misma carpeta y ejecuta: python sentiment_ollama_web.py
 
 import csv
 import time
@@ -16,8 +16,8 @@ except ImportError:
     sys.exit(1)
 
 # --- Configuracion ---
-INPUT_CSV  = "Scrapduck_multiquery_MACBA.csv"
-OUTPUT_CSV = "Scrapduck_multiquery_MACBA_sentiment.csv"
+INPUT_CSV  = "Scrapduck_multiquery_MACBA_masclicks.csv"
+OUTPUT_CSV = "sentiment_ollama_web.csv"
 MODEL      = "llama3.2"
 TEXT_COL   = "description"
 SAVE_EVERY = 50
@@ -33,9 +33,9 @@ def get_sentiment(text):
     if not text or len(text.strip()) < 3:
         return ""
     prompt = (
-        "Is the sentiment of this tweet positive or negative?\n"
+        "Is the sentiment of this web article description positive or negative?\n"
         "Reply with ONLY '1' if positive (or neutral), or '0' if negative. Nothing else.\n"
-        "Tweet: " + text
+        "Text: " + text
     )
     try:
         response = ollama.chat(
@@ -76,7 +76,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     total = len(rows)
-    print("Total tweets: " + str(total))
+    print("Total articulos: " + str(total))
     print("  1 = positivo / neutro")
     print("  0 = negativo\n")
     results = []
@@ -102,5 +102,5 @@ if __name__ == "__main__":
 
     save_progress(results, fieldnames, OUTPUT_CSV)
     elapsed = time.time() - start
-    print("\nHecho! " + str(total) + " tweets en " + str(round(elapsed/60, 1)) + " min.")
+    print("\nHecho! " + str(total) + " articulos en " + str(round(elapsed/60, 1)) + " min.")
     print("Archivo guardado: " + OUTPUT_CSV)
