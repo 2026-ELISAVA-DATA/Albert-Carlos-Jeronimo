@@ -30,7 +30,6 @@ def make_ddg_url(query):
     return f"https://duckduckgo.com/?q={quote_plus(query)}&t=chromentp&ia=web"
 
 def extract_date_from_page(page):
-    """Try to extract a publication date from the actual article page."""
     for selector in [
         "meta[property='article:published_time']",
         "meta[name='pubdate']",
@@ -76,7 +75,6 @@ def extract_date_from_page(page):
     return ""
 
 def extract_result_data(r, query):
-    """Extract title, URL, date, and description from a DDG result element."""
     title_link = r.query_selector("a[data-testid='result-title-a']")
     url = title_link.get_attribute("href") if title_link else None
     title = title_link.inner_text().strip() if title_link else ""
@@ -164,9 +162,9 @@ with sync_playwright() as p:
         print(f"\n[Query {q_idx+1}/{len(QUERIES)}] '{query}'")
         url = make_ddg_url(query)
         search_page.goto(url)
-        time.sleep(5)  # wait for DDG to load
+        time.sleep(5)
 
-        raw_results = click_more_and_collect(search_page, query, max_clicks=10, pause=2)
+        raw_results = click_more_and_collect(search_page, query, max_clicks=40, pause=2)
         print(f"  Raw results: {len(raw_results)}")
 
         for r in raw_results:
@@ -181,12 +179,11 @@ with sync_playwright() as p:
                 seen_urls.add(item["url"])
 
         print(f"  Unique so far: {len(all_data)}")
-        time.sleep(2)  # polite pause between queries
+        time.sleep(2)
 
     search_page.close()
     print(f"\nTotal unique results across all queries: {len(all_data)}")
 
-    # Visit each URL to get missing dates
     article_page = context.new_page()
 
     for i, item in enumerate(all_data):
@@ -204,13 +201,13 @@ with sync_playwright() as p:
     article_page.close()
 
     # --- Save JSON ---
-    json_path = "Scrapduck_multiquery_MACBA.json"
+    json_path = "Scrapduck_multiquery_MACBA_masclicks.json"
     with open(json_path, "w", encoding="utf-8") as f:
         json.dump(all_data, f, ensure_ascii=False, indent=2)
     print(f"\nJSON saved -> {json_path}")
 
     # --- Save CSV ---
-    csv_path = "Scrapduck_multiquery_MACBA.csv"
+    csv_path = "Scrapduck_multiquery_MACBA_masclicks.csv"
     fieldnames = ["title", "url", "date", "description", "query", "scraped_at"]
 
     with open(csv_path, "w", encoding="utf-8", newline="") as f:
