@@ -6,7 +6,6 @@
       {
         "id": "0294745504c79b62",
         "type": "tabs",
-        "dimension": 50,
         "children": [
           {
             "id": "bf867c954c8c52c8",
@@ -14,6 +13,7 @@
             "state": {
               "type": "video",
               "state": {
+<<<<<<< HEAD
                 "file": "Assets/videoModelomacba.mp4"
               },
               "icon": "lucide-file",
@@ -35,6 +35,14 @@
               "state": {},
               "icon": "lucide-file",
               "title": "Slide Preview"
+=======
+                "file": "scrapping_twitter_website_iteraciones/Codigos de scrapping de twiter.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Codigos de scrapping de twiter"
+>>>>>>> c3421b5fb6a3220151da9e6013b5e287de06a46d
             }
           }
         ]
@@ -94,7 +102,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 243.5
+    "width": 459.5
   },
   "right": {
     "id": "59d0d4efaa3c3e9f",
@@ -188,6 +196,7 @@
   },
   "active": "bf867c954c8c52c8",
   "lastOpenFiles": [
+<<<<<<< HEAD
     "Assets/macba_skate_news_100_with_dates_sorted_negative.csv",
     "README.md",
     "Assets/App.md",
@@ -211,10 +220,45 @@
     "Assets/UI MORPHSOUND.png",
     "DATASETSCARLOS/Shoe prices.csv",
     "DATASETSCARLOS/practicasesion4.ipynb",
+=======
+    "CARPETADATASETS/web/Scrapduck_multiquery_MACBA.csv",
+    "CARPETADATASETS/web/Scrapduck_multiquery_MACBA.json",
+    "Scripts de python/Scrapduck_multiquery_MACBA.csv",
+    "Scripts de python/Scrapduck_multiquery_MACBA.json",
+    "CARPETADATASETS/web/Scrapduck_chrome_datesfixed_50clicks2.json",
+    "CARPETADATASETS/web/Scrapduck_chrome_datesfixed_50clicks 2.csv",
+    "CARPETADATASETS/web/Scrapduck_chrome_datesfixed_50clicks.json",
+    "Scripts de python/Scrapduck_chrome_datesfixed_50clicks.json",
+    "Scripts de python/Scrapduck_chrome_datesfixed_50clicks.csv",
+    "Scripts de python/Scrapduck_multiquery_MACBA.py",
+    "Scripts de python/Scrapduck_chrome_datesfixed copy.py",
+    "README.md",
+    "NARRATIVA.md",
+    "Assets/App.md",
+    "scrapping_twitter/Codigos de scrapping de twiter.md",
+    "scrapping_twitter_website_iteraciones/README.md",
+    "scrapping_twitter_website_iteraciones/Codigos de scrapping de twiter.md",
+    "Assets/Detector de personas y skates con YOLO y Label-studio.md",
+    "scrapping_twitter/README.md",
+    "Untitled.md",
+    "Assets/olamonumento.jpg",
+    "Assets/mappingdiy.png",
+    "Assets/macbapartes.png",
+    "Assets/Proyeccion + mapping.md",
+    "CARPETADATASETS/darknet/data/labels/99_7.png",
+    "CARPETADATASETS/darknet/data/labels/99_6.png",
+    "CARPETADATASETS/darknet/data/labels/99_5.png",
+    "CARPETADATASETS/darknet/data/labels/99_4.png",
+    "CARPETADATASETS/darknet/data/labels/99_3.png",
+    "CARPETADATASETS/darknet/data/labels/99_2.png",
+    "CARPETADATASETS/darknet/data/labels/99_1.png",
+    "CARPETADATASETS/darknet/README.md",
+    "Assets/Blender + Audio reactive.md",
+    "Jeronimo.md",
+>>>>>>> c3421b5fb6a3220151da9e6013b5e287de06a46d
     "PRESENTACION LUNES 2.md",
     "PRESENTACION.md",
     "Screenshot.md",
-    "Screenshot 2026-02-02 at 16.06.45.png",
     "Untitled.canvas",
     "sesiones/20260129_sesion_2/MI_TITULO.md",
     "sesiones/20260129_sesion_2/README.md",
@@ -224,16 +268,6 @@
     "referencias/teoria_tecnica/README.md",
     "referencias/teoria_tecnica/dataVizs/videos/README.md",
     "herramientas/terminal/README.md",
-    "proyectos/README.md",
-    "proyectos/de la observacion al dato/README.md",
-    "sesiones/20260128_sesion_1/README.md",
-    "Sesión 8 - Presentación de proyecto.md",
-    "referencias/teoria_tecnica/dataVizs/README.md",
-    "sesiones/20260305_sesion_8/README.md",
-    "sesiones/20260302_sesion_7/README.md",
-    "sesiones/20260226_sesion_6/README.md",
-    "sesiones/20260225_sesion_5/README.md",
-    "sesiones/20260205_sesion_4/README.md",
-    "sesiones/20260201_sesion_3/README.md"
+    "proyectos/README.md"
   ]
 }
