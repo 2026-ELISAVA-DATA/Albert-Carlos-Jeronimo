@@ -13,6 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Assets/App.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "App"
+            }
+          },
+          {
+            "id": "7312ab1974d098a0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "scrapping_twitter_website_iteraciones/Codigos de scrapping de twiter.md",
                 "mode": "source",
                 "source": false
@@ -21,7 +35,8 @@
               "title": "Codigos de scrapping de twiter"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -78,7 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 459.5
+    "width": 243.5
   },
   "right": {
     "id": "59d0d4efaa3c3e9f",
@@ -170,46 +185,42 @@
       "slides-extended:Show Slide Preview": false
     }
   },
-  "active": "bf867c954c8c52c8",
+  "active": "7312ab1974d098a0",
   "lastOpenFiles": [
-    "CARPETADATASETS/web/Scrapduck_multiquery_MACBA.csv",
-    "CARPETADATASETS/web/Scrapduck_multiquery_MACBA.json",
-    "Scripts de python/Scrapduck_multiquery_MACBA.csv",
-    "Scripts de python/Scrapduck_multiquery_MACBA.json",
-    "CARPETADATASETS/web/Scrapduck_chrome_datesfixed_50clicks2.json",
-    "CARPETADATASETS/web/Scrapduck_chrome_datesfixed_50clicks 2.csv",
-    "CARPETADATASETS/web/Scrapduck_chrome_datesfixed_50clicks.json",
-    "Scripts de python/Scrapduck_chrome_datesfixed_50clicks.json",
-    "Scripts de python/Scrapduck_chrome_datesfixed_50clicks.csv",
-    "Scripts de python/Scrapduck_multiquery_MACBA.py",
-    "Scripts de python/Scrapduck_chrome_datesfixed copy.py",
-    "README.md",
-    "NARRATIVA.md",
-    "Assets/App.md",
-    "scrapping_twitter/Codigos de scrapping de twiter.md",
+    "valor sentimental/tweets_macba_skate_sentiment.csv",
+    "valor sentimental/sentiment_ollama.py",
+    "Assets/Blender + Audio reactive.md",
+    "valor sentimental/Valorsentimental.py",
+    "valor sentimental/tweets_macba_skate_V5.csv",
+    "valor sentimental",
+    "scrapping_twitter_website_iteraciones/tweets_skate_barcelona.json",
+    "scrapping_twitter_website_iteraciones/tweets_macba_skate.json",
+    "scrapping_twitter_website_iteraciones/scrapp_twitter_V4.py",
+    "scrapping_twitter_website_iteraciones/scrapp_twitter_V3.py",
+    "scrapping_twitter_website_iteraciones/scrapp_twitter_V2.py",
+    "scrapping_twitter_website_iteraciones/scrapp_twitter.V3.py",
     "scrapping_twitter_website_iteraciones/README.md",
     "scrapping_twitter_website_iteraciones/Codigos de scrapping de twiter.md",
-    "Assets/Detector de personas y skates con YOLO y Label-studio.md",
-    "scrapping_twitter/README.md",
-    "Untitled.md",
     "Assets/olamonumento.jpg",
     "Assets/mappingdiy.png",
     "Assets/macbapartes.png",
     "Assets/Proyeccion + mapping.md",
-    "CARPETADATASETS/darknet/data/labels/99_7.png",
-    "CARPETADATASETS/darknet/data/labels/99_6.png",
-    "CARPETADATASETS/darknet/data/labels/99_5.png",
-    "CARPETADATASETS/darknet/data/labels/99_4.png",
-    "CARPETADATASETS/darknet/data/labels/99_3.png",
-    "CARPETADATASETS/darknet/data/labels/99_2.png",
-    "CARPETADATASETS/darknet/data/labels/99_1.png",
-    "CARPETADATASETS/darknet/README.md",
-    "Assets/Blender + Audio reactive.md",
+    "Assets/Detector de personas y skates con YOLO y Label-studio.md",
+    "Assets/Grasshoppertree.png",
+    "Assets/Grasshopperaudio.png",
+    "Assets/UIMORPHSOUND.png",
+    "NARRATIVA.md",
+    "README.md",
+    "Assets/App.md",
     "Jeronimo.md",
     "PRESENTACION LUNES 2.md",
     "PRESENTACION.md",
     "Screenshot.md",
+    "Screenshot 2026-02-02 at 16.06.45.png",
+    "Screenshot 2026-02-02 at 16.07.32.png",
+    "Screenshot 2026-02-02 at 16.08.14 1.png",
     "Untitled.canvas",
+    "Screenshot 2026-02-02 at 16.08.14.png",
     "sesiones/20260129_sesion_2/MI_TITULO.md",
     "sesiones/20260129_sesion_2/README.md",
     "2026-01-29.md",
@@ -218,6 +229,10 @@
     "referencias/teoria_tecnica/README.md",
     "referencias/teoria_tecnica/dataVizs/videos/README.md",
     "herramientas/terminal/README.md",
-    "proyectos/README.md"
+    "proyectos/README.md",
+    "proyectos/de la observacion al dato/README.md",
+    "sesiones/20260128_sesion_1/README.md",
+    "Sesión 8 - Presentación de proyecto.md",
+    "referencias/teoria_tecnica/dataVizs/README.md"
   ]
 }
