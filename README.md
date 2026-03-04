@@ -321,68 +321,38 @@ Para el análisis de sentimiento se utilizó **Ollama**, una herramienta que per
 
 ## Resultado
 Se genera un nuevo archivo CSV con una columna adicional llamada **`sentiment`**:
-- **1** = positivo # Análisis de Sentimiento con Ollama
-
-## Requisitos previos
-- Windows 10 o 11
-- Conexión a internet (solo para la instalación)
-
----
-
-## Paso 1 — Instalar Python
-1. Ve a **python.org/downloads** y descarga la última versión
-2. Durante la instalación, marca obligatoriamente la casilla **"Add Python to PATH"**
-3. Verifica la instalación abriendo CMD y ejecutando:
-```
-   python --version
-```
-
----
-
-## Paso 2 — Instalar Ollama
-1. Ve a **ollama.com/download/windows** y descarga el instalador
-2. Instálalo (quedará como icono en la barra de tareas)
-
----
-
-## Paso 3 — Descargar el modelo LLaMA 3.2
-1. Abre CMD y ejecuta:
-```
-   ollama pull llama3.2
-```
-2. Espera a que se descargue (~2GB)
-
----
-
-## Paso 4 — Instalar la librería de Python
-1. En CMD ejecuta:
-```
-   python -m pip install ollama
-```
-
----
-
-## Paso 5 — Preparar los archivos
-1. Crea una carpeta en tu ordenador
-2. Pon dentro el script `.py` y el CSV con los datos
-
----
-
-## Paso 6 — Ejecutar el script
-1. En CMD, navega a la carpeta donde están los archivos:
-```
-   cd C:\ruta\a\tu\carpeta
-```
-2. Ejecuta el script:
-```
-   python sentiment_ollama_web.py
-```
-3. El script procesará cada fila del CSV y mostrará en pantalla si cada entrada es positiva o negativa
-
----
-
-## Resultado
-Se genera un nuevo archivo CSV con una columna adicional llamada **`sentiment`**:
-- **1** = positivo o neutro
+- **1** = positivo o neutro(No teniamos tiempo de crear otro filtro en la web)
 - **0** = negativo
-- **0** = negativo
+
+## Cómo funciona el código
+
+El núcleo del script es la función `get_sentiment()`, que es la que se comunica con Ollama y decide si un texto es positivo o negativo:
+```python
+def get_sentiment(text):
+    if not text or len(text.strip()) < 3:
+        return ""
+    prompt = (
+        "Is the sentiment of this web article description positive or negative?\n"
+        "Reply with ONLY '1' if positive (or neutral), or '0' if negative. Nothing else.\n"
+        "Text: " + text
+    )
+    response = ollama.chat(
+        model=MODEL,
+        messages=[{"role": "user", "content": prompt}],
+        options={"temperature": 0, "num_predict": 3},
+    )
+    score = response["message"]["content"].strip()
+    if "1" in score:
+        return 1
+    if "0" in score:
+        return 0
+```
+
+**El prompt** es la instrucción que se le envía al modelo con cada texto. Le pregunta si el sentimiento es positivo o negativo y le obliga a responder únicamente con `1` o `0`, sin ninguna explicación adicional. Este texto se puede modificar para darle criterios más específicos, por ejemplo orientados al skateboarding en espacios públicos.
+
+**`temperature: 0`** hace que el modelo sea determinista, es decir, que siempre tienda a dar la misma respuesta ante el mismo texto, sin "improvisar".
+
+**`num_predict: 3`** limita la longitud de la respuesta a muy pocas palabras, forzando al modelo a devolver solo el número.
+
+El script recorre el CSV fila a fila, envía el texto de la columna `description` a Ollama, recibe el valor `1` o `0` y lo escribe en una nueva columna llamada `sentiment` en el archivo de salida.
+
