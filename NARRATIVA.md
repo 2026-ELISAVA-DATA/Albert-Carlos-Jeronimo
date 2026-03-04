@@ -1,1 +1,10 @@
 Version 1: Este proyecto toma como punto de partida un elemento urbano concreto de la plaza del Museu d'Art Contemporani de Barcelona(MACBA): un bloque de piedra utilizado de forma recurrente. A través de una visualización generativa, este objeto se convierte en una superficie sensible donde se acumulan cicatrices físicas y culturales. Las partículas distribuidas sobre el objeto reaccionan a datos de turismo en Barcelona, modificando su densidad, estabilidad y cohesión, como metáfora del desgaste que produce la presión turística sobre la ciudad. Del mismo modo que el skate deja marcas visibles en el material, el turismo masivo erosiona identidades locales, lenguas y dinámicas culturales
+
+Version Final:
+La plaza del Museu d'Art Contemporani de Barcelona (MACBA), diseñada por Richard Meier, ha trascendido su condición arquitectónica para consolidarse como un enclave fundamental en la cultura global del skateboarding. Ante la propuesta de reforma del espacio y la emergencia del movimiento “Save the MACBA”, se activa un debate que excede lo urbano y se sitúa en el ámbito del patrimonio cultural contemporáneo y la apropiación del espacio público.
+
+Este proyecto propone una visualización de datos como herramienta de análisis cultural. A partir de la extracción sistemática de tweets y artículos mediante técnicas de web scraping, se construye una base de datos que recoge la conversación digital generada en torno al conflicto. Estos contenidos son procesados mediante modelos de clasificación de lenguaje para identificar su polaridad (positiva o negativa).
+
+La web materializa esta información en una infografía tridimensional del museo, donde cada punto representa un dato. Las fachadas del edificio funcionan como soporte visual de la conversación colectiva, permitiendo observar su volumen, distribución y tono. De este modo, la arquitectura se convierte en interfaz y el dato en evidencia cuantificable de una dinámica cultural activa.
+
+El proyecto explora cómo la visualización puede revelar la dimensión social de un espacio urbano, transformando el edificio en un mapa de las voces que lo defienden.

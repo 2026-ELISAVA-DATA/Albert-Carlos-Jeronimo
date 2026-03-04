@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "scrapping_twitter_website_iteraciones/Codigos de scrapping de twiter.md",
+                "file": "IDEACION.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Codigos de scrapping de twiter"
+              "title": "IDEACION"
+            }
+          },
+          {
+            "id": "ead014d2637372db",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "README"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -170,8 +185,13 @@
       "slides-extended:Show Slide Preview": false
     }
   },
-  "active": "7312ab1974d098a0",
+  "active": "ead014d2637372db",
   "lastOpenFiles": [
+    "NARRATIVA.md",
+    "README.md",
+    "IDEACION.md",
+    "VIDEOS PRESENTACION/Screen Recording 2026-02-27 at 16.38.53.mov",
+    "scrapping_twitter_website_iteraciones/Codigos de scrapping de twiter.md",
     "VIDEOS PRESENTACION/webs1.mov",
     "VIDEOS PRESENTACION/webs3.mov",
     "VIDEOS PRESENTACION/twitter2.mov",
@@ -179,12 +199,9 @@
     "VIDEOS PRESENTACION/twitter1.mov",
     "VIDEOS PRESENTACION/Screen Recording 2026-03-04 at 10.20.11.mov",
     "Assets/App.md",
-    "scrapping_twitter_website_iteraciones/Codigos de scrapping de twiter.md",
     "Python.Scrap_web_X/FINAL/Scrapduck_multiquery_MACBA.py",
     "Python.Scrap_web_X/FINAL/scrapp_twitter_V5.py",
     "Python.Scrap_web_X/FINAL",
-    "Python.Scrap_web_X/New folder",
-    "CARPETADATASETS/web/FINAL/Scrapduck_multiquery_MACBA_masclicks.csv",
     "Assets/Blender + Audio reactive.md",
     "scrapping_twitter_website_iteraciones/README.md",
     "Assets/olamonumento.jpg",
@@ -195,8 +212,6 @@
     "Assets/Grasshoppertree.png",
     "Assets/Grasshopperaudio.png",
     "Assets/UIMORPHSOUND.png",
-    "NARRATIVA.md",
-    "README.md",
     "Jeronimo.md",
     "PRESENTACION LUNES 2.md",
     "PRESENTACION.md",
