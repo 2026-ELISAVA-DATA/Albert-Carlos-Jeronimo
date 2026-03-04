@@ -1,4 +1,3 @@
-# Albert-Carlos-Jeronimo
 
 **Ideas principales:**
 
@@ -11,7 +10,6 @@
 - creación de visuales en processing a partir de data + Proyección (videomapping)
 - Creación modelo 3D en grasshopper a partir de audio + Proyección  (videomapping)
 - Audio/data skate + generación de imágen/animación + Proyección (videomapping)
-
 
 
 **Posibles data set a utilizar:** 1. https://opendata-ajuntament.barcelona.cat/data/en/dataset/intensitat-activitat-turistica # Areas of the city of Barcelona with higher concentration of tourism

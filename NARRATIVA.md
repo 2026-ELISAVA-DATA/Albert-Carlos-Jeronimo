@@ -1,5 +1,4 @@
 
-Version Final:
 La plaza del Museu d'Art Contemporani de Barcelona (MACBA), diseñada por Richard Meier, ha trascendido su condición arquitectónica para consolidarse como un enclave fundamental en la cultura global del skateboarding. Ante la propuesta de reforma del espacio y la emergencia del movimiento “Save the MACBA”, se activa un debate que excede lo urbano y se sitúa en el ámbito del patrimonio cultural contemporáneo y la apropiación del espacio público.
 
 Este proyecto propone una visualización de datos como herramienta de análisis cultural. A partir de la extracción sistemática de tweets y artículos mediante técnicas de web scraping, se construye una base de datos que recoge la conversación digital generada en torno al conflicto. Estos contenidos son procesados mediante modelos de clasificación de lenguaje para identificar su polaridad (positiva o negativa).
