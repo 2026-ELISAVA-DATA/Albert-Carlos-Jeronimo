@@ -1,4 +1,4 @@
-<center></center>![macba skater](https://raw.githubusercontent.com/2026-ELISAVA-DATA/Albert-Carlos-Jeronimo/main/Assets/macba%20skater.jpg)
+![macba skater](https://raw.githubusercontent.com/2026-ELISAVA-DATA/Albert-Carlos-Jeronimo/main/Assets/macba%20skater.jpg)
 
 La plaza del Museu d'Art Contemporani de Barcelona (MACBA), diseñada por Richard Meier, ha trascendido su condición arquitectónica para consolidarse como un enclave fundamental en la cultura global del skateboarding. Ante la propuesta de reforma del espacio y la emergencia del movimiento “Save the MACBA”, se activa un debate que excede lo urbano y se sitúa en el ámbito del patrimonio cultural contemporáneo y la apropiación del espacio público.
 
