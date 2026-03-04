@@ -13,10 +13,10 @@
             "state": {
               "type": "video",
               "state": {
-                "file": "VIDEOS PRESENTACION/Screen Recording 2026-02-27 at 16.38.53.mov"
+                "file": "VIDEOS PRESENTACION/Recording 2026-03-04 104642.mp4"
               },
               "icon": "lucide-file",
-              "title": "Screen Recording 2026-02-27 at 16.38.53"
+              "title": "Recording 2026-03-04 104642"
             }
           }
         ]
@@ -92,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "VIDEOS PRESENTACION/Screen Recording 2026-02-27 at 16.38.53.mov",
+                "file": "VIDEOS PRESENTACION/Recording 2026-03-04 104642.mp4",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Screen Recording 2026-02-27 at 16.38.53"
+              "title": "Backlinks for Recording 2026-03-04 104642"
             }
           },
           {
@@ -111,12 +111,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "VIDEOS PRESENTACION/Screen Recording 2026-02-27 at 16.38.53.mov",
+                "file": "VIDEOS PRESENTACION/Recording 2026-03-04 104642.mp4",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Screen Recording 2026-02-27 at 16.38.53"
+              "title": "Outgoing links from Recording 2026-03-04 104642"
             }
           },
           {
@@ -140,13 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "VIDEOS PRESENTACION/Screen Recording 2026-02-27 at 16.38.53.mov",
+                "file": "VIDEOS PRESENTACION/Recording 2026-03-04 104642.mp4",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Screen Recording 2026-02-27 at 16.38.53"
+              "title": "Outline of Recording 2026-03-04 104642"
             }
           }
         ]
@@ -170,16 +170,17 @@
   },
   "active": "0547b5ae34c729ab",
   "lastOpenFiles": [
+    "VIDEOS PRESENTACION/Claude primera version web.mp4",
+    "Claude primera version web.mp4",
     "VIDEOS PRESENTACION/videomacba.mp4",
+    "NARRATIVA.md",
     "VIDEOS PRESENTACION/VIEWPORTNODESAUDIO.mp4",
     "VIDEOS PRESENTACION/Screen Recording 2026-03-04 at 10.20.11.mov",
+    "VIDEOS PRESENTACION/Screen Recording 2026-02-27 at 16.38.53.mov",
+    "VIDEOS PRESENTACION/Recording 2026-03-04 104642.mp4",
     "VIDEOS PRESENTACION/Screen Recording 2026-03-02 at 18.40.02.mov",
     "VIDEOS PRESENTACION/Recording 2026-03-04 114346.mp4",
-    "VIDEOS PRESENTACION/Recording 2026-03-04 104642.mp4",
     "Versiones_de_la_web/macba-data-domes_22.html",
-    "Versiones_de_la_web/macba-data-domes_21.html",
-    "Versiones_de_la_web/macba-data-domes_20.html",
-    "Versiones_de_la_web/macba-data-domes_19.html",
-    "Versiones_de_la_web/macba-data-domes_18.html"
+    "Versiones_de_la_web/macba-data-domes_21.html"
   ]
 }
