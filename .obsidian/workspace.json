@@ -8,6 +8,7 @@
         "type": "tabs",
         "children": [
           {
+<<<<<<< HEAD
             "id": "bf867c954c8c52c8",
             "type": "leaf",
             "state": {
@@ -47,6 +48,8 @@
             }
           },
           {
+=======
+>>>>>>> ab5b6316f15dcb095cbd06d91e5baba44e46da2c
             "id": "7312ab1974d098a0",
             "type": "leaf",
             "state": {
@@ -62,8 +65,7 @@
 >>>>>>> c3421b5fb6a3220151da9e6013b5e287de06a46d
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -216,6 +218,7 @@
   "lastOpenFiles": [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "Assets/macba_skate_news_100_with_dates_sorted_negative.csv",
     "README.md",
     "Assets/App.md",
@@ -270,7 +273,22 @@
     "scrapping_twitter_website_iteraciones/scrapp_twitter.V3.py",
 >>>>>>> ab64556ccd682eaaa10f3e3678dd5fddb623efc9
     "scrapping_twitter_website_iteraciones/README.md",
+=======
+    "Assets/App.md",
+>>>>>>> ab5b6316f15dcb095cbd06d91e5baba44e46da2c
     "scrapping_twitter_website_iteraciones/Codigos de scrapping de twiter.md",
+    "Python.Scrap_web_X/FINAL/Scrapduck_multiquery_MACBA.py",
+    "Python.Scrap_web_X/FINAL/scrapp_twitter_V5.py",
+    "Python.Scrap_web_X/FINAL",
+    "Python.Scrap_web_X/New folder",
+    "CARPETADATASETS/web/FINAL/Scrapduck_multiquery_MACBA_masclicks.csv",
+    "CARPETADATASETS/web/FINAL/Scrapduck_multiquery_MACBA_masclicks.json",
+    "CARPETADATASETS/web/FINAL",
+    "CARPETADATASETS/web/New folder",
+    "CARPETADATASETS/Tweets/FINAL/tweets_macba_skate_V5.json",
+    "CARPETADATASETS/Tweets/FINAL/tweets_macba_skate_V5.csv",
+    "Assets/Blender + Audio reactive.md",
+    "scrapping_twitter_website_iteraciones/README.md",
     "Assets/olamonumento.jpg",
     "Assets/mappingdiy.png",
     "Assets/macbapartes.png",
@@ -281,7 +299,6 @@
     "Assets/UIMORPHSOUND.png",
     "NARRATIVA.md",
     "README.md",
-    "Assets/App.md",
     "Jeronimo.md",
 >>>>>>> c3421b5fb6a3220151da9e6013b5e287de06a46d
     "PRESENTACION LUNES 2.md",
