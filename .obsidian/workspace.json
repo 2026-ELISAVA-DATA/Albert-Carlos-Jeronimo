@@ -1,68 +1,22 @@
 {
   "main": {
-    "id": "4700bd1f43cb5837",
+    "id": "e891f46d4a2a497c",
     "type": "split",
     "children": [
       {
-        "id": "0294745504c79b62",
+        "id": "9cc036a559ddb51b",
         "type": "tabs",
         "children": [
           {
-<<<<<<< HEAD
-            "id": "bf867c954c8c52c8",
+            "id": "a4b867d2dcf90909",
             "type": "leaf",
             "state": {
               "type": "video",
               "state": {
-<<<<<<< HEAD
-<<<<<<< HEAD
-                "file": "Assets/videoModelomacba.mp4"
+                "file": "VIDEOS PRESENTACION/Screen Recording 2026-02-27 at 16.38.53.mov"
               },
               "icon": "lucide-file",
-              "title": "videoModelomacba"
-            }
-          }
-        ]
-      },
-      {
-        "id": "2ad4c705e61ddecb",
-        "type": "tabs",
-        "dimension": 50,
-        "children": [
-          {
-            "id": "a869d6d23f2e78f9",
-            "type": "leaf",
-            "state": {
-              "type": "reveal-preview-view",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Slide Preview"
-=======
-=======
-                "file": "Assets/App.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "App"
-            }
-          },
-          {
-=======
->>>>>>> ab5b6316f15dcb095cbd06d91e5baba44e46da2c
-            "id": "7312ab1974d098a0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
->>>>>>> ab64556ccd682eaaa10f3e3678dd5fddb623efc9
-                "file": "scrapping_twitter_website_iteraciones/Codigos de scrapping de twiter.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Codigos de scrapping de twiter"
->>>>>>> c3421b5fb6a3220151da9e6013b5e287de06a46d
+              "title": "Screen Recording 2026-02-27 at 16.38.53"
             }
           }
         ]
@@ -71,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "a6966de33d52e69f",
+    "id": "19641f015326338e",
     "type": "split",
     "children": [
       {
-        "id": "beb67f98e72839b8",
+        "id": "ffef3e3eb3a77a83",
         "type": "tabs",
         "children": [
           {
-            "id": "5d665c478dee3697",
+            "id": "0547b5ae34c729ab",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -92,7 +46,7 @@
             }
           },
           {
-            "id": "8ce849352a82341e",
+            "id": "1d221eb8b7eff88e",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -105,40 +59,40 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Buscar"
+              "title": "Search"
             }
           },
           {
-            "id": "e505e802d4a900d6",
+            "id": "386a67bca91c95ef",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "Marcadores"
+              "title": "Bookmarks"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 243.5
+    "width": 300
   },
   "right": {
-    "id": "59d0d4efaa3c3e9f",
+    "id": "0df0e681e5248c28",
     "type": "split",
     "children": [
       {
-        "id": "e5dcf2a2b8cd4c72",
+        "id": "f13f07783375379a",
         "type": "tabs",
         "children": [
           {
-            "id": "e548cac13096d32d",
+            "id": "4edb66d7d66de4b9",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "VIDEOS PRESENTACION/Screen Recording 2026-02-27 at 16.38.53.mov",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -148,25 +102,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Enlaces entrantes de README"
+              "title": "Backlinks for Screen Recording 2026-02-27 at 16.38.53"
             }
           },
           {
-            "id": "dab19bc058ff3343",
+            "id": "c5bebde95ffbef04",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "VIDEOS PRESENTACION/Screen Recording 2026-02-27 at 16.38.53.mov",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Enlaces salientes de README"
+              "title": "Outgoing links from Screen Recording 2026-02-27 at 16.38.53"
             }
           },
           {
-            "id": "5eae8daf950fcde1",
+            "id": "1e261772484363f1",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -177,22 +131,22 @@
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "Etiquetas"
+              "title": "Tags"
             }
           },
           {
-            "id": "b40dd67c827bbfa8",
+            "id": "001de82e4f22191a",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "VIDEOS PRESENTACION/Screen Recording 2026-02-27 at 16.38.53.mov",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Esquema de README"
+              "title": "Outline of Screen Recording 2026-02-27 at 16.38.53"
             }
           }
         ]
@@ -214,113 +168,18 @@
       "slides-extended:Show Slide Preview": false
     }
   },
-  "active": "7312ab1974d098a0",
+  "active": "a4b867d2dcf90909",
   "lastOpenFiles": [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "Assets/macba_skate_news_100_with_dates_sorted_negative.csv",
-    "README.md",
-    "Assets/App.md",
-    "Assets/Grasshopperaudio.png",
-    "Assets/Grasshoppertree.png",
-    "Assets/UIMORPHSOUND.png",
-    "Assets/videoModelomacba.mp4",
-    "Jeronimo.md",
-    "Assets/UI MORPHSOUND 1.png",
-    "UIMORPHSOUND.png",
-    "Assets/video Modelo macba.mp4",
-    "Assets/Macba animacion deforma agua.mp4",
-    "video Modelo macba 1.mp4",
-    "video Modelo macba.mp4",
-    "UI MORPHSOUND.png",
-    "UI MORPHSOUND 1 1.png",
-    "UI MORPHSOUND 1.png",
-    "morphsound-1771954844522 1.webm",
-    "morphsound-1771954844522.webm",
-    "videaso.mp4",
-    "Assets/UI MORPHSOUND.png",
-    "DATASETSCARLOS/Shoe prices.csv",
-    "DATASETSCARLOS/practicasesion4.ipynb",
-=======
-    "CARPETADATASETS/web/Scrapduck_multiquery_MACBA.csv",
-    "CARPETADATASETS/web/Scrapduck_multiquery_MACBA.json",
-    "Scripts de python/Scrapduck_multiquery_MACBA.csv",
-    "Scripts de python/Scrapduck_multiquery_MACBA.json",
-    "CARPETADATASETS/web/Scrapduck_chrome_datesfixed_50clicks2.json",
-    "CARPETADATASETS/web/Scrapduck_chrome_datesfixed_50clicks 2.csv",
-    "CARPETADATASETS/web/Scrapduck_chrome_datesfixed_50clicks.json",
-    "Scripts de python/Scrapduck_chrome_datesfixed_50clicks.json",
-    "Scripts de python/Scrapduck_chrome_datesfixed_50clicks.csv",
-    "Scripts de python/Scrapduck_multiquery_MACBA.py",
-    "Scripts de python/Scrapduck_chrome_datesfixed copy.py",
-    "README.md",
-    "NARRATIVA.md",
-    "Assets/App.md",
-    "scrapping_twitter/Codigos de scrapping de twiter.md",
-=======
-    "valor sentimental/tweets_macba_skate_sentiment.csv",
-    "valor sentimental/sentiment_ollama.py",
-    "Assets/Blender + Audio reactive.md",
-    "valor sentimental/Valorsentimental.py",
-    "valor sentimental/tweets_macba_skate_V5.csv",
-    "valor sentimental",
-    "scrapping_twitter_website_iteraciones/tweets_skate_barcelona.json",
-    "scrapping_twitter_website_iteraciones/tweets_macba_skate.json",
-    "scrapping_twitter_website_iteraciones/scrapp_twitter_V4.py",
-    "scrapping_twitter_website_iteraciones/scrapp_twitter_V3.py",
-    "scrapping_twitter_website_iteraciones/scrapp_twitter_V2.py",
-    "scrapping_twitter_website_iteraciones/scrapp_twitter.V3.py",
->>>>>>> ab64556ccd682eaaa10f3e3678dd5fddb623efc9
-    "scrapping_twitter_website_iteraciones/README.md",
-=======
-    "Assets/App.md",
->>>>>>> ab5b6316f15dcb095cbd06d91e5baba44e46da2c
-    "scrapping_twitter_website_iteraciones/Codigos de scrapping de twiter.md",
-    "Python.Scrap_web_X/FINAL/Scrapduck_multiquery_MACBA.py",
-    "Python.Scrap_web_X/FINAL/scrapp_twitter_V5.py",
-    "Python.Scrap_web_X/FINAL",
-    "Python.Scrap_web_X/New folder",
-    "CARPETADATASETS/web/FINAL/Scrapduck_multiquery_MACBA_masclicks.csv",
-    "CARPETADATASETS/web/FINAL/Scrapduck_multiquery_MACBA_masclicks.json",
-    "CARPETADATASETS/web/FINAL",
-    "CARPETADATASETS/web/New folder",
-    "CARPETADATASETS/Tweets/FINAL/tweets_macba_skate_V5.json",
-    "CARPETADATASETS/Tweets/FINAL/tweets_macba_skate_V5.csv",
-    "Assets/Blender + Audio reactive.md",
-    "scrapping_twitter_website_iteraciones/README.md",
-    "Assets/olamonumento.jpg",
-    "Assets/mappingdiy.png",
-    "Assets/macbapartes.png",
-    "Assets/Proyeccion + mapping.md",
-    "Assets/Detector de personas y skates con YOLO y Label-studio.md",
-    "Assets/Grasshoppertree.png",
-    "Assets/Grasshopperaudio.png",
-    "Assets/UIMORPHSOUND.png",
-    "NARRATIVA.md",
-    "README.md",
-    "Jeronimo.md",
->>>>>>> c3421b5fb6a3220151da9e6013b5e287de06a46d
-    "PRESENTACION LUNES 2.md",
-    "PRESENTACION.md",
-    "Screenshot.md",
-    "Screenshot 2026-02-02 at 16.06.45.png",
-    "Screenshot 2026-02-02 at 16.07.32.png",
-    "Screenshot 2026-02-02 at 16.08.14 1.png",
-    "Untitled.canvas",
-    "Screenshot 2026-02-02 at 16.08.14.png",
-    "sesiones/20260129_sesion_2/MI_TITULO.md",
-    "sesiones/20260129_sesion_2/README.md",
-    "2026-01-29.md",
-    "proyectos/proyecto _final-guia/ideas/README.md",
-    "proyectos/proyecto _final-guia/README.md.md",
-    "referencias/teoria_tecnica/README.md",
-    "referencias/teoria_tecnica/dataVizs/videos/README.md",
-    "herramientas/terminal/README.md",
-    "proyectos/README.md",
-    "proyectos/de la observacion al dato/README.md",
-    "sesiones/20260128_sesion_1/README.md",
-    "Sesión 8 - Presentación de proyecto.md",
-    "referencias/teoria_tecnica/dataVizs/README.md"
+    "Versiones_de_la_web/macba-data-domes_22.html",
+    "Versiones_de_la_web/macba-data-domes_21.html",
+    "Versiones_de_la_web/macba-data-domes_20.html",
+    "Versiones_de_la_web/macba-data-domes_19.html",
+    "Versiones_de_la_web/macba-data-domes_18.html",
+    "Versiones_de_la_web/macba-data-domes_17.html",
+    "Versiones_de_la_web/macba-data-domes_16.html",
+    "Versiones_de_la_web/macba-data-domes_15.html",
+    "Versiones_de_la_web/macba-data-domes_14.html",
+    "Versiones_de_la_web/macba-data-domes_13.html",
+    "Versiones_de_la_web/macba-data-domes_12.html"
   ]
 }

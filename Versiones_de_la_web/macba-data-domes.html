@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MACBA Data Domes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<style>
+  :root {
+    --bg: #080809;
+    --panel: #0f0f11;
+    --panel2: #141416;
+    --border: #1e1e24;
+    --border2: #2a2a34;
+    --text: #dddde8;
+    --text2: #6e6e80;
+    --text3: #38383f;
+    --cyan: #5ef0e8;
+    --orange: #f0895e;
+    --purple: #9d5ef0;
+    --green: #5ef090;
+    --pink: #f05e9d;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; overflow: hidden; width: 100vw; height: 100vh; display: flex; }
+  
+  /* Canvas area */
+  #canvas-wrap { flex: 1; position: relative; overflow: hidden; }
+  #three-canvas { display: block; width: 100%; height: 100%; }
+  
+  /* Top bar */
+  #topbar {
+    position: absolute; top: 0; left: 0; right: 0; z-index: 20;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 20px;
+    background: linear-gradient(180deg, rgba(8,8,9,.95) 0%, transparent 100%);
+    pointer-events: none;
+  }
+  #wordmark { pointer-events: auto; }
+  #wordmark .w1 { font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: .22em; color: var(--text); line-height: 1; }
+  #wordmark .w2 { font-family: 'Space Mono', monospace; font-size: 8px; letter-spacing: .18em; color: var(--text3); }
+  #topbar-right { display: flex; align-items: center; gap: 16px; pointer-events: auto; }
+  #layer-dots { display: flex; gap: 10px; align-items: center; }
+  .layer-dot { width: 6px; height: 6px; border-radius: 50%; }
+  
+  #panel-toggle {
+    background: rgba(15,15,17,.85); border: 1px solid var(--border2);
+    border-radius: 3px; padding: 6px 14px; color: var(--text2);
+    cursor: pointer; font-size: 9px; font-family: 'Space Mono', monospace;
+    letter-spacing: .08em; transition: color .2s, border-color .2s;
+  }
+  #panel-toggle:hover { color: var(--text); border-color: var(--border2); }
+  
+  /* Bottom hint */
+  #hint {
+    position: absolute; bottom: 16px; left: 20px; z-index: 5;
+    font-family: 'Space Mono', monospace; font-size: 9px; color: var(--text3);
+    line-height: 1.9; pointer-events: none;
+    opacity: 0; transition: opacity .5s;
+  }
+  #hint.show { opacity: 1; }
+
+  /* Upload overlay */
+  #upload-overlay {
+    position: absolute; inset: 0; z-index: 30;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(8,8,9,.6); backdrop-filter: blur(4px);
+  }
+  #upload-box {
+    width: 300px; text-align: center;
+    padding: 48px 36px;
+    border: 1px dashed var(--border2); border-radius: 8px;
+    background: rgba(15,15,17,.92); cursor: pointer;
+    transition: border-color .2s, background .2s;
+  }
+  #upload-box:hover, #upload-box.dragging {
+    border-color: var(--cyan); background: rgba(94,240,232,.04);
+  }
+  #upload-box .icon { font-size: 36px; opacity: .35; margin-bottom: 18px; font-family: 'Space Mono', monospace; }
+  #upload-box .label { font-family: 'Space Mono', monospace; font-size: 11px; color: var(--text2); line-height: 1.9; letter-spacing: .1em; }
+  #upload-box .sub { font-size: 9px; color: var(--text3); }
+  #skip-btn {
+    margin-top: 20px; background: none; border: 1px solid var(--border);
+    border-radius: 3px; padding: 7px 20px; color: var(--text3);
+    cursor: pointer; font-size: 9px; font-family: 'Space Mono', monospace;
+    letter-spacing: .08em; display: block; margin-left: auto; margin-right: auto;
+    transition: color .2s, border-color .2s;
+  }
+  #skip-btn:hover { color: var(--text2); border-color: var(--border2); }
+  #model-status { margin-top: 12px; font-size: 10px; color: var(--cyan); font-family: 'Space Mono', monospace; min-height: 14px; }
+  
+  /* Side panel */
+  #panel {
+    width: 304px; min-width: 304px; flex-shrink: 0;
+    border-left: 1px solid var(--border);
+    background: var(--panel); display: flex; flex-direction: column;
+    overflow: hidden; transition: margin-right .32s cubic-bezier(.16,1,.3,1);
+  }
+  #panel.hidden { margin-right: -304px; }
+  
+  /* Tab bar */
+  #tabs { display: flex; border-bottom: 1px solid var(--border); flex-shrink: 0; }
+  .tab {
+    flex: 1; padding: 13px 4px; background: none; border: none;
+    border-bottom: 2px solid transparent; cursor: pointer;
+    font-size: 8.5px; font-family: 'Space Mono', monospace; letter-spacing: .1em;
+    color: var(--text3); transition: color .15s, border-color .15s;
+  }
+  .tab.active { color: var(--cyan); border-bottom-color: var(--cyan); }
+  
+  /* Tab panes */
+  .pane { display: none; flex-direction: column; height: 100%; overflow: hidden; }
+  .pane.active { display: flex; }
+  
+  /* Layers pane */
+  #csv-drop {
+    margin: 14px; padding: 22px 16px; border: 1px dashed var(--border2);
+    border-radius: 4px; cursor: pointer; text-align: center;
+    transition: all .2s; flex-shrink: 0;
+  }
+  #csv-drop:hover, #csv-drop.dragging { border-color: var(--cyan); background: rgba(94,240,232,.04); }
+  #csv-drop .plus { font-size: 20px; color: var(--text3); margin-bottom: 6px; }
+  #csv-drop .csv-label { font-family: 'Space Mono', monospace; font-size: 10px; color: var(--text2); line-height: 1.7; letter-spacing: .08em; }
+  #csv-drop .csv-sub { font-size: 8px; color: var(--text3); }
+  
+  #layers-list { flex: 1; overflow-y: auto; }
+  
+  .layer-item {
+    border-bottom: 1px solid var(--border);
+    padding: 14px 16px; background: var(--panel);
+    transition: background .15s;
+  }
+  .layer-item:hover { background: var(--panel2); }
+  .layer-row1 { display: flex; align-items: center; gap: 9px; margin-bottom: 11px; }
+  .layer-dot-big { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .layer-name {
+    flex: 1; background: none; border: none; outline: none;
+    color: var(--text); font-size: 12px; font-family: 'DM Sans', sans-serif;
+    min-width: 0;
+  }
+  .layer-idx { font-size: 9px; font-family: 'Space Mono', monospace; color: var(--text3); }
+  .layer-vis, .layer-del {
+    background: none; border: none; cursor: pointer;
+    font-size: 14px; padding: 0; transition: color .15s; line-height: 1;
+  }
+  .layer-vis { color: var(--text2); }
+  .layer-vis.hidden { color: var(--text3); }
+  .layer-del { color: var(--text3); }
+  .layer-del:hover { color: #f05e5e; }
+  
+  .layer-controls { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  input[type=color] {
+    -webkit-appearance: none; width: 26px; height: 26px;
+    border: 1px solid var(--border2); border-radius: 3px; cursor: pointer; padding: 0;
+  }
+  input[type=color]::-webkit-color-swatch-wrapper { padding: 2px; }
+  input[type=color]::-webkit-color-swatch { border: none; border-radius: 2px; }
+  .pts-count { font-size: 9px; font-family: 'Space Mono', monospace; color: var(--text3); margin-left: auto; }
+  
+  .slider-row { margin-bottom: 7px; }
+  .slider-label-row { display: flex; justify-content: space-between; margin-bottom: 4px; }
+  .slider-lbl { font-size: 9px; font-family: 'Space Mono', monospace; color: var(--text2); letter-spacing: .07em; }
+  .slider-val { font-size: 9px; font-family: 'Space Mono', monospace; color: var(--text3); }
+  
+  input[type=range] {
+    -webkit-appearance: none; width: 100%; height: 2px;
+    background: var(--border); border-radius: 1px; outline: none;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none; width: 11px; height: 11px; border-radius: 50%;
+    background: var(--cyan); cursor: pointer; transition: transform .15s;
+  }
+  input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.35); }
+  
+  /* Legend */
+  #legend { padding: 12px 16px; border-top: 1px solid var(--border); flex-shrink: 0; }
+  .legend-title { font-size: 8px; font-family: 'Space Mono', monospace; color: var(--text3); letter-spacing: .12em; margin-bottom: 8px; }
+  .legend-row { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
+  .legend-dot { width: 5px; height: 5px; border-radius: 50%; }
+  .legend-name { font-size: 10px; color: var(--text2); }
+  
+  /* Article / Detail pane */
+  #detail-pane { height: 100%; display: flex; flex-direction: column; overflow: hidden; }
+  #detail-header { padding: 16px 20px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
+  #detail-layer { font-family: 'Space Mono', monospace; font-size: 8px; color: var(--text2); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 5px; }
+  #detail-title { font-size: 13px; font-weight: 500; color: var(--text); line-height: 1.45; }
+  #detail-actions { margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .action-btn {
+    font-size: 9px; font-family: 'Space Mono', monospace; letter-spacing: .07em;
+    padding: 5px 12px; border-radius: 2px; cursor: pointer;
+    border: 1px solid var(--border2); background: none; color: var(--cyan);
+    transition: background .15s; text-decoration: none; display: inline-block;
+  }
+  .action-btn:hover { background: rgba(94,240,232,.07); }
+  .action-btn.close { color: var(--text3); }
+  .action-btn.close:hover { color: var(--text2); background: none; }
+  
+  #detail-body { flex: 1; overflow-y: auto; padding: 16px 20px; }
+  
+  #detail-empty { color: var(--text3); font-family: 'Space Mono', monospace; font-size: 10px; text-align: center; padding: 48px 16px; line-height: 2; }
+  #detail-empty .empty-icon { font-size: 22px; opacity: .4; margin-bottom: 10px; }
+  
+  #detail-loading { color: var(--text2); font-family: 'Space Mono', monospace; font-size: 10px; text-align: center; padding: 48px 16px; animation: pulse 1.4s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity: .4; } 50% { opacity: 1; } }
+  
+  #detail-error { padding: 12px 14px; background: rgba(240,94,94,.07); border: 1px solid rgba(240,94,94,.18); border-radius: 3px; font-size: 11px; color: #f08e8e; margin-bottom: 14px; font-family: 'Space Mono', monospace; line-height: 1.6; }
+  
+  /* Data table */
+  .data-table { font-family: 'DM Sans', sans-serif; }
+  .data-row { display: flex; border-bottom: 1px solid var(--border); padding: 8px 0; gap: 12px; align-items: flex-start; }
+  .data-key { font-size: 9px; font-family: 'Space Mono', monospace; color: var(--text2); text-transform: uppercase; letter-spacing: .07em; min-width: 80px; padding-top: 1px; word-break: break-word; }
+  .data-val { font-size: 12px; color: var(--text); flex: 1; word-break: break-word; line-height: 1.5; }
+  .data-val a { color: var(--cyan); text-decoration: none; }
+  .data-val a:hover { text-decoration: underline; }
+  
+  /* Article content */
+  .article-meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 14px; }
+  .meta-tag { font-size: 9px; font-family: 'Space Mono', monospace; letter-spacing: .07em; padding: 3px 8px; background: var(--border); border-radius: 2px; color: var(--text2); }
+  .meta-byline { font-size: 11px; color: var(--text2); }
+  .article-h { font-family: 'Space Mono', monospace; font-size: 14px; font-weight: 700; color: var(--text); line-height: 1.45; margin-bottom: 12px; }
+  .article-excerpt { font-size: 12px; color: var(--text2); line-height: 1.7; font-style: italic; margin-bottom: 14px; border-left: 2px solid var(--border2); padding-left: 12px; }
+  .article-body { font-size: 13px; line-height: 1.78; color: var(--text); }
+  .article-body p { margin-bottom: .9em; }
+  .article-body h1,.article-body h2,.article-body h3 { font-family: 'Space Mono', monospace; font-weight: 700; margin: 1.4em 0 .5em; color: var(--text); font-size: 13px; }
+  .article-body a { color: var(--cyan); text-decoration: none; }
+  .article-body a:hover { text-decoration: underline; }
+  .article-body img { max-width: 100%; border-radius: 3px; margin: .8em 0; }
+  .article-body blockquote { border-left: 2px solid var(--cyan); padding-left: 12px; margin: 1em 0; color: var(--text2); font-style: italic; }
+  
+  /* Settings pane */
+  #settings-body { padding: 20px; overflow-y: auto; }
+  .settings-section { font-size: 8px; font-family: 'Space Mono', monospace; color: var(--text3); letter-spacing: .14em; margin-bottom: 18px; }
+  .settings-divider { height: 1px; background: var(--border); margin: 24px 0; }
+  .sess-btn {
+    width: 100%; background: none; border: 1px solid var(--border2);
+    border-radius: 3px; padding: 11px 16px; color: var(--text); cursor: pointer;
+    font-size: 10px; font-family: 'Space Mono', monospace; letter-spacing: .07em;
+    text-align: left; transition: border-color .2s; margin-bottom: 8px; display: block;
+  }
+  .sess-btn:hover { border-color: rgba(94,240,232,.35); }
+  
+  /* Tooltip */
+  #tooltip {
+    position: fixed; z-index: 100; pointer-events: none;
+    transform: translate(14px, -50%);
+    opacity: 0; transition: opacity .12s;
+  }
+  #tooltip.show { opacity: 1; }
+  #tooltip-inner {
+    background: rgba(8,8,9,.97);
+    border-radius: 4px; padding: 11px 15px;
+    min-width: 160px; max-width: 260px;
+  }
+  #tooltip-title { font-family: 'Space Mono', monospace; font-size: 11px; font-weight: 700; color: var(--text); margin-bottom: 7px; line-height: 1.4; word-break: break-word; }
+  .tt-field { display: flex; gap: 6px; margin-bottom: 3px; }
+  .tt-key { font-size: 9px; font-family: 'Space Mono', monospace; color: var(--text2); text-transform: uppercase; letter-spacing: .05em; min-width: 46px; }
+  .tt-val { font-size: 9px; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 150px; }
+  .tt-url-hint { margin-top: 7px; display: flex; align-items: center; gap: 5px; }
+  .tt-dot { width: 4px; height: 4px; border-radius: 50%; }
+  .tt-cta { font-size: 8px; font-family: 'Space Mono', monospace; letter-spacing: .08em; }
+  
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 3px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+  
+  /* CORS notice */
+  #cors-note { font-size: 10px; color: var(--text2); line-height: 1.6; margin-bottom: 14px; padding: 10px 12px; background: rgba(94,240,232,.05); border: 1px solid rgba(94,240,232,.12); border-radius: 3px; }
+  #cors-note strong { color: var(--cyan); font-weight: 500; }
+</style>
+</head>
+<body>
+
+<!-- Canvas -->
+<div id="canvas-wrap">
+  <canvas id="three-canvas"></canvas>
+  
+  <!-- Top bar -->
+  <div id="topbar">
+    <div id="wordmark">
+      <div class="w1">MACBA</div>
+      <div class="w2">DATA DOMES</div>
+    </div>
+    <div id="topbar-right">
+      <div id="layer-dots"></div>
+      <button id="panel-toggle">HIDE →</button>
+    </div>
+  </div>
+
+  <!-- Model upload overlay -->
+  <div id="upload-overlay">
+    <div>
+      <div id="upload-box">
+        <div class="icon">◈</div>
+        <div class="label">
+          DROP 3D MODEL<br>
+          <span class="sub">GLB · GLTF · OBJ (drag all files)</span>
+        </div>
+        <div id="model-status"></div>
+      </div>
+      <button id="skip-btn">SKIP — USE DOMES ONLY</button>
+    </div>
+  </div>
+
+  <!-- Hint -->
+  <div id="hint">
+    DRAG TO ORBIT &nbsp;·&nbsp; SCROLL TO ZOOM &nbsp;·&nbsp; RIGHT DRAG TO PAN
+  </div>
+</div>
+
+<!-- Side panel -->
+<div id="panel">
+  <div id="tabs">
+    <button class="tab active" data-tab="layers">LAYERS</button>
+    <button class="tab" data-tab="detail">DETAIL</button>
+    <button class="tab" data-tab="settings">SETTINGS</button>
+  </div>
+
+  <!-- Layers pane -->
+  <div class="pane active" id="pane-layers">
+    <div id="csv-drop">
+      <div class="plus">＋</div>
+      <div class="csv-label">DROP CSV FILES<br><span class="csv-sub">OR CLICK TO BROWSE · MULTIPLE OK</span></div>
+    </div>
+    <div id="layers-list"></div>
+    <div id="legend" style="display:none">
+      <div class="legend-title">ACTIVE LAYERS</div>
+      <div id="legend-rows"></div>
+    </div>
+  </div>
+
+  <!-- Detail pane -->
+  <div class="pane" id="pane-detail">
+    <div id="detail-pane">
+      <div id="detail-header" style="display:none">
+        <div id="detail-layer"></div>
+        <div id="detail-title"></div>
+        <div id="detail-actions"></div>
+      </div>
+      <div id="detail-body">
+        <div id="detail-empty">
+          <div class="empty-icon">◎</div>
+          SELECT A POINT<br>TO VIEW DETAILS
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings pane -->
+  <div class="pane" id="pane-settings">
+    <div id="settings-body">
+      <div class="settings-section">DOME GEOMETRY</div>
+
+      <div class="slider-row">
+        <div class="slider-label-row">
+          <span class="slider-lbl">LAYER SPACING</span>
+          <span class="slider-val" id="val-spacing">1.0</span>
+        </div>
+        <input type="range" id="sl-spacing" min="0.1" max="6" step="0.1" value="1.0">
+      </div>
+
+      <div class="slider-row" style="margin-top:14px">
+        <div class="slider-label-row">
+          <span class="slider-lbl">BASE RADIUS</span>
+          <span class="slider-val" id="val-baseradius">2.0</span>
+        </div>
+        <input type="range" id="sl-baseradius" min="0.5" max="12" step="0.1" value="2.0">
+      </div>
+
+      <div class="slider-row" style="margin-top:14px">
+        <div class="slider-label-row">
+          <span class="slider-lbl">RADIUS STEP</span>
+          <span class="slider-val" id="val-radiusstep">0.7</span>
+        </div>
+        <input type="range" id="sl-radiusstep" min="0.1" max="4" step="0.1" value="0.7">
+      </div>
+
+      <div class="settings-divider"></div>
+      <div class="settings-section">SESSION</div>
+
+      <button class="sess-btn" id="btn-export">↓ EXPORT SESSION JSON</button>
+      <button class="sess-btn" id="btn-import">↑ IMPORT SESSION JSON</button>
+      <input type="file" id="import-file" accept=".json" style="display:none">
+
+      <div class="settings-divider"></div>
+      <div class="settings-section">ARTICLE VIEWER NOTE</div>
+      <div id="cors-note">
+        <strong>No backend running?</strong> Article content fetch requires a local server due to browser CORS policy. 
+        Run <code>node server/index.js</code> from the project folder, or click "Open Original" to read in a new tab.
+      </div>
+
+      <div style="margin-top:24px;font-size:9px;font-family:'Space Mono',monospace;color:var(--text3);line-height:2">
+        MACBA DATA DOMES<br>SINGLE-FILE EDITION
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tooltip -->
+<div id="tooltip">
+  <div id="tooltip-inner">
+    <div id="tooltip-title"></div>
+    <div id="tooltip-fields"></div>
+    <div id="tooltip-url-hint" style="display:none" class="tt-url-hint">
+      <div class="tt-dot" id="tt-dot"></div>
+      <span class="tt-cta" id="tt-cta-text"></span>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden file inputs -->
+<input type="file" id="model-file" accept=".glb,.gltf,.obj,.mtl" multiple style="display:none">
+<input type="file" id="csv-file" accept=".csv" multiple style="display:none">
+
+<script>
+// ═══════════════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════════════
+const state = {
+  layers: [],          // { id, name, color, points, visible, opacity, pointSize, threeObj }
+  anchor: new THREE.Vector3(0, 0, 0),
+  modelLoaded: false,
+  hoveredInfo: null,   // { point, layerColor, layerName }
+  selectedInfo: null,  // { point, layerName }
+  // geometry settings
+  spacing: 1.0,
+  baseRadius: 2.0,
+  radiusStep: 0.7,
+  panelOpen: true,
+};
+
+const DOME_COLORS = ['#5ef0e8','#f0895e','#9d5ef0','#5ef090','#f05e9d','#f0d45e','#5e9df0','#f05e5e'];
+let colorIdx = 0;
+
+// ═══════════════════════════════════════════════════════════
+// THREE.JS SETUP
+// ═══════════════════════════════════════════════════════════
+const canvas = document.getElementById('three-canvas');
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.setClearColor(0x080809);
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(50, 1, 0.01, 2000);
+camera.position.set(8, 5, 8);
+camera.lookAt(0, 0, 0);
+
+// Lights
+scene.add(new THREE.AmbientLight(0xffffff, 0.5));
+const dirLight = new THREE.DirectionalLight(0xffffff, 1.0);
+dirLight.position.set(10, 20, 10);
+scene.add(dirLight);
+const fillLight = new THREE.DirectionalLight(0x5ef0e8, 0.28);
+fillLight.position.set(-8, 8, -8);
+scene.add(fillLight);
+
+// Grid
+const grid = new THREE.GridHelper(40, 40, 0x1c1c22, 0x141418);
+scene.add(grid);
+
+// ── Orbit Controls (manual — no import needed) ────────────
+let orb = { 
+  isDragging: false, isRightDrag: false,
+  lastX: 0, lastY: 0,
+  theta: Math.PI * 0.3, phi: Math.PI * 0.28,
+  radius: 14, target: new THREE.Vector3(0, 1, 0),
+};
+
+function updateCamera() {
+  camera.position.set(
+    orb.target.x + orb.radius * Math.sin(orb.phi) * Math.cos(orb.theta),
+    orb.target.y + orb.radius * Math.cos(orb.phi),
+    orb.target.z + orb.radius * Math.sin(orb.phi) * Math.sin(orb.theta)
+  );
+  camera.lookAt(orb.target);
+}
+updateCamera();
+
+canvas.addEventListener('mousedown', e => {
+  orb.isDragging = true;
+  orb.isRightDrag = e.button === 2;
+  orb.lastX = e.clientX; orb.lastY = e.clientY;
+});
+window.addEventListener('mouseup', () => { orb.isDragging = false; });
+canvas.addEventListener('contextmenu', e => e.preventDefault());
+
+window.addEventListener('mousemove', e => {
+  if (!orb.isDragging) return;
+  const dx = e.clientX - orb.lastX, dy = e.clientY - orb.lastY;
+  orb.lastX = e.clientX; orb.lastY = e.clientY;
+  if (orb.isRightDrag) {
+    // Pan
+    const right = new THREE.Vector3();
+    const up = new THREE.Vector3(0, 1, 0);
+    right.crossVectors(camera.getWorldDirection(new THREE.Vector3()), up).normalize();
+    const panSpeed = orb.radius * 0.001;
+    orb.target.addScaledVector(right, -dx * panSpeed);
+    orb.target.y += dy * panSpeed;
+  } else {
+    orb.theta -= dx * 0.007;
+    orb.phi = Math.max(0.05, Math.min(Math.PI * 0.48, orb.phi - dy * 0.007));
+  }
+  updateCamera();
+});
+
+canvas.addEventListener('wheel', e => {
+  e.preventDefault();
+  orb.radius = Math.max(0.5, Math.min(300, orb.radius * (1 + e.deltaY * 0.001)));
+  updateCamera();
+}, { passive: false });
+
+// ── Resize ────────────────────────────────────────────────
+function resize() {
+  const wrap = document.getElementById('canvas-wrap');
+  const w = wrap.clientWidth, h = wrap.clientHeight;
+  renderer.setSize(w, h);
+  camera.aspect = w / h;
+  camera.updateProjectionMatrix();
+}
+new ResizeObserver(resize).observe(document.getElementById('canvas-wrap'));
+resize();
+
+// ── Raycaster ─────────────────────────────────────────────
+const raycaster = new THREE.Raycaster();
+raycaster.params.Points = { threshold: 0.08 };
+const mouse = new THREE.Vector2();
+let currentLayerForHover = []; // [{points, threeObj, color, name}]
+
+canvas.addEventListener('mousemove', e => {
+  const rect = canvas.getBoundingClientRect();
+  mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+  mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+  
+  raycaster.setFromCamera(mouse, camera);
+  
+  let foundPoint = null, foundColor = null, foundName = null;
+  
+  for (const l of state.layers) {
+    if (!l.visible || !l.threeObj) continue;
+    const hits = raycaster.intersectObject(l.threeObj);
+    if (hits.length > 0) {
+      const idx = hits[0].index;
+      if (idx !== undefined && idx < l.points.length) {
+        foundPoint = l.points[idx];
+        foundColor = l.color;
+        foundName = l.name;
+        break;
+      }
+    }
+  }
+  
+  if (foundPoint) {
+    state.hoveredInfo = { point: foundPoint, layerColor: foundColor, layerName: foundName };
+    showTooltip(e.clientX, e.clientY, foundPoint, foundColor);
+    canvas.style.cursor = 'pointer';
+  } else {
+    state.hoveredInfo = null;
+    hideTooltip();
+    canvas.style.cursor = 'default';
+  }
+});
+
+canvas.addEventListener('click', e => {
+  if (state.hoveredInfo) {
+    selectPoint(state.hoveredInfo.point, state.hoveredInfo.layerName);
+  }
+});
+
+// ── Render loop ───────────────────────────────────────────
+function animate() {
+  requestAnimationFrame(animate);
+  renderer.render(scene, camera);
+}
+animate();
+
+// ═══════════════════════════════════════════════════════════
+// DOME GEOMETRY
+// ═══════════════════════════════════════════════════════════
+
+/**
+ * Fibonacci hemisphere distribution.
+ * phi ∈ [0, π/2] (upper hemisphere), theta ∈ [0, 2π]
+ * Uses area-uniform sampling via arccos mapping.
+ */
+function fibonacciHemisphere(n, radius, center) {
+  const pos = new Float32Array(n * 3);
+  const gr = (1 + Math.sqrt(5)) / 2;
+  for (let i = 0; i < n; i++) {
+    const theta = (2 * Math.PI * i) / gr;
+    const t = i / Math.max(n - 1, 1);
+    // arccos(1-t) maps [0,1] → [0,π/2] with uniform area distribution
+    const phi = Math.acos(Math.max(0, 1 - t));
+    const sp = Math.sin(phi);
+    pos[i*3]   = center.x + radius * sp * Math.cos(theta);
+    pos[i*3+1] = center.y + radius * Math.cos(phi);
+    pos[i*3+2] = center.z + radius * sp * Math.sin(theta);
+  }
+  return pos;
+}
+
+/**
+ * Compute center Y for layer i so domes never intersect.
+ * c_i = c_{i-1} + r_{i-1} + gap + r_i
+ * where gap = spacing * 0.4
+ */
+function domeCenterY(layerIdx) {
+  const gap = state.spacing * 0.4;
+  let cy = state.anchor.y;
+  for (let i = 1; i <= layerIdx; i++) {
+    const rp = state.baseRadius + (i-1) * state.radiusStep;
+    const rc = state.baseRadius + i * state.radiusStep;
+    cy += rp + gap + rc;
+  }
+  return cy;
+}
+
+function buildDomeObject(layer, layerIdx) {
+  const r = state.baseRadius + layerIdx * state.radiusStep;
+  const cy = domeCenterY(layerIdx);
+  const center = new THREE.Vector3(state.anchor.x, cy, state.anchor.z);
+  
+  const positions = fibonacciHemisphere(layer.points.length, r, center);
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  geo.computeBoundingSphere();
+  
+  const mat = new THREE.PointsMaterial({
+    color: new THREE.Color(layer.color),
+    size: layer.pointSize * 0.012,
+    sizeAttenuation: true,
+    transparent: true,
+    opacity: layer.opacity,
+    depthWrite: false,
+  });
+  
+  return new THREE.Points(geo, mat);
+}
+
+function rebuildAllDomes() {
+  // Remove old dome objects
+  for (const l of state.layers) {
+    if (l.threeObj) { scene.remove(l.threeObj); l.threeObj.geometry.dispose(); l.threeObj.material.dispose(); l.threeObj = null; }
+  }
+  // Rebuild
+  state.layers.forEach((l, i) => {
+    if (l.visible && l.points.length > 0) {
+      l.threeObj = buildDomeObject(l, i);
+      scene.add(l.threeObj);
+    }
+  });
+}
+
+function updateLayerMaterial(layer) {
+  if (!layer.threeObj) return;
+  layer.threeObj.material.color.set(layer.color);
+  layer.threeObj.material.opacity = layer.opacity;
+  layer.threeObj.material.size = layer.pointSize * 0.012;
+  layer.threeObj.material.needsUpdate = true;
+}
+
+// ═══════════════════════════════════════════════════════════
+// CSV PARSING
+// ═══════════════════════════════════════════════════════════
+
+function parseCSVData(results) {
+  const headers = results.meta.fields || [];
+  const labelCol = headers.find(h => ['title','name','label','titulo','nom'].includes(h.toLowerCase())) || headers[0];
+  const urlCol = headers.find(h => ['url','link','href','source','enlace'].includes(h.toLowerCase()));
+  
+  return results.data.map((row, idx) => {
+    const label = row[labelCol] || `Item ${idx+1}`;
+    let url;
+    if (urlCol && row[urlCol] && row[urlCol].startsWith('http')) {
+      url = row[urlCol].trim();
+    } else {
+      for (const v of Object.values(row)) {
+        if (typeof v === 'string' && v.trim().startsWith('http')) { url = v.trim(); break; }
+      }
+    }
+    return { id: `pt-${idx}-${Math.random().toString(36).slice(2)}`, label, url, fields: row };
+  });
+}
+
+// ═══════════════════════════════════════════════════════════
+// MODEL LOADING  
+// ═══════════════════════════════════════════════════════════
+
+// Lazy-load GLTF/OBJ loaders from CDN
+function loadGLTFLoader() {
+  return new Promise(resolve => {
+    if (window.GLTFLoader) { resolve(window.GLTFLoader); return; }
+    const s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js';
+    s.onload = () => resolve(THREE.GLTFLoader || window.GLTFLoader);
+    document.head.appendChild(s);
+  });
+}
+function loadOBJLoader() {
+  return new Promise(resolve => {
+    if (THREE.OBJLoader) { resolve(THREE.OBJLoader); return; }
+    const s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js';
+    s.onload = () => { 
+      const t = document.createElement('script');
+      t.src = 'https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/MTLLoader.js';
+      t.onload = () => resolve(THREE.OBJLoader);
+      document.head.appendChild(t);
+    };
+    document.head.appendChild(s);
+  });
+}
+
+let modelGroup = null;
+
+function fitCameraToModel(box) {
+  const center = box.getCenter(new THREE.Vector3());
+  const size = box.getSize(new THREE.Vector3());
+  const maxDim = Math.max(size.x, size.y, size.z);
+  orb.radius = maxDim * 2.2;
+  orb.target.set(center.x, center.y * 0.5, center.z);
+  updateCamera();
+}
+
+async function loadModel(files) {
+  const glbFile = files.find(f => f.name.match(/\.(glb|gltf)$/i));
+  const objFile = files.find(f => f.name.match(/\.obj$/i));
+  const mtlFile = files.find(f => f.name.match(/\.mtl$/i));
+  
+  setModelStatus('Loading...');
+  
+  if (modelGroup) { scene.remove(modelGroup); modelGroup = null; }
+  
+  if (glbFile) {
+    await loadGLTFLoader();
+    const url = URL.createObjectURL(glbFile);
+    const loader = new THREE.GLTFLoader();
+    loader.load(url, gltf => {
+      modelGroup = new THREE.Group();
+      modelGroup.add(gltf.scene);
+      scene.add(modelGroup);
+      const box = new THREE.Box3().setFromObject(modelGroup);
+      // Center on XZ, floor at y=0
+      const c = box.getCenter(new THREE.Vector3());
+      modelGroup.position.set(-c.x, -box.min.y, -c.z);
+      const finalBox = new THREE.Box3().setFromObject(modelGroup);
+      state.anchor.set(0, finalBox.max.y + 0.3, 0);
+      state.modelLoaded = true;
+      setModelStatus('✓ ' + glbFile.name);
+      finishModelLoad(finalBox);
+      rebuildAllDomes();
+    }, undefined, err => setModelStatus('Error: ' + err.message));
+    return;
+  }
+  
+  if (objFile) {
+    await loadOBJLoader();
+    const objUrl = URL.createObjectURL(objFile);
+    const loadObj = (materials) => {
+      const loader = new THREE.OBJLoader();
+      if (materials) loader.setMaterials(materials);
+      loader.load(objUrl, obj => {
+        modelGroup = new THREE.Group();
+        modelGroup.add(obj);
+        scene.add(modelGroup);
+        const box = new THREE.Box3().setFromObject(modelGroup);
+        const c = box.getCenter(new THREE.Vector3());
+        modelGroup.position.set(-c.x, -box.min.y, -c.z);
+        const finalBox = new THREE.Box3().setFromObject(modelGroup);
+        state.anchor.set(0, finalBox.max.y + 0.3, 0);
+        state.modelLoaded = true;
+        setModelStatus('✓ ' + objFile.name);
+        finishModelLoad(finalBox);
+        rebuildAllDomes();
+      });
+    };
+    if (mtlFile) {
+      const mtlUrl = URL.createObjectURL(mtlFile);
+      new THREE.MTLLoader().load(mtlUrl, mats => { mats.preload(); loadObj(mats); });
+    } else {
+      loadObj(null);
+    }
+    return;
+  }
+  
+  setModelStatus('No valid 3D file found');
+}
+
+function finishModelLoad(box) {
+  fitCameraToModel(box);
+  document.getElementById('upload-overlay').style.display = 'none';
+  document.getElementById('hint').classList.add('show');
+}
+
+function setModelStatus(msg) {
+  document.getElementById('model-status').textContent = msg;
+}
+
+// ═══════════════════════════════════════════════════════════
+// TOOLTIP
+// ═══════════════════════════════════════════════════════════
+
+const tooltip = document.getElementById('tooltip');
+const ttTitle = document.getElementById('tooltip-title');
+const ttFields = document.getElementById('tooltip-fields');
+const ttUrlHint = document.getElementById('tooltip-url-hint');
+const ttDot = document.getElementById('tt-dot');
+const ttCta = document.getElementById('tt-cta-text');
+
+function showTooltip(cx, cy, point, color) {
+  tooltip.style.left = cx + 'px';
+  tooltip.style.top = cy + 'px';
+  document.getElementById('tooltip-inner').style.borderLeft = `3px solid ${color}`;
+  document.getElementById('tooltip-inner').style.border = `1px solid ${color}33`;
+  document.getElementById('tooltip-inner').style.borderLeft = `3px solid ${color}`;
+  
+  ttTitle.textContent = point.label;
+  
+  // Show a few fields (skip empty/url)
+  const fieldEntries = Object.entries(point.fields)
+    .filter(([k,v]) => v && !String(v).startsWith('http') && !['url','link','href'].includes(k.toLowerCase()))
+    .slice(0, 3);
+  
+  ttFields.innerHTML = fieldEntries.map(([k,v]) => `
+    <div class="tt-field">
+      <span class="tt-key">${k.slice(0,8)}</span>
+      <span class="tt-val">${String(v).slice(0,55)}</span>
+    </div>
+  `).join('');
+  
+  if (point.url) {
+    ttUrlHint.style.display = 'flex';
+    ttDot.style.background = color;
+    ttCta.style.color = color;
+    ttCta.textContent = 'CLICK TO READ';
+  } else {
+    ttUrlHint.style.display = 'none';
+  }
+  
+  tooltip.classList.add('show');
+}
+
+function hideTooltip() {
+  tooltip.classList.remove('show');
+}
+
+// ═══════════════════════════════════════════════════════════
+// DETAIL / ARTICLE
+// ═══════════════════════════════════════════════════════════
+
+function selectPoint(point, layerName) {
+  state.selectedInfo = { point, layerName };
+  switchTab('detail');
+  renderDetail(point, layerName);
+}
+
+function renderDetail(point, layerName) {
+  const header = document.getElementById('detail-header');
+  const body = document.getElementById('detail-body');
+  const empty = document.getElementById('detail-empty');
+  
+  document.getElementById('detail-layer').textContent = layerName;
+  document.getElementById('detail-title').textContent = point.label;
+  
+  const actionsEl = document.getElementById('detail-actions');
+  actionsEl.innerHTML = '';
+  if (point.url) {
+    const a = document.createElement('a');
+    a.className = 'action-btn'; a.href = point.url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+    a.textContent = '↗ OPEN ORIGINAL';
+    actionsEl.appendChild(a);
+  }
+  const closeBtn = document.createElement('button');
+  closeBtn.className = 'action-btn close'; closeBtn.textContent = '× CLOSE';
+  closeBtn.onclick = () => { state.selectedInfo = null; header.style.display = 'none'; body.innerHTML = `<div id="detail-empty"><div class="empty-icon">◎</div>SELECT A POINT<br>TO VIEW DETAILS</div>`; };
+  actionsEl.appendChild(closeBtn);
+  
+  header.style.display = 'block';
+  if (empty) empty.remove();
+  
+  if (!point.url) {
+    // Show raw data table
+    body.innerHTML = renderDataTable(point.fields);
+    return;
+  }
+  
+  // Try to fetch article via backend proxy
+  body.innerHTML = '<div id="detail-loading">◌ FETCHING CONTENT...</div>';
+  
+  fetch(`/api/article?url=${encodeURIComponent(point.url)}`)
+    .then(r => r.json())
+    .then(data => {
+      if (data.error && !data.contentHtml) {
+        body.innerHTML = `
+          <div id="detail-error">⚠ ${data.error}<br><span style="font-size:9px;opacity:.6">Try running the backend: node server/index.js</span></div>
+          ${renderDataTable(point.fields)}
+        `;
+        return;
+      }
+      
+      let html = '';
+      if (data.siteName || data.byline) {
+        html += `<div class="article-meta">`;
+        if (data.siteName) html += `<span class="meta-tag">${data.siteName}</span>`;
+        if (data.byline) html += `<span class="meta-byline">${data.byline}</span>`;
+        html += `</div>`;
+      }
+      if (data.title) html += `<div class="article-h">${escHtml(data.title)}</div>`;
+      if (data.excerpt) html += `<div class="article-excerpt">${escHtml(data.excerpt)}</div>`;
+      if (data.contentHtml) html += `<div class="article-body">${data.contentHtml}</div>`;
+      
+      body.innerHTML = html;
+    })
+    .catch(err => {
+      body.innerHTML = `
+        <div id="detail-error">⚠ Cannot reach backend proxy.<br><span style="font-size:9px;opacity:.6">Run: node server/index.js — or use "Open Original"</span></div>
+        ${renderDataTable(point.fields)}
+      `;
+    });
+}
+
+function renderDataTable(fields) {
+  return `<div class="data-table">${Object.entries(fields).map(([k,v]) => {
+    const isUrl = String(v).startsWith('http');
+    return `<div class="data-row">
+      <span class="data-key">${escHtml(k)}</span>
+      <span class="data-val">${isUrl ? `<a href="${escHtml(v)}" target="_blank" rel="noopener">${escHtml(v)}</a>` : escHtml(String(v))}</span>
+    </div>`;
+  }).join('')}</div>`;
+}
+
+function escHtml(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ═══════════════════════════════════════════════════════════
+// LAYER UI
+// ═══════════════════════════════════════════════════════════
+
+function addLayer(name, points) {
+  const color = DOME_COLORS[colorIdx % DOME_COLORS.length];
+  colorIdx++;
+  const id = `layer-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+  const layer = { id, name, color, points, visible: true, opacity: 0.85, pointSize: 6, threeObj: null };
+  state.layers.push(layer);
+  rebuildAllDomes();
+  renderLayersList();
+  updateLegend();
+  updateTopDots();
+}
+
+function removeLayer(id) {
+  const l = state.layers.find(x => x.id === id);
+  if (l && l.threeObj) { scene.remove(l.threeObj); l.threeObj.geometry.dispose(); l.threeObj.material.dispose(); }
+  state.layers = state.layers.filter(x => x.id !== id);
+  rebuildAllDomes();
+  renderLayersList();
+  updateLegend();
+  updateTopDots();
+}
+
+function toggleLayerVisibility(id) {
+  const l = state.layers.find(x => x.id === id);
+  if (!l) return;
+  l.visible = !l.visible;
+  rebuildAllDomes();
+  renderLayersList();
+  updateTopDots();
+}
+
+function renderLayersList() {
+  const list = document.getElementById('layers-list');
+  list.innerHTML = '';
+  
+  if (state.layers.length === 0) {
+    list.innerHTML = `<div style="padding:20px;text-align:center;font-family:'Space Mono',monospace;font-size:10px;color:var(--text3)">NO LAYERS YET</div>`;
+    return;
+  }
+  
+  state.layers.forEach((l, i) => {
+    const div = document.createElement('div');
+    div.className = 'layer-item';
+    div.innerHTML = `
+      <div class="layer-row1">
+        <div class="layer-dot-big" style="background:${l.color};box-shadow:0 0 8px ${l.color}55"></div>
+        <input class="layer-name" type="text" value="${escHtml(l.name)}" data-id="${l.id}">
+        <span class="layer-idx">#${i+1}</span>
+        <button class="layer-vis ${l.visible?'':'hidden'}" data-id="${l.id}" title="${l.visible?'Hide':'Show'}">${l.visible?'◉':'○'}</button>
+        <button class="layer-del" data-id="${l.id}" title="Remove">×</button>
+      </div>
+      <div class="layer-controls">
+        <label style="font-size:9px;color:var(--text2);font-family:'Space Mono',monospace">COLOR</label>
+        <input type="color" value="${l.color}" data-id="${l.id}" class="layer-color">
+        <span class="pts-count">${l.points.length} pts</span>
+      </div>
+      <div class="slider-row">
+        <div class="slider-label-row">
+          <span class="slider-lbl">OPACITY</span>
+          <span class="slider-val layer-op-val">${Math.round(l.opacity*100)}%</span>
+        </div>
+        <input type="range" min="0.1" max="1" step="0.05" value="${l.opacity}" class="layer-opacity" data-id="${l.id}">
+      </div>
+      <div class="slider-row">
+        <div class="slider-label-row">
+          <span class="slider-lbl">POINT SIZE</span>
+          <span class="slider-val layer-ps-val">${l.pointSize}</span>
+        </div>
+        <input type="range" min="1" max="24" step="1" value="${l.pointSize}" class="layer-psize" data-id="${l.id}">
+      </div>
+    `;
+    
+    // Name change
+    div.querySelector('.layer-name').addEventListener('change', e => {
+      const lay = state.layers.find(x => x.id === e.target.dataset.id);
+      if (lay) { lay.name = e.target.value; updateLegend(); }
+    });
+    
+    // Color
+    div.querySelector('.layer-color').addEventListener('input', e => {
+      const lay = state.layers.find(x => x.id === e.target.dataset.id);
+      if (lay) {
+        lay.color = e.target.value;
+        div.querySelector('.layer-dot-big').style.background = lay.color;
+        div.querySelector('.layer-dot-big').style.boxShadow = `0 0 8px ${lay.color}55`;
+        updateLayerMaterial(lay);
+        updateLegend(); updateTopDots();
+      }
+    });
+    
+    // Visibility
+    div.querySelector('.layer-vis').addEventListener('click', e => toggleLayerVisibility(e.target.dataset.id));
+    
+    // Delete
+    div.querySelector('.layer-del').addEventListener('click', e => removeLayer(e.target.dataset.id));
+    
+    // Opacity
+    div.querySelector('.layer-opacity').addEventListener('input', e => {
+      const lay = state.layers.find(x => x.id === e.target.dataset.id);
+      if (lay) {
+        lay.opacity = parseFloat(e.target.value);
+        div.querySelector('.layer-op-val').textContent = Math.round(lay.opacity*100) + '%';
+        updateLayerMaterial(lay);
+      }
+    });
+    
+    // Point size
+    div.querySelector('.layer-psize').addEventListener('input', e => {
+      const lay = state.layers.find(x => x.id === e.target.dataset.id);
+      if (lay) {
+        lay.pointSize = parseInt(e.target.value);
+        div.querySelector('.layer-ps-val').textContent = lay.pointSize;
+        updateLayerMaterial(lay);
+      }
+    });
+    
+    list.appendChild(div);
+  });
+}
+
+function updateLegend() {
+  const leg = document.getElementById('legend');
+  const rows = document.getElementById('legend-rows');
+  if (state.layers.length === 0) { leg.style.display = 'none'; return; }
+  leg.style.display = 'block';
+  rows.innerHTML = state.layers.map(l => `
+    <div class="legend-row">
+      <div class="legend-dot" style="background:${l.color};box-shadow:0 0 5px ${l.color}88"></div>
+      <span class="legend-name">${escHtml(l.name)} (${l.points.length})</span>
+      ${!l.visible ? '<span style="font-size:8px;font-family:\'Space Mono\',monospace;color:var(--text3)">HIDDEN</span>' : ''}
+    </div>
+  `).join('');
+}
+
+function updateTopDots() {
+  const dotsEl = document.getElementById('layer-dots');
+  dotsEl.innerHTML = state.layers.filter(l => l.visible).map(l => `
+    <div class="layer-dot" style="background:${l.color};box-shadow:0 0 5px ${l.color}"></div>
+    <span style="font-size:9px;font-family:'Space Mono',monospace;color:var(--text2)">${l.points.length}</span>
+  `).join('');
+}
+
+// ═══════════════════════════════════════════════════════════
+// TABS
+// ═══════════════════════════════════════════════════════════
+
+function switchTab(id) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === id));
+  document.querySelectorAll('.pane').forEach(p => p.classList.toggle('active', p.id === `pane-${id}`));
+}
+
+document.querySelectorAll('.tab').forEach(t => {
+  t.addEventListener('click', () => switchTab(t.dataset.tab));
+});
+
+// ═══════════════════════════════════════════════════════════
+// SETTINGS
+// ═══════════════════════════════════════════════════════════
+
+function bindSlider(id, valId, stateProp, afterChange) {
+  const sl = document.getElementById(id);
+  const vl = document.getElementById(valId);
+  sl.addEventListener('input', () => {
+    state[stateProp] = parseFloat(sl.value);
+    vl.textContent = parseFloat(sl.value).toFixed(1);
+    afterChange();
+  });
+}
+
+bindSlider('sl-spacing', 'val-spacing', 'spacing', rebuildAllDomes);
+bindSlider('sl-baseradius', 'val-baseradius', 'baseRadius', rebuildAllDomes);
+bindSlider('sl-radiusstep', 'val-radiusstep', 'radiusStep', rebuildAllDomes);
+
+// Session export/import
+document.getElementById('btn-export').addEventListener('click', () => {
+  const data = { layers: state.layers.map(l => ({...l, threeObj: undefined})), spacing: state.spacing, baseRadius: state.baseRadius, radiusStep: state.radiusStep };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'macba-domes-session.json';
+  a.click();
+});
+
+document.getElementById('btn-import').addEventListener('click', () => document.getElementById('import-file').click());
+document.getElementById('import-file').addEventListener('change', e => {
+  const file = e.target.files[0]; if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    try {
+      const data = JSON.parse(ev.target.result);
+      if (data.layers) { state.layers = data.layers.map(l => ({...l, threeObj: null})); }
+      if (data.spacing) { state.spacing = data.spacing; document.getElementById('sl-spacing').value = data.spacing; document.getElementById('val-spacing').textContent = parseFloat(data.spacing).toFixed(1); }
+      if (data.baseRadius) { state.baseRadius = data.baseRadius; document.getElementById('sl-baseradius').value = data.baseRadius; document.getElementById('val-baseradius').textContent = parseFloat(data.baseRadius).toFixed(1); }
+      if (data.radiusStep) { state.radiusStep = data.radiusStep; document.getElementById('sl-radiusstep').value = data.radiusStep; document.getElementById('val-radiusstep').textContent = parseFloat(data.radiusStep).toFixed(1); }
+      rebuildAllDomes();
+      renderLayersList();
+      updateLegend();
+      updateTopDots();
+    } catch(err) { alert('Invalid session JSON'); }
+  };
+  reader.readAsText(file);
+});
+
+// ═══════════════════════════════════════════════════════════
+// PANEL TOGGLE
+// ═══════════════════════════════════════════════════════════
+
+document.getElementById('panel-toggle').addEventListener('click', () => {
+  state.panelOpen = !state.panelOpen;
+  document.getElementById('panel').classList.toggle('hidden', !state.panelOpen);
+  document.getElementById('panel-toggle').textContent = state.panelOpen ? 'HIDE →' : '← PANEL';
+  setTimeout(resize, 350);
+});
+
+// ═══════════════════════════════════════════════════════════
+// MODEL UPLOAD EVENTS
+// ═══════════════════════════════════════════════════════════
+
+const uploadBox = document.getElementById('upload-box');
+const modelFileInput = document.getElementById('model-file');
+
+uploadBox.addEventListener('click', () => modelFileInput.click());
+modelFileInput.addEventListener('change', e => { if (e.target.files.length) loadModel(Array.from(e.target.files)); });
+
+uploadBox.addEventListener('dragover', e => { e.preventDefault(); uploadBox.classList.add('dragging'); });
+uploadBox.addEventListener('dragleave', () => uploadBox.classList.remove('dragging'));
+uploadBox.addEventListener('drop', e => {
+  e.preventDefault(); uploadBox.classList.remove('dragging');
+  if (e.dataTransfer.files.length) loadModel(Array.from(e.dataTransfer.files));
+});
+
+document.getElementById('skip-btn').addEventListener('click', () => {
+  document.getElementById('upload-overlay').style.display = 'none';
+  document.getElementById('hint').classList.add('show');
+});
+
+// Also allow dropping model files anywhere on the canvas
+const canvasWrap = document.getElementById('canvas-wrap');
+canvasWrap.addEventListener('dragover', e => e.preventDefault());
+canvasWrap.addEventListener('drop', e => {
+  e.preventDefault();
+  const files = Array.from(e.dataTransfer.files);
+  const has3D = files.some(f => f.name.match(/\.(glb|gltf|obj|mtl)$/i));
+  const hasCSV = files.some(f => f.name.endsWith('.csv'));
+  if (has3D) loadModel(files);
+  if (hasCSV) handleCSVFiles(files.filter(f => f.name.endsWith('.csv')));
+});
+
+// ═══════════════════════════════════════════════════════════
+// CSV UPLOAD EVENTS
+// ═══════════════════════════════════════════════════════════
+
+const csvDrop = document.getElementById('csv-drop');
+const csvFileInput = document.getElementById('csv-file');
+
+csvDrop.addEventListener('click', () => csvFileInput.click());
+csvFileInput.addEventListener('change', e => { if (e.target.files.length) handleCSVFiles(Array.from(e.target.files)); e.target.value = ''; });
+csvDrop.addEventListener('dragover', e => { e.preventDefault(); csvDrop.classList.add('dragging'); });
+csvDrop.addEventListener('dragleave', () => csvDrop.classList.remove('dragging'));
+csvDrop.addEventListener('drop', e => {
+  e.preventDefault(); csvDrop.classList.remove('dragging');
+  handleCSVFiles(Array.from(e.dataTransfer.files).filter(f => f.name.endsWith('.csv')));
+});
+
+function handleCSVFiles(files) {
+  files.forEach(file => {
+    Papa.parse(file, {
+      header: true,
+      skipEmptyLines: true,
+      complete: results => {
+        const points = parseCSVData(results);
+        if (points.length > 0) {
+          addLayer(file.name.replace('.csv',''), points);
+          // Auto-close upload overlay if still showing
+          document.getElementById('upload-overlay').style.display = 'none';
+          document.getElementById('hint').classList.add('show');
+        }
+      }
+    });
+  });
+}
+
+// ═══════════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════════
+
+renderLayersList();
+updateLegend();
+updateTopDots();
+
+// Restore session from localStorage
+try {
+  const saved = localStorage.getItem('macba-domes-v1');
+  if (saved) {
+    const data = JSON.parse(saved);
+    if (data.layers && data.layers.length) {
+      data.layers.forEach(l => { l.threeObj = null; state.layers.push(l); });
+      if (data.spacing) { state.spacing = data.spacing; document.getElementById('sl-spacing').value = data.spacing; document.getElementById('val-spacing').textContent = parseFloat(data.spacing).toFixed(1); }
+      if (data.baseRadius) { state.baseRadius = data.baseRadius; document.getElementById('sl-baseradius').value = data.baseRadius; document.getElementById('val-baseradius').textContent = parseFloat(data.baseRadius).toFixed(1); }
+      if (data.radiusStep) { state.radiusStep = data.radiusStep; document.getElementById('sl-radiusstep').value = data.radiusStep; document.getElementById('val-radiusstep').textContent = parseFloat(data.radiusStep).toFixed(1); }
+      colorIdx = state.layers.length;
+      rebuildAllDomes();
+      renderLayersList();
+      updateLegend();
+      updateTopDots();
+    }
+  }
+} catch(e) {}
+
+// Auto-save to localStorage every 10s
+setInterval(() => {
+  try {
+    const data = { layers: state.layers.map(l => ({...l, threeObj: undefined})), spacing: state.spacing, baseRadius: state.baseRadius, radiusStep: state.radiusStep };
+    localStorage.setItem('macba-domes-v1', JSON.stringify(data));
+  } catch(e) {}
+}, 10000);
+
+console.log('%cMACBA DATA DOMES', 'font-family:monospace;font-size:18px;color:#5ef0e8;font-weight:bold');
+console.log('%cDrop .csv files to add dome layers. Drop .glb/.obj to load a 3D model.', 'color:#6e6e80;font-size:11px');
+</script>
+</body>
+</html>
