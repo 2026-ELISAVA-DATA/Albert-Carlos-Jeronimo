@@ -8,17 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7312ab1974d098a0",
+            "id": "ead014d2637372db",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "scrapping_twitter_website_iteraciones/Codigos de scrapping de twiter.md",
+                "file": "NARRATIVA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Codigos de scrapping de twiter"
+              "title": "NARRATIVA"
             }
           }
         ]
@@ -170,22 +170,24 @@
       "slides-extended:Show Slide Preview": false
     }
   },
-  "active": "7312ab1974d098a0",
+  "active": "5d665c478dee3697",
   "lastOpenFiles": [
-    "Versiones_de_la_web/macba-data-domes_9.html",
-    "Versiones_de_la_web/macba-data-domes_8.html",
-    "Versiones_de_la_web/macba-data-domes_7.html",
-    "Versiones_de_la_web/macba-data-domes_6.html",
-    "Versiones_de_la_web/macba-data-domes_5.html",
-    "Versiones_de_la_web/macba-data-domes_4.html",
-    "Versiones_de_la_web/macba-data-domes_3.html",
-    "Versiones_de_la_web/macba-data-domes_21.html",
-    "Versiones_de_la_web/macba-data-domes_20.html",
-    "Versiones_de_la_web/macba-data-domes_2.html",
-    "Versiones_de_la_web/macba-data-domes_19.html",
+    "VIDEOS PRESENTACION/SENTIMIENTOS.mp4",
+    "VIDEOS PRESENTACION/INSTANCESONPOINTS.mp4",
+    "VIDEOS PRESENTACION/webs2.mov",
+    "VIDEOS PRESENTACION/webs1.mov",
+    "VIDEOS PRESENTACION/twitter2.mov",
+    "VIDEOS PRESENTACION/twitter1.mov",
     "IDEACION.md",
-    "Assets/App.md",
+    "README.md",
+    "NARRATIVA.md",
+    "Scripts.Scrap_web_X/FINAL/scrapp_twitter_V5.py",
+    "Scripts.Scrap_web_X/FINAL/Scrapduck_multiquery_MACBA.py",
+    "Scripts.Scrap_web_X/scrapp_twitter_V4.py",
+    "Scripts.Scrap_web_X/scrapp_twitter.V3.py",
+    "Scripts.Scrap_web_X/scrapp_instagram.py",
     "scrapping_twitter_website_iteraciones/Codigos de scrapping de twiter.md",
+    "Assets/App.md",
     "Assets/Blender + Audio reactive.md",
     "scrapping_twitter_website_iteraciones/README.md",
     "Assets/olamonumento.jpg",
@@ -196,8 +198,6 @@
     "Assets/Grasshoppertree.png",
     "Assets/Grasshopperaudio.png",
     "Assets/UIMORPHSOUND.png",
-    "NARRATIVA.md",
-    "README.md",
     "Jeronimo.md",
     "PRESENTACION LUNES 2.md",
     "PRESENTACION.md",
