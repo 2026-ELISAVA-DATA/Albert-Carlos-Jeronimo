@@ -166,11 +166,13 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "slides-extended:Show Slide Preview": false
     }
   },
   "active": "7312ab1974d098a0",
   "lastOpenFiles": [
+    "VIDEOS PRESENTACION/Screen Recording 2026-03-04 at 10.20.11.mov",
     "Assets/App.md",
     "scrapping_twitter_website_iteraciones/Codigos de scrapping de twiter.md",
     "Python.Scrap_web_X/FINAL/Scrapduck_multiquery_MACBA.py",
