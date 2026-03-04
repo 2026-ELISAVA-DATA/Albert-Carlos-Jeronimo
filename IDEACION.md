@@ -35,7 +35,9 @@ Dependiendo de la intensidad de los sonidos hacer diferentes haz de luces con un
 
 Hacer un mapping de datasets de turismo y tiempo para modificar una animacion de x tiempo de un skater 
 
+# Narrativa
 
+Version 1: Este proyecto toma como punto de partida un elemento urbano concreto de la plaza del Museu d'Art Contemporani de Barcelona(MACBA): un bloque de piedra utilizado de forma recurrente. A través de una visualización generativa, este objeto se convierte en una superficie sensible donde se acumulan cicatrices físicas y culturales. Las partículas distribuidas sobre el objeto reaccionan a datos de turismo en Barcelona, modificando su densidad, estabilidad y cohesión, como metáfora del desgaste que produce la presión turística sobre la ciudad. Del mismo modo que el skate deja marcas visibles en el material, el turismo masivo erosiona identidades locales, lenguas y dinámicas culturales
    
    
    
