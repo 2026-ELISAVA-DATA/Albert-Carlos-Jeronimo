@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "NARRATIVA.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NARRATIVA"
+              "title": "README"
             }
           }
         ]
@@ -170,8 +170,9 @@
       "slides-extended:Show Slide Preview": false
     }
   },
-  "active": "5d665c478dee3697",
+  "active": "ead014d2637372db",
   "lastOpenFiles": [
+    "NARRATIVA.md",
     "VIDEOS PRESENTACION/SENTIMIENTOS.mp4",
     "VIDEOS PRESENTACION/INSTANCESONPOINTS.mp4",
     "VIDEOS PRESENTACION/webs2.mov",
@@ -180,12 +181,10 @@
     "VIDEOS PRESENTACION/twitter1.mov",
     "IDEACION.md",
     "README.md",
-    "NARRATIVA.md",
     "Scripts.Scrap_web_X/FINAL/scrapp_twitter_V5.py",
     "Scripts.Scrap_web_X/FINAL/Scrapduck_multiquery_MACBA.py",
     "Scripts.Scrap_web_X/scrapp_twitter_V4.py",
     "Scripts.Scrap_web_X/scrapp_twitter.V3.py",
-    "Scripts.Scrap_web_X/scrapp_instagram.py",
     "scrapping_twitter_website_iteraciones/Codigos de scrapping de twiter.md",
     "Assets/App.md",
     "Assets/Blender + Audio reactive.md",
