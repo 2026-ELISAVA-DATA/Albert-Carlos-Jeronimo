@@ -369,7 +369,7 @@ El script recorre el CSV fila a fila, envía el texto de la columna `description
 
 
 
-#**FUTUROS PASOS**
+# FUTUROS PASOS
 
 1- Actualizar la web si salen nuevos articulos o tweets de el macba (scrap automatico).
 2- El analisis de sentimiento en ollama se podria mejorar dandole un promt mas extenso en el que se relacionan palabras especificas con la categorizacion positiva o negativa.
