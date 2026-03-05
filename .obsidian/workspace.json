@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Web/MACBA_web_resumen.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "MACBA_web_resumen"
             }
           }
         ]
@@ -172,6 +172,8 @@
   },
   "active": "7312ab1974d098a0",
   "lastOpenFiles": [
+    "Assets/macba skater.jpg",
+    "README.md",
     "scrapping_twitter_website_iteraciones/Codigos de scrapping de twiter.md",
     "Web/MACBA_web_resumen.md",
     "Web",
@@ -197,7 +199,6 @@
     "Assets/Grasshopperaudio.png",
     "Assets/UIMORPHSOUND.png",
     "NARRATIVA.md",
-    "README.md",
     "Jeronimo.md",
     "PRESENTACION LUNES 2.md",
     "PRESENTACION.md",
@@ -206,7 +207,6 @@
     "Screenshot 2026-02-02 at 16.07.32.png",
     "Screenshot 2026-02-02 at 16.08.14 1.png",
     "Untitled.canvas",
-    "Screenshot 2026-02-02 at 16.08.14.png",
     "sesiones/20260129_sesion_2/MI_TITULO.md",
     "sesiones/20260129_sesion_2/README.md",
     "2026-01-29.md",
@@ -217,7 +217,6 @@
     "herramientas/terminal/README.md",
     "proyectos/README.md",
     "proyectos/de la observacion al dato/README.md",
-    "sesiones/20260128_sesion_1/README.md",
-    "Sesión 8 - Presentación de proyecto.md"
+    "sesiones/20260128_sesion_1/README.md"
   ]
 }

@@ -1,3 +1,5 @@
+LINK A LA WEB: https://macbaskatedataviz.netlify.app/
+
 # MACBA x SKATE — Cómo funciona la web (resumen técnico)
 
 > Web **estática** (sin backend / sin build). Corre 100% en el navegador con **Three.js** + **PapaParse**.  
