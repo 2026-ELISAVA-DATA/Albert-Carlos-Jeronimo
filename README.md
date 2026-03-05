@@ -12,12 +12,12 @@ Este proyecto construye una base de datos que recoge la conversación digital ge
 
 ## Stack técnico
 
-| Herramienta | Uso |
-|-------------|-----|
-| Python 3 | Lenguaje principal |
-| Playwright | Automatización del navegador |
+| Herramienta   | Uso                              |
+| ------------- | -------------------------------- |
+| Python 3      | Lenguaje principal               |
+| Playwright    | Automatización del navegador     |
 | Google Chrome | Navegador controlado remotamente |
-| CSV / JSON | Formatos de salida |
+| CSV / JSON    | Formatos de salida               |
 
 ### Instalación de dependencias
 ```bash
@@ -130,7 +130,7 @@ scrapp_twitter_V5.py
 tweets_macba_skate_V5.csv
 tweets_macba_skate_V5.json
 ```
-
+[Twitter 2](https://drive.google.com/file/d/14w3n5eC4j8kZWaJb7oHpYZdnadYXRVdW/view?usp=drive_link)
 ---
 
 ## Parte 2 — Scraping de la web
@@ -188,6 +188,7 @@ Para cada query:
   7. Pausa de 2s entre queries
 ```
 
+[Web 1](https://drive.google.com/file/d/1JQ_FtCTts9Q0GnkjlnmNIPmq5ioBq-5J/view?usp=drive_link)
 ### Extracción de fechas
 
 Para cada artículo el scraper busca la fecha de publicación en este orden de prioridad:
@@ -217,6 +218,8 @@ Scrapduck_multiquery_MACBA.py
 Scrapduck_multiquery_MACBA_masclicks.csv
 Scrapduck_multiquery_MACBA_masclicks.json
 ```
+
+[Web 2](https://drive.google.com/file/d/1pmt2N6wj9afiGMAUVbjeTghscHwZ2crX/view?usp=drive_link)
 
 ---
 
@@ -324,6 +327,7 @@ Se genera un nuevo archivo CSV con una columna adicional llamada **`sentiment`**
 - **1** = positivo o neutro(No teniamos tiempo de crear otro filtro en la web)
 - **0** = negativo
 
+[Sentimientos](https://drive.google.com/file/d/1xj6aInrkGBmftCGRKX0AZln8OhiLNaip/view?usp=drive_link)
 ## Cómo funciona el código
 
 El núcleo del script es la función `get_sentiment()`, que es la que se comunica con Ollama y decide si un texto es positivo o negativo:
