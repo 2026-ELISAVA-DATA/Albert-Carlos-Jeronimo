@@ -1,9 +1,0 @@
-## Líneas de mejora futuras
-
-1. **Scraping automático** — Automatizar la actualización de la web para que detecte y añada nuevos artículos o tweets sobre el MACBA sin necesidad de hacerlo manualmente.
-
-2. **Mejora del análisis de sentimiento** — Refinar el prompt que se le envía a Ollama incluyendo palabras clave específicas relacionadas con el contexto del MACBA, para que la clasificación positiva/negativa sea más precisa y ajustada al tema.
-
-3. **Mejora de la UI** — Realizar journey studies con usuarios que nunca hayan usado la web para identificar puntos de confusión y recoger feedback que permita mejorar la experiencia de uso.
-
-4. **Scraping de Instagram** — Ampliar las fuentes de datos incorporando contenido de Instagram, lo que permitiría añadir un filtro adicional a la web y enriquecer el análisis.
