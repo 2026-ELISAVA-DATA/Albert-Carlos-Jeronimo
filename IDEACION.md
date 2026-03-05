@@ -1,3 +1,7 @@
+**Ideación y exploración inicial**
+
+Antes de definir la visualización final, el proyecto partió de una fase de exploración en la que se investigaron distintas formas de relacionar skate, datos urbanos y representación digital del espacio.
+
 
 **Ideas principales:**
 
