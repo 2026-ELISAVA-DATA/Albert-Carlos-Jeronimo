@@ -1,24 +1,24 @@
 {
   "main": {
-    "id": "e891f46d4a2a497c",
+    "id": "4700bd1f43cb5837",
     "type": "split",
     "children": [
       {
-        "id": "9cc036a559ddb51b",
+        "id": "0294745504c79b62",
         "type": "tabs",
         "children": [
           {
-            "id": "a4b867d2dcf90909",
+            "id": "7312ab1974d098a0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Web/MACBA_web_resumen.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MACBA_web_resumen"
+              "title": "README"
             }
           }
         ]
@@ -27,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "19641f015326338e",
+    "id": "a6966de33d52e69f",
     "type": "split",
     "children": [
       {
-        "id": "ffef3e3eb3a77a83",
+        "id": "beb67f98e72839b8",
         "type": "tabs",
         "children": [
           {
-            "id": "0547b5ae34c729ab",
+            "id": "5d665c478dee3697",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +48,7 @@
             }
           },
           {
-            "id": "1d221eb8b7eff88e",
+            "id": "8ce849352a82341e",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -61,40 +61,40 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "Buscar"
             }
           },
           {
-            "id": "386a67bca91c95ef",
+            "id": "e505e802d4a900d6",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
               "state": {},
               "icon": "lucide-bookmark",
-              "title": "Bookmarks"
+              "title": "Marcadores"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 243.5
   },
   "right": {
-    "id": "0df0e681e5248c28",
+    "id": "59d0d4efaa3c3e9f",
     "type": "split",
     "children": [
       {
-        "id": "f13f07783375379a",
+        "id": "e5dcf2a2b8cd4c72",
         "type": "tabs",
         "children": [
           {
-            "id": "4edb66d7d66de4b9",
+            "id": "e548cac13096d32d",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Web/MACBA_web_resumen.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,25 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for MACBA_web_resumen"
+              "title": "Enlaces entrantes de README"
             }
           },
           {
-            "id": "c5bebde95ffbef04",
+            "id": "dab19bc058ff3343",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Web/MACBA_web_resumen.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from MACBA_web_resumen"
+              "title": "Enlaces salientes de README"
             }
           },
           {
-            "id": "1e261772484363f1",
+            "id": "5eae8daf950fcde1",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -133,22 +133,22 @@
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
-              "title": "Tags"
+              "title": "Etiquetas"
             }
           },
           {
-            "id": "001de82e4f22191a",
+            "id": "b40dd67c827bbfa8",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Web/MACBA_web_resumen.md",
+                "file": "README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of MACBA_web_resumen"
+              "title": "Esquema de README"
             }
           }
         ]
@@ -170,31 +170,54 @@
       "slides-extended:Show Slide Preview": false
     }
   },
-  "active": "a4b867d2dcf90909",
+  "active": "7312ab1974d098a0",
   "lastOpenFiles": [
-    "VIDEOS PRESENTACION/webs2.mov",
-    "VIDEOS PRESENTACION/webs1.mov",
-    "VIDEOS PRESENTACION/twitter2.mov",
-    "VIDEOS PRESENTACION/twitter1.mov",
+    "scrapping_twitter_website_iteraciones/Codigos de scrapping de twiter.md",
+    "Web/MACBA_web_resumen.md",
+    "Web",
     "VIDEOS PRESENTACION/SENTIMIENTOS.mp4",
     "VIDEOS PRESENTACION/INSTANCESONPOINTS.mp4",
-    "Web/Untitled.md",
-    "Web/MACBA_web_resumen.md",
-    "Untitled.md",
-    "Assets/videopruebamapping.mp4",
-    "Web",
-    "Assets/videoModelomacba.mp4",
-    "Assets/UIMORPHSOUND.png",
-    "Assets/Proyeccion + mapping.md",
+    "Versiones_de_la_web/macba-data-domes_9.html",
+    "Versiones_de_la_web/macba-data-domes_8.html",
+    "Versiones_de_la_web/macba-data-domes_7.html",
+    "Versiones_de_la_web/macba-data-domes_6.html",
+    "Versiones_de_la_web/macba-data-domes_5.html",
+    "Versiones_de_la_web/macba-data-domes_4.html",
+    "Versiones_de_la_web/macba-data-domes_3.html",
+    "IDEACION.md",
+    "Assets/App.md",
+    "Assets/Blender + Audio reactive.md",
+    "scrapping_twitter_website_iteraciones/README.md",
     "Assets/olamonumento.jpg",
     "Assets/mappingdiy.png",
     "Assets/macbapartes.png",
+    "Assets/Proyeccion + mapping.md",
+    "Assets/Detector de personas y skates con YOLO y Label-studio.md",
     "Assets/Grasshoppertree.png",
     "Assets/Grasshopperaudio.png",
-    "Assets/Blender + Audio reactive.md",
-    "Assets/Detector de personas y skates con YOLO y Label-studio.md",
-    "VIDEOS PRESENTACION/Recording 2026-03-04 104642.mp4",
-    "Scripts.Scrap_web_X/FINAL/Scrapduck_multiquery_MACBA.py",
-    "NARRATIVA.md"
+    "Assets/UIMORPHSOUND.png",
+    "NARRATIVA.md",
+    "README.md",
+    "Jeronimo.md",
+    "PRESENTACION LUNES 2.md",
+    "PRESENTACION.md",
+    "Screenshot.md",
+    "Screenshot 2026-02-02 at 16.06.45.png",
+    "Screenshot 2026-02-02 at 16.07.32.png",
+    "Screenshot 2026-02-02 at 16.08.14 1.png",
+    "Untitled.canvas",
+    "Screenshot 2026-02-02 at 16.08.14.png",
+    "sesiones/20260129_sesion_2/MI_TITULO.md",
+    "sesiones/20260129_sesion_2/README.md",
+    "2026-01-29.md",
+    "proyectos/proyecto _final-guia/ideas/README.md",
+    "proyectos/proyecto _final-guia/README.md.md",
+    "referencias/teoria_tecnica/README.md",
+    "referencias/teoria_tecnica/dataVizs/videos/README.md",
+    "herramientas/terminal/README.md",
+    "proyectos/README.md",
+    "proyectos/de la observacion al dato/README.md",
+    "sesiones/20260128_sesion_1/README.md",
+    "Sesión 8 - Presentación de proyecto.md"
   ]
 }
