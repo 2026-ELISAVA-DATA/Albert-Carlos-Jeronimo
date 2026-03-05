@@ -1,4 +1,3 @@
-# Albert-Carlos-Jeronimo
 
 **Ideas principales:**
 
@@ -13,15 +12,16 @@
 - Audio/data skate + generación de imágen/animación + Proyección (videomapping)
 
 
+**Posibles data set a utilizar:** 
 
-**Posibles data set a utilizar:** 1. https://opendata-ajuntament.barcelona.cat/data/en/dataset/intensitat-activitat-turistica # Areas of the city of Barcelona with higher concentration of tourism
+1. https://opendata-ajuntament.barcelona.cat/data/en/dataset/intensitat-activitat-turistica # Areas of the city of Barcelona with higher concentration of tourism
 
-https://opendata-ajuntament.barcelona.cat/data/en/dataset/punts-informacio-turistica # Cultural interest points in the city of Barcelona
+2. https://opendata-ajuntament.barcelona.cat/data/en/dataset/punts-informacio-turistica # Cultural interest points in the city of Barcelona
 
-Crear data set a partir de este informe https://observatoriturisme.barcelona/en/destination-barcelona-tourism-activity-latest-data/
+3. Crear data set a partir de este informe https://observatoriturisme.barcelona/en/destination-barcelona-tourism-activity-latest-data/
 
-Scrap de twiter con palabras como skate y barcelona en el mismo tweet
-(hacer un scrip para sacar sentimientos de los tweets)
+4. Scrap de twiter con palabras como skate y barcelona en el mismo tweet
+   (hacer un scrip para sacar sentimientos de los tweets)
 
 
 **Projectos de referencia**
@@ -31,9 +31,9 @@ Gryroscopio y accelerometro para crear visualizaciones de la tabla de skate: htt
 
 **Ideas:**
 
-Dependiendo de la intensidad de los sonidos hacer diferentes haz de luces con un producto fisico.
+Dependiendo de la intensidad de los **sonidos** hacer diferentes haz de luces con un producto fisico.
 
-Hacer un mapping de datasets de turismo y tiempo para modificar una animacion de x tiempo de un skater 
+Hacer un mapping de datasets de **turismo y tiempo** para modificar una animacion de x tiempo de un skater 
 
 # Narrativa
 
