@@ -7,3 +7,5 @@ Este proyecto propone una visualización de datos como herramienta de análisis 
 La web materializa esta información en una infografía tridimensional del museo, donde cada punto representa un dato. Las fachadas del edificio funcionan como soporte visual de la conversación colectiva, permitiendo observar su volumen, distribución y tono. De este modo, la arquitectura se convierte en interfaz y el dato en evidencia cuantificable de una dinámica cultural activa.
 
 El proyecto explora cómo la visualización puede revelar la dimensión social de un espacio urbano, transformando el edificio en un mapa de las voces que lo defienden.
+
+Video del proyecto: https://www.youtube.com/watch?v=QkrHv51VIMs
